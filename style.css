@@ -270,6 +270,7 @@ a.single-about,
   line-height: 36px;
   padding-left: 30px;
   padding-right: 30px;
+  margin-top : 40px;
 }
 
 /*===================
@@ -1769,3 +1770,12 @@ a.gradient-btn:hover:after{
 ::placeholder{color:#fff}
 
 /*===================================== end =================================*/
+
+.form-cell {
+  background-color : #062489 ;
+   caret-color : white;
+   margin-right : 50px;
+}
+::placeholder{
+  color : red ;
+}
