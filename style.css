@@ -79,6 +79,10 @@ h6
 	font-family: 'Montserrat', sans-serif;
 	text-transform: capitalize;
 }
+@font-face {
+  font-family: 'iransans';
+  src: url('assets/fonts/IRANSans_Medium.ttf');
+}
 
 ul{
   margin: 0;
