@@ -83,6 +83,18 @@ h6
   font-family: 'iransans';
   src: url('assets/fonts/IRANSans_Medium.ttf');
 }
+legend{
+  font-family: iransans;
+}
+
+input[type=text]:focus {
+  background-color: #0042de;
+}
+
+.form-cell::placeholder{
+  color: white;
+}
+
 
 ul{
   margin: 0;
@@ -1779,7 +1791,4 @@ a.gradient-btn:hover:after{
   background-color : #062489 ;
    caret-color : white;
    margin-right : 50px;
-}
-::placeholder{
-  color : red ;
 }
