@@ -1776,6 +1776,11 @@ a.gradient-btn:hover:after{
    caret-color : white;
    margin-right : 50px;
 }
+
+.form-cell:focus{
+  background-color : #99c4ef;
+}
+
 ::placeholder{
   color : red ;
 }
