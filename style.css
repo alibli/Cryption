@@ -1066,6 +1066,7 @@ community area css
 
 .single-community a.behance i {
   background: #B4B4B4;
+  visibility: hidden;
 }
 
 .single-community a.youtube i {
