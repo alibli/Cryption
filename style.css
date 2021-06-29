@@ -89,6 +89,7 @@ legend{
 
 input[type=text]:focus {
   background-color: #0042de;
+  color: white;
 }
 
 .form-cell::placeholder{
@@ -1796,6 +1797,7 @@ a.gradient-btn:hover:after{
 .form-cell:focus{
   background-color : #99c4ef;
 }
+
 
 ::placeholder{
   color : red ;
