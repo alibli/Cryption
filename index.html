@@ -232,7 +232,7 @@
             <div class="row">
                 <div class="col-12 text-center">
                     <div class="ico-heading">
-                        <h1><a href= "#">ICO</a> Live Now</h1>
+                        <h1><a href= "#">محاسبات</a> </h1>
                     </div>
                 </div>
             </div>
@@ -244,10 +244,10 @@
             <div class="row">
                 <legend style="text-align : right ">اطلاعات عمومی</legend>
                 <div class="col-lg-6 col-sm-12" >
-                    <input type="text" class="form-control form-cell" placeholder="مساحت مزرعه" >
+                    <input id="farmArea" type="text" class="form-control form-cell" placeholder="مساحت مزرعه" >
                 </div>
                 <div class="col-lg-6 col-sm-12">
-                    <input type="text" class="form-control form-cell" placeholder="تعداد کاشت" >
+                    <input id="plantNumber" type="text" class="form-control form-cell" placeholder="تعداد کاشت" >
                 </div>
             </div>
         </div>
@@ -256,13 +256,13 @@
             <div class="row">
                 <legend style="text-align : right ">مفروضات هزینه های درصدی</legend>
                 <div class="col-lg-4 col-sm-12" >
-                    <input type="text" class="form-control form-cell" placeholder="مساحت مزرعه" >
+                    <input id="costPer" type="text" class="form-control form-cell" placeholder="درصد هزینه" >
                 </div>
                 <div class="col-lg-4 col-sm-12">
-                    <input type="text" class="form-control form-cell" placeholder="تعداد کاشت" >
+                    <input id="interstRatio" type="text" class="form-control form-cell" placeholder="  ضریب دوره بهره برداری" >
                 </div>
                 <div class="col-lg-4 col-sm-12">
-                    <input type="text" class="form-control form-cell" placeholder="تعداد کاشت" >
+                    <input id="perfomRatio" type="text" class="form-control form-cell" placeholder="ضریب دوره اجرا" >
                 </div>
             </div>
         </div>
@@ -272,9 +272,15 @@
             
             <div class="row">
                 <div class="col-12 text-center">
-                    <a href="#tables" class="gradient-btn v2">محاسبه</a>
+                    <a onclick="calc()" href="#tables" class="gradient-btn v2">محاسبه</a>
                 </div>
             </div>
+
+            <div id="Answer" class="container">
+                answer
+            </div>
+
+
         </div>
     </div>
     <!--ico area end-->
