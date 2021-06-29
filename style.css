@@ -196,9 +196,10 @@ a.single-about,
 .main-menu li a {
   display: block;
   padding: 10px;
-  font-size: 14px;
+  font-size: 20px;
   color: #fff;
   text-transform: capitalize;
+  margin-left: 55px;
 }
 
 .main-menu li ul {
@@ -222,7 +223,7 @@ a.single-about,
 
 .main-menu li ul li a:hover {
   background: #062489;
-  padding-left: 15px;
+  padding-left: 25px;
 }
 
 .main-menu li:hover ul {
