@@ -94,10 +94,22 @@ input[type=text]:focus {
   color: white;
 }
 
+input[type=text] {
+  /*background-color: #0042de;*/
+  color: white;
+}
+
 .form-cell::placeholder{
   color: white;
 }
 
+#Answerz{
+  color: white;
+  display: inline;
+  margin-top: 30px;
+  text-align: center;
+
+}
 
 ul{
   margin: 0;
@@ -107,6 +119,7 @@ ul{
 
 a, a:hover{
   text-decoration: none;
+  cursor: grab;
 }
 
 input:focus, button:focus, textarea:focus {
