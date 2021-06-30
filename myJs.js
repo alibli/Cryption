@@ -12,5 +12,5 @@ function calc(){
 
     console.log(costPer)
 
-    answer.innerHTML =  parseInt(farmArea) + parseInt(plantNumber) +parseInt(costPer)  + parseInt(interstRatio) ;
+    answer.innerHTML = "نتیجه: " + (parseInt(farmArea) + parseInt(plantNumber) +parseInt(costPer)  + parseInt(interstRatio) ) ;
 }
