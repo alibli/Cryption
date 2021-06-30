@@ -94,6 +94,11 @@ input[type=text]:focus {
   color: white;
 }
 
+input[type=text] {
+  /*background-color: #0042de;*/
+  color: white;
+}
+
 .form-cell::placeholder{
   color: white;
 }
@@ -107,6 +112,7 @@ ul{
 
 a, a:hover{
   text-decoration: none;
+  cursor: grab;
 }
 
 input:focus, button:focus, textarea:focus {
