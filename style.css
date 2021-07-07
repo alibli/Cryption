@@ -79,6 +79,7 @@ h6
 {
 	color: #fff;
 	font-family: 'Montserrat', sans-serif;
+    font-family: 'iransans';
 	text-transform: capitalize;
 }
 @font-face {
@@ -87,6 +88,7 @@ h6
 }
 legend{
   font-family: iransans;
+  color: #f9748f;
 }
 
 input[type=text]:focus {
@@ -222,7 +224,7 @@ a.single-about,
   left: 0;
   top: 70px;
   z-index: 999;
-  background: #001763;
+  background: #062489;
   border-radius: 5px;
   visibility: hidden;;
   opacity: 1;
@@ -403,7 +405,9 @@ ico area css
 ======================*/
 
 .ico-area {
-  background: #031b69;
+  /*background: #031b69;*/
+  background: #80ffd2;
+  //rang
 }
 
 
