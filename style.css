@@ -55,15 +55,23 @@ css list:
 
 /*===================
      base css
+
+     #7c92db
+
+     #668aff
+     #93bbe5
+
 =====================*/
+
+
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,800');
 
 body{
 	background: #062489;
+	background: #668aff;      
 	font-family: 'Montserrat', sans-serif;
 	font-family: 'iransans';
-  
 	font-size: 14px;
 	color: #cbe5ff;
   overflow-x: hidden;
@@ -89,6 +97,8 @@ h6
 legend{
   font-family: iransans;
   color: #f9748f;
+  color: #ffffff;
+  
 }
 
 input[type=text]:focus {
@@ -406,7 +416,7 @@ ico area css
 
 .ico-area {
   /*background: #031b69;*/
-  background: #80ffd2;
+  background: #93bbe5;
   //rang
 }
 
@@ -418,12 +428,13 @@ ico area css
 }
 
 .ico-heading h1 a {
-  color: #f9748f;
+  
+  color: #ffffff;
   text-transform: uppercase;
 }
 
 .ico-heading h1 a:hover {
-  color: #F6D266;
+  color: #aaf1e2;
 }
 
 .ico-area h5 {
@@ -433,6 +444,7 @@ ico area css
 
 .single-ico a {
   color: #f9748f;
+  color: #ffffff;
   padding-right: 10px;
   font-size: 18px;
 }
@@ -589,6 +601,7 @@ Documentation area css
 
 .single-document:hover .single-document-text span {
   color: #FB9A8C;
+  color: #186b0d;
 }
 
 button.single-document-text {
@@ -997,7 +1010,7 @@ community area css
 .community-area {
   position: relative;
   z-index: 2;
-  background: #031b69;
+  background: #93bbe5;
   overflow:hidden;
 }
 
@@ -1762,7 +1775,7 @@ a.gradient-btn {
   color: #fff;
   text-transform: uppercase;
   font-weight: 700;
-  background: -webkit-linear-gradient(right,#fe998b,#fa768d,#f78ca0);
+  background: -webkit-linear-gradient(right,#5d96c5,#a1b1e6,#5d96c5);
   padding: 10px 20px;
   border-radius: 5px;
   position: relative;
@@ -1776,7 +1789,7 @@ a.gradient-btn:after {
   left: 0;
   top: 0;
   content: "";
-  background: -webkit-linear-gradient(right,#072487,#fa768d,#fe998b);
+  background: -webkit-linear-gradient(right,#a1b1e6,#5d96c5,#a1b1e6);
   height: 100%;
   width: 100%;
   z-index: -1;
