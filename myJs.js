@@ -12,5 +12,16 @@ function calc(){
 
     console.log(costPer)
 
-    answer.innerHTML = "نتیجه: " + (parseInt(farmArea) + parseInt(plantNumber) +parseInt(costPer)  + parseInt(interstRatio) + parseInt(performRatio)) ;
+    answer.innerHTML =  (parseInt(farmArea) + parseInt(plantNumber) +parseInt(costPer)  + parseInt(interstRatio) + parseInt(performRatio)) ;
+
+    console.log(answer)
+    console.log(isNaN(answer.innerHTML))
+
+    if (isNaN(answer.innerHTML)){
+        answer.innerHTML = "لطفا تمام فیلد ها را پر کنید";
+        answer.style.color = 'darkred'
+    }else{
+        answer.innerHTML =  "نتیجه: "+ answer.innerHTML
+        answer.style.color = 'white'
+    }
 }
