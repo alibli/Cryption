@@ -120,7 +120,13 @@ input[type=text] {
   display: inline;
   margin-top: 30px;
   text-align: center;
+}
 
+.answer{
+  color: white;
+  display: inline;
+  margin-top: 30px;
+  text-align: center;
 }
 
 ul{

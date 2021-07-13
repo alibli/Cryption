@@ -208,7 +208,7 @@
                             <a  onclick="calc()"  class="gradient-btn v2">محاسبه</a>
                         </div>
         
-                        <div id="Answerz" class="col-12 text-center">
+                        <div id="Answerz" class="answer col-12 text-center">
                         </div>
         
                     </div>
@@ -227,61 +227,46 @@
                     </div>
                     <div class="space-60"></div>
                     <div class="row">
-        
-            <form class="container" >
-                <div class="form">
-                    <div class="row">
-                        <legend style="text-align : right ">مفروضات هزینه های درصدی</legend>
-                        <div class="col-lg-4 col-sm-12" >
-                            <input id="costPer" type="text" class="form-control form-cell" placeholder="زمین" >
-                        </div>
-                        <div class="col-lg-4 col-sm-12">
-                            <input id="interstRatio" type="text" class="form-control form-cell" placeholder="محوطه سازی " >
-                        </div>
-                        <div class="col-lg-4 col-sm-12">
-                            <input id="performRatio" type="text" class="form-control form-cell" placeholder="ساختمان " >
-                        </div>
-                    </div>
-                </div>  <br>
-                <div class="form">
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-12" >
-                            <input id="costPer" type="text" class="form-control form-cell" placeholder="ماشین آلات " >
-                        </div>
-                        <div class="col-lg-4 col-sm-12">
-                            <input id="interstRatio" type="text" class="form-control form-cell" placeholder="تجهیزات " >
-                        </div>
-                        <div class="col-lg-4 col-sm-12">
-                            <input id="performRatio" type="text" class="form-control form-cell" placeholder="حمل و نقل" >
-                        </div>
-                    </div>
-                </div> <br>
-                <div class="form">
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-12" >
-                            <input id="costPer" type="text" class="form-control form-cell" placeholder="تجهیزات دفتری " >
-                        </div>
-                        <div class="col-lg-4 col-sm-12">
-                            <input id="interstRatio" type="text" class="form-control form-cell" placeholder="هزینه های قبل از بهره برداری" >
-                        </div>
-                        <div class="col-lg-4 col-sm-12">
-                            <input id="performRatio" type="text" class="form-control form-cell" placeholder="هزینه های پیش بینی نشده" >
-                        </div>
-                    </div>
-                </div>
 
-            </form>
+                        <form class="container" >
+                            <div class="form">
+                                <div class="row">
+                                    <legend style="text-align : right ">هزینه های مزرعه</legend>
+                                    <div class="col-lg-6 col-sm-12" >
+                                        <input id="farmprepare" type="text" class="form-control form-cell" placeholder="هزینه های آماده سازی زمین" >
+                                    </div>
+                                    <div class="col-lg-6 col-sm-12">
+                                        <input id="farmrent" type="text" class="form-control form-cell" placeholder="اجاره بها زمین" >
+                                    </div>
+                                </div>
+                            </div>
+                            </br></br></br>
+                            <div class="form">
+                                <div class="row">
+
+                                    <div class="col-lg-4 col-sm-12" >
+                                        <input id="plant" type="text" class="form-control form-cell" placeholder="کاشت" >
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12">
+                                        <input id="grow" type="text" class="form-control form-cell" placeholder="داشت" >
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12">
+                                        <input id="harvest" type="text" class="form-control form-cell" placeholder="برداشت" >
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                         <br><br>
                     </div>
-                    
+
                     <div class="row">
                         <div class="col-12 text-center">
-                            <a  onclick="calc()"  class="gradient-btn v2">محاسبه</a>
+                            <a  onclick="calc2()"  class="gradient-btn v2">محاسبه</a>
                         </div>
-        
-                        <div id="Answerz" class="col-12 text-center">
+
+                        <div id="Answer2" class="answer col-12 text-center">
                         </div>
-        
+
                     </div>
                 </div>
 
@@ -298,46 +283,61 @@
                     </div>
                     <div class="space-60"></div>
                     <div class="row">
-        
-            <form class="container" >
-                <div class="form">
-                    <div class="row">
-                        <legend style="text-align : right ">اطلاعات عمومی</legend>
-                        <div class="col-lg-6 col-sm-12" >
-                            <input id="farmArea" type="text" class="form-control form-cell" placeholder="مساحت مزرعه" >
-                        </div>
-                        <div class="col-lg-6 col-sm-12">
-                            <input id="plantNumber" type="text" class="form-control form-cell" placeholder="تعداد کاشت" >
-                        </div>
-                    </div>
-                </div>
-                            </br></br></br>
-                <div class="form">
-                    <div class="row">
-                        <legend style="text-align : right ">مفروضات هزینه های درصدی</legend>
-                        <div class="col-lg-4 col-sm-12" >
-                            <input id="costPer" type="text" class="form-control form-cell" placeholder="درصد هزینه" >
-                        </div>
-                        <div class="col-lg-4 col-sm-12">
-                            <input id="interstRatio" type="text" class="form-control form-cell" placeholder="  ضریب دوره بهره برداری" >
-                        </div>
-                        <div class="col-lg-4 col-sm-12">
-                            <input id="performRatio" type="text" class="form-control form-cell" placeholder="ضریب دوره اجرا" >
-                        </div>
-                    </div>
-                </div>
-            </form>
+
+                        <form class="container" >
+                            <div class="form">
+                                <div class="row">
+                                    <legend style="text-align : right ">محاسبه اجزا و میزان سرمایه ثابت</legend>
+                                    <div class="col-lg-4 col-sm-12" >
+                                        <input id="farm" type="text" class="form-control form-cell" placeholder="زمین" >
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12">
+                                        <input id="areaconstruction" type="text" class="form-control form-cell" placeholder="محوطه سازی " >
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12">
+                                        <input id="building" type="text" class="form-control form-cell" placeholder="ساختمان " >
+                                    </div>
+                                </div>
+                            </div>  <br>
+                            <div class="form">
+                                <div class="row">
+                                    <div class="col-lg-4 col-sm-12" >
+                                        <input id="machinery" type="text" class="form-control form-cell" placeholder="ماشین آلات " >
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12">
+                                        <input id="equipment" type="text" class="form-control form-cell" placeholder="تجهیزات " >
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12">
+                                        <input id="transportation" type="text" class="form-control form-cell" placeholder="حمل و نقل" >
+                                    </div>
+                                </div>
+                            </div> <br>
+                            <div class="form">
+                                <div class="row">
+                                    <div class="col-lg-4 col-sm-12" >
+                                        <input id="officeequipment" type="text" class="form-control form-cell" placeholder="تجهیزات دفتری " >
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12">
+                                        <input id="costbefore" type="text" class="form-control form-cell" placeholder="هزینه های قبل از بهره برداری" >
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12">
+                                        <input id="unpredictedcosts" type="text" class="form-control form-cell" placeholder="هزینه های پیش بینی نشده" >
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
                         <br><br>
                     </div>
-                    
+
                     <div class="row">
                         <div class="col-12 text-center">
-                            <a  onclick="calc()"  class="gradient-btn v2">محاسبه</a>
+                            <a  onclick="calc3()"  class="gradient-btn v2">محاسبه</a>
                         </div>
-        
-                        <div id="Answerz" class="col-12 text-center">
+
+                        <div id="Answer3" class="answer col-12 text-center">
                         </div>
-        
+
                     </div>
                 </div>
 
@@ -447,7 +447,7 @@
             <div class="row">
                 <div class="col-12 text-center">
                     <div class="heading">
-                        
+
                         <div class="space-10"></div>
                         <h1>راه های ارتباط با ما</h1>
                     </div>
