@@ -1842,3 +1842,12 @@ a.gradient-btn:hover:after{
 ::placeholder{
   color : red ;
 }
+
+#main-text{
+  line-height: 35px;
+  text-align :right;
+}
+.tahlil-text{
+  line-height: 30px;
+  text-align: right;
+}
