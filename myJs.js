@@ -81,7 +81,6 @@ function calc3(){
 
 function calc4(){
 
-    console.log('salam')
     let return_percent = document.getElementById('return-percent').value;
     let b0 = document.getElementById('1400').value;
     let b1 = document.getElementById('1401').value;
@@ -98,7 +97,13 @@ function calc4(){
     const cashflow = [parseInt(b0), parseInt(b1), parseInt(b2), parseInt(b3), parseInt(b4)];
     console.log(NPV(cashflow, return_percent)); // 476.19047619047524
 
-    answer.innerHTML = NPV(cashflow, return_percent)
+    var rate = 10;
+    var initialCost = 0;
+    var cashFlows2 = [0, 45000, 45000, 45000, 45000];
+    console.log(getNPV(rate, initialCost, cashFlows2))
+
+
+    answer.innerHTML = getNPV(rate, initialCost, cashFlows2)
 
     console.log(answer)
     console.log(isNaN(answer.innerHTML))
@@ -110,4 +115,9 @@ function calc4(){
         answer.innerHTML =  "NPV: "+ answer.innerHTML
         answer.style.color = 'white'
     }
+}
+
+/** * Calculates the Net Present Value of a given initial investment * cost and an array of cash flow values with the specified discount rate. * * @param{number}rate - The discount rate percentage * @param{number}initialCost - The initial investment * @param{array}cashFlows - An array of future payment amounts * @return{number}The calculated Net Present Value */
+function getNPV(rate, initialCost, cashFlows){
+    return cashFlows.reduce((accumulator, currentValue, index) =>accumulator + currentValue / Math.pow(rate / 100 + 1, index + 1),initialCost )
 }
