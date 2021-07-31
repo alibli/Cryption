@@ -77,3 +77,37 @@ function calc3(){
         answer.style.color = 'white'
     }
 }
+
+
+function calc4(){
+
+    console.log('salam')
+    let return_percent = document.getElementById('return-percent').value;
+    let b0 = document.getElementById('1400').value;
+    let b1 = document.getElementById('1401').value;
+    let b2 = document.getElementById('1402').value;
+    let b3 = document.getElementById('1403').value;
+    let b4 = document.getElementById('1404').value;
+
+    let answer = document.getElementById("Answer4");
+
+
+    const NPV = (cashflow, discountRate) => cashflow
+        .reduce((acc, val, i) => acc + val / Math.pow((1 + discountRate), i), 0);
+
+    const cashflow = [parseInt(b0), parseInt(b1), parseInt(b2), parseInt(b3), parseInt(b4)];
+    console.log(NPV(cashflow, return_percent)); // 476.19047619047524
+
+    answer.innerHTML = NPV(cashflow, return_percent)
+
+    console.log(answer)
+    console.log(isNaN(answer.innerHTML))
+
+    if (isNaN(answer.innerHTML)){
+        answer.innerHTML = "لطفا تمام فیلد ها را پر کنید";
+        answer.style.color = 'darkred'
+    }else{
+        answer.innerHTML =  "NPV: "+ answer.innerHTML
+        answer.style.color = 'white'
+    }
+}
