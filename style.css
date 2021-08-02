@@ -1831,8 +1831,8 @@ a.gradient-btn:hover:after{
 }
 .single-team-img{
   height: 250px;
-  width: 240px;
-  margin-right: 35px;
+  width: 260px;
+  margin-right: 25px;
 }
 
 ::-webkit-input-placeholder{color:#fff}
