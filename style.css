@@ -731,7 +731,7 @@ team area css
 ======================*/
 
 .single-team-img img {
-  border-radius: 35px;
+  border-radius: 20px;
 }
 
 .single-team-content h3 {
@@ -776,6 +776,15 @@ team area css
 .single-team-social li a.ico-3 {
   background: #55acee;
 }
+
+.single-team-social li a.ico-4 { /*ali added*/
+  background: #c9224b;
+}
+
+.single-team-social li a.ico-5 { /*ali added  telegram*/
+  background: #0088cc;
+}
+
 
 /*===================
 faq area css
@@ -1819,6 +1828,11 @@ a.gradient-btn:hover:after{
 .welcome-img img{
   height: 100%;
   width: 100%;
+}
+.single-team-img{
+  height: 250px;
+  width: 240px;
+  margin-right: 35px;
 }
 
 ::-webkit-input-placeholder{color:#fff}
