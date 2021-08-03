@@ -56,8 +56,6 @@ css list:
 /*===================
      base css
 
-     #7c92db
-
      #668aff
      #93bbe5
 
@@ -166,6 +164,10 @@ input, textarea{
   text-transform: capitalize;
 }
 
+.dropdown-first{
+  color: rgba(255, 255, 255, 0.5) !important ;
+}
+
 a.gradient-btn:hover:after, 
 a.gradient-btn:after,
 .single-details a,  
@@ -240,7 +242,7 @@ a.single-about,
 }
 
 .main-menu li.active a{
-  color: #FB9A8C;
+  color: #26754a;
 }
 
 .main-menu li a {
@@ -1042,7 +1044,7 @@ community area css
 .community-area {
   position: relative;
   z-index: 2;
-  background: #93bbe5;
+  background: #668aff;
   overflow:hidden;
 }
 
@@ -1884,4 +1886,9 @@ a.gradient-btn:hover:after{
 input[type="text"].form-cell::-webkit-input-placeholder {
   color: white;
   opacity: 0.5;
+}
+
+.chart-area{
+ /* background-color: #93bbe5; */
+  background-color: #668aff;
 }
