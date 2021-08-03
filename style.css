@@ -128,6 +128,17 @@ input[type=text] {
   margin-top: 30px;
   text-align: center;
 }
+button{
+  margin-right: 50px;
+}
+select{
+  color: white;
+  background-color: #062489;
+  margin-right: 50px;
+  width: 500px;
+  height: 35px;
+  border-radius: 3px;
+}
 
 ul{
   margin: 0;

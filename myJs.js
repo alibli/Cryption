@@ -24,6 +24,32 @@ function calc(){
     }
 }
 
+function calc1(){
+
+    let projectname = document.getElementById("projectname").value;
+    let product = document.getElementById("product").value;
+    let productarea = document.getElementById("productarea").value;
+    let city = document.getElementById("city").value;
+    let answer = document.getElementById("Answer1");
+
+    answer.innerHTML =  productarea + projectname + product + city;
+
+    console.log(product)
+    console.log(projectname)
+    console.log(productarea)
+    console.log(city)
+    console.log(answer.innerHTML)
+    console.log(isNaN(answer.innerHTML))
+
+    if (!isNaN(answer.innerHTML)){
+        answer.innerHTML = "لطفا تمام فیلد ها را پر کنید";
+        answer.style.color = 'darkred'
+    }else{
+        answer.innerHTML =  "اطلاعات با موفقیت ثبت شد"
+        answer.style.color = 'white'
+    }
+}
+
 function calc2(){
 
     let farmprepare = document.getElementById('farmprepare').value;
@@ -103,7 +129,7 @@ function calc4(){
     console.log(getNPV(rate, initialCost, cashFlows2))
 
 
-    answer.innerHTML = getNPV(rate, initialCost, cashFlows2)
+    answer.innerHTML = getNPV(rate/100, initialCost, cashFlows2)
 
     console.log(answer)
     console.log(isNaN(answer.innerHTML))

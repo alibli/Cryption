@@ -71,6 +71,7 @@
     <!--header area end-->
 
     <!--welcome area start-->
+
     <div class="welcome-area wow fadeInUp" id="home">
         <div id="particles-js"></div>
         <div class="container">
@@ -104,7 +105,6 @@
     <!--about area start-->
     <!--about area end-->
 
-    <!--single about area start-->
     <div class="single-about-area wow fadeInUp">
         <div class="container">
             <div class="row">
@@ -166,7 +166,10 @@
 
         <ul class="nav nav-pills mb-2 mx-auto justify-content-center" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">فرضیات</button>
+                <button class="nav-link active" id="pills-general-tab" data-bs-toggle="pill" data-bs-target="#pills-general" type="button" role="tab" aria-controls="pills-home" aria-selected="true">اطلاعات کلی</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">فرضیات</button>
             </li>
             <li class="nav-item" role="presentation">
               <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">قیمت ها</button>
@@ -179,7 +182,83 @@
             </li>
         </ul> <br><br><br>
         <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <div class="tab-pane fade show active" id="pills-general" role="tabpanel" aria-labelledby="pills-home-tab">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <div class="ico-heading">
+                                <h1>اطلاعات کلی</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-60"></div>
+                    <div class="row">
+        
+            <form class="container" >
+                <div class="form">
+                    <div class="row">
+<!--                        <legend style="text-align : right ">اطلاعات عمومی</legend>-->
+                        <div class="col-lg-6 col-sm-12" >
+                            <input id="projectname" type="text" class="form-control form-cell" placeholder="نام پروژه" >
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <select name="cars" id="product">
+                                <option value="" disabled selected hidden>محصول اصلی</option>
+                                <option value="1">گندم</option>
+                                <option value="2">جو</option>
+                                <option value="3">ذرت</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                </br>
+                <div class="form">
+                    <div class="row">
+<!--                        <legend style="text-align : right ">مفروضات هزینه های درصدی</legend>-->
+                        <div class="col-lg-6 col-sm-12" >
+                            <input id="productarea" type="text" class="form-control form-cell" placeholder="سطح زیر کشت محصول" >
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <select name="cars" id="city">
+                                <option value="" disabled selected hidden>استان</option>
+                                <option value="1">تهران</option>
+                                <option value="2">مشهد</option>
+                                <option value="3">دزفول</option>
+                                <option value="4">سمنان</option>
+                            </select>
+<!--                            TODO: using bootstrap dropdown-->
+<!--                            <div class="dropdown">-->
+<!--                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                                    Dropdown button-->
+<!--                                </button>-->
+<!--                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
+<!--                                    <a class="dropdown-item" href="#">Action</a>-->
+<!--                                    <a class="dropdown-item" href="#">Another action</a>-->
+<!--                                    <a class="dropdown-item" href="#">Something else here</a>-->
+<!--                                </div>-->
+<!--                            </div>   -->
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+                        <br><br>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <a  onclick="calc1()"  class="gradient-btn v2">محاسبه</a>
+                        </div>
+        
+                        <div id="Answer1" class="answer col-12 text-center">
+                        </div>
+        
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 
                 <div class="container">
                     <div class="row">
@@ -191,13 +270,13 @@
                     </div>
                     <div class="space-60"></div>
                     <div class="row">
-        
+
             <form class="container" >
                 <div class="form">
                     <div class="row">
                         <legend style="text-align : right ">اطلاعات عمومی</legend>
                         <div class="col-lg-6 col-sm-12" >
-                            <input id="farmArea" type="text" class="form-control form-cell" placeholder="sssمساحت مزرعه" >
+                            <input id="farmArea" type="text" class="form-control form-cell" placeholder="مساحت مزرعه" >
                         </div>
                         <div class="col-lg-6 col-sm-12">
                             <input id="plantNumber" type="text" class="form-control form-cell" placeholder="تعداد کاشت" >
@@ -222,15 +301,15 @@
             </form>
                         <br><br>
                     </div>
-                    
+
                     <div class="row">
                         <div class="col-12 text-center">
                             <a  onclick="calc()"  class="gradient-btn v2">محاسبه</a>
                         </div>
-        
+
                         <div id="Answerz" class="answer col-12 text-center">
                         </div>
-        
+
                     </div>
                 </div>
 
