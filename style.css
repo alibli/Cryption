@@ -139,6 +139,12 @@ select{
   height: 35px;
   border-radius: 3px;
 }
+canvas#bar-chart{
+  width: 500px;
+  height: 250px;
+  background-color: rgb(170, 207, 243);
+  position: center;
+}
 
 ul{
   margin: 0;

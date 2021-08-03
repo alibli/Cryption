@@ -117,19 +117,16 @@ function calc4(){
     let answer = document.getElementById("Answer4");
 
 
+    const cashflow = [parseInt(b0), parseInt(b1), parseInt(b2), parseInt(b3), parseInt(b4)];
+
     const NPV = (cashflow, discountRate) => cashflow
         .reduce((acc, val, i) => acc + val / Math.pow((1 + discountRate), i), 0);
-
-    const cashflow = [parseInt(b0), parseInt(b1), parseInt(b2), parseInt(b3), parseInt(b4)];
     console.log(NPV(cashflow, return_percent)); // 476.19047619047524
 
-    var rate = 10;
     var initialCost = 0;
-    var cashFlows2 = [0, 45000, 45000, 45000, 45000];
-    console.log(getNPV(rate, initialCost, cashFlows2))
+    var x = getNPV(return_percent, initialCost, cashflow)
 
-
-    answer.innerHTML = getNPV(rate/100, initialCost, cashFlows2)
+    answer.innerHTML = x.toFixed(2)
 
     console.log(answer)
     console.log(isNaN(answer.innerHTML))
@@ -151,23 +148,40 @@ function getNPV(rate, initialCost, cashFlows){
 
 
 // Bar chart
+
+
+// var ctx = document.getElementById("bar-chart");
+
 new Chart(document.getElementById("bar-chart"), {
     type: 'bar',
+
     data: {
-      labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+      labels: ["1400", "1401", "1402", "1403", "1404"],
       datasets: [
         {
-          label: "Population (millions)",
+
+          // label: "تجمعی",
           backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-          data: [2478,5267,734,784,433]
+          data: [-3470803,-2562083,-1653364,-744644,164076],
+
         }
       ]
     },
     options: {
+        responsive: false,
       legend: { display: false },
-      title: {
-        display: true,
-        text: 'Predicted world population (millions) in 2050'
-      }
+
+        plugins: {
+            legend: {
+                display: false
+            },
+            title: {
+                display: true,
+                text: 'خالص تجمعی جریان وجوه نقد',
+                    font: {
+                        family: "iransans"
+                    }
+            }
+        }
     }
 });
