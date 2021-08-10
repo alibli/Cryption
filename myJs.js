@@ -64,10 +64,29 @@ function calcv(){
     let poison = document.getElementById("poison");
     let fertil = document.getElementById("fertilizer");
 
-    seed.innerHTML = " هزینه بذر: " + seeda * seedp ;
-    poison.innerHTML = " هزینه سم: " +  poisona * poisonp;
-    fertil.innerHTML = " هزینه کود: " + fertilizera * fertilizerp;
 
+    sum = seeda * seedp +  poisona * poisonp + fertilizera * fertilizerp;
+    console.log(sum)
+
+    seedsum = seeda * seedp;
+    seedpercent = seedsum*100/sum;
+
+    poisonsum = poisona * poisonp;
+    poisonpercent = poisonsum*100/sum;
+
+    fertilsum = fertilizera * fertilizerp;
+    fertilpercent = fertilsum*100/sum;
+
+    seed.innerHTML = " هزینه بذر: " + seedsum ;
+    poison.innerHTML = " هزینه سم: " +  poisonsum;
+    fertil.innerHTML = " هزینه کود: " + fertilsum;
+
+    seed.innerHTML += '<br>';
+    seed.innerHTML += "درصد: " + seedpercent.toFixed(2) + '%';
+    poison.innerHTML += '<br>';
+    poison.innerHTML += "درصد: " + poisonpercent.toFixed(2) + '%';
+    fertil.innerHTML += '<br>';
+    fertil.innerHTML += "درصد: " + fertilpercent.toFixed(2) + '%';
     console.log(seeda*seedp)
     console.log(seed.innerHTML)
     // if (!isNaN(answer.innerHTML)){

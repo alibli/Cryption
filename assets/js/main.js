@@ -140,6 +140,7 @@
 
         // Display the result in the element with id="demo"
         //     ali commentted these lines :
+        //      به اینجا دست نزن D:
        	document.getElementById("days").innerHTML = days;
         document.getElementById("hours").innerHTML = hours;
         document.getElementById("minutes").innerHTML = minutes;
