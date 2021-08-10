@@ -200,11 +200,11 @@
                     <div class="row">
 <!--                        <legend style="text-align : right ">اطلاعات عمومی</legend>-->
                         <div class="col-lg-6 col-sm-12" >
-                            <input id="projectname" type="text" class="form-control form-cell" placeholder="نام پروژه" >
+                            <input id="projectname" type="text" class="form-control form-cell" placeholder="نام پروژه" required>
                         </div>
                         <div class="col-lg-6 col-sm-12">
                             <select name="cars" id="product">
-                                <option value="" disabled selected hidden>محصول اصلی</option>
+                                <option class="dropdown-first" value="-1"  selected hidden>محصول اصلی</option>
                                 <option value="1">گندم</option>
                                 <option value="2">جو</option>
                                 <option value="3">ذرت</option>
@@ -220,24 +220,42 @@
                             <input id="productarea" type="text" class="form-control form-cell" placeholder="سطح زیر کشت محصول" >
                         </div>
                         <div class="col-lg-6 col-sm-12">
-                            <select name="cars" id="city">
-                                <option value="" disabled selected hidden>استان</option>
-                                <option value="1">تهران</option>
-                                <option value="2">مشهد</option>
-                                <option value="3">دزفول</option>
-                                <option value="4">سمنان</option>
+                            <select name="provinces" id="city">
+                                <option class="dropdown-first" value="-1"  selected hidden>استان</option>                                
+				                <option value="2">آذربایجان شرقی</option>
+				                <option value="3">آذربایجان غربی</option>
+				                <option value="4">اردبیل</option>
+				                <option value="5">اصفهان</option>
+				                <option value="6">البرز</option>
+				                <option value="7">ایلام</option>
+				                <option value="8">بوشهر</option>
+				                <option value="9">تهران</option>
+				                <option value="10">چهار محال و بختیاری</option>
+				                <option value="11">خراسان جنوبی</option>
+				                <option value="12">خراسان رضوی</option>
+				                <option value="13">خراسان شمالی</option>
+				                <option value="14">خوزستان</option>
+				                <option value="15">زنجان</option>
+				                <option value="16">سمنان</option>
+				                <option value="17">سیستان و بلوچستان</option>
+				                <option value="18">فارس</option>
+				                <option value="19">قزوین</option>
+				                <option value="20">قم</option>
+				                <option value="21">کردستان</option>
+				                <option value="22">کرمان</option>
+				                <option value="23">کرمانشاه</option>
+				                <option value="24">کهگیلویه و بویراحمد</option>
+				                <option value="25">گلستان</option>
+				                <option value="26">گیلان</option>
+				                <option value="27">لرستان</option>
+				                <option value="28">مازندران</option>
+				                <option value="29">مرکزی</option>
+				                <option value="30">هرمزگان</option>
+				                <option value="31">همدان</option>
+				                <option value="32">یزد</option>
                             </select>
 <!--                            TODO: using bootstrap dropdown-->
-<!--                            <div class="dropdown">-->
-<!--                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-<!--                                    Dropdown button-->
-<!--                                </button>-->
-<!--                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
-<!--                                    <a class="dropdown-item" href="#">Action</a>-->
-<!--                                    <a class="dropdown-item" href="#">Another action</a>-->
-<!--                                    <a class="dropdown-item" href="#">Something else here</a>-->
-<!--                                </div>-->
-<!--                            </div>   -->
+
 
                         </div>
                     </div>
@@ -506,13 +524,25 @@
     </div>
     <!--ico area end-->
 
-    <div class="container">
+
+    <div class=" chart-area">
         <br><br>
-        <canvas id="bar-chart" class="mx-auto justify-content-center" ></canvas>
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="heading">
+                    <!-- <h5>core team</h5> -->
+                    <div class="space-10"></div>
+                    <h1>نمودار</h1>
+                </div>
+                <div class="space-60"></div>
+            </div>
+        </div>
+        <canvas dir="ltr" id="bar-chart" class="mx-auto justify-content-center" ></canvas>
     </div>
+    <br><br>
 
     <!--team-bg-->
-    <div id="team" class="team-bg">
+    <div id="team" class="team-bg" style="background-color: #93bbe5;">
         <!--team area start-->
         <div id="tables" class="team-area wow fadeInUp section-padding" >
             <div class="container">
@@ -663,14 +693,6 @@
         </div>
     </div>
     <!--community area end-->
-
-
-
-        <!-- <div>
-            <canvas id="myChart"></canvas>
-        </div>
-       -->
-
 
 
     <script src="./node_modules/chart.js/dist/chart.js"></script>
