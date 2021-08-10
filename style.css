@@ -96,9 +96,19 @@ legend{
   font-family: iransans;
   color: #f9748f;
   color: #ffffff;
-  
 }
 
+legend.variable{
+  margin-right: 50px;
+  margin-bottom: 20px;
+}
+.varanswer{
+  border: #0c4128;
+  border-style: solid;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+}
 input[type=text]:focus {
   background-color: #0042de;
   color: white;

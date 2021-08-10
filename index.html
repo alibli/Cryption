@@ -172,6 +172,9 @@
               <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">فرضیات</button>
             </li>
             <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-variable-tab" data-bs-toggle="pill" data-bs-target="#pills-variable" type="button" role="tab" aria-controls="pills-home" aria-selected="true">هزینه های متغیر سالانه</button>
+            </li>
+            <li class="nav-item" role="presentation">
               <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">قیمت ها</button>
             </li>
             <li class="nav-item" role="presentation">
@@ -326,6 +329,82 @@
                         </div>
 
                         <div id="Answerz" class="answer col-12 text-center">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="pills-variable" role="tabpanel" aria-labelledby="pills-home-tab">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <div class="ico-heading">
+                                <h1>هزینه های متغیر سالانه</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-60"></div>
+                    <div class="row">
+
+            <form class="container" >
+                <div class=" row form">
+                    <div class="row col-lg-4 col-sm-12">
+                        <legend class="variable" style="text-align : center ">بذر</legend>
+                        <div class="col-lg-6 col-sm-12" >
+                            <input id="seedamount" type="text" class="form-control form-cell" placeholder="مقدار بذر مصرف شده" >
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <input id="seed price" type="text" class="form-control form-cell" placeholder="هزینه هر کیلو بذر" >
+                        </div>
+                    </div>
+                    <div class="row col-lg-4 col-sm-12">
+                        <legend class="variable" style="text-align : center ">سم</legend>
+                        <div class="col-lg-6 col-sm-12" >
+                            <input id="poisonamount" type="text" class="form-control form-cell" placeholder="مقدار سم مصرف شده" >
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <input id="poisonprice" type="text" class="form-control form-cell" placeholder="هزینه هر کیلو سم" >
+                        </div>
+                    </div>
+                    <div class="row col-lg-4 col-sm-12">
+                        <legend class="variable" style="text-align : center ">کود</legend>
+                        <div class="col-lg-6 col-sm-12" >
+                            <input id="fertilizeramount" type="text" class="form-control form-cell" placeholder="مقدار کود مصرف شده" >
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <input id="fertilizerprice" type="text" class="form-control form-cell" placeholder="هزینه هر کیلو کود" >
+                        </div>
+                    </div>
+                </div>
+            </form>
+                        <br><br><br>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <a  onclick="calcv()"  class="gradient-btn v2">محاسبه</a>
+                        </div>
+
+                        <br><br>
+
+                        <div class="row">
+
+                            <div class="col-lg-4 col-sm-12 varanswer" id="seed" >
+
+                            </div>
+                            <div class="col-lg-4 col-sm-12 varanswer" id="poison">
+
+                            </div>
+                            <div class="col-lg-4 col-sm-12 varanswer" id="fertilizer">
+
+                            </div>
+                        </div>
+
+                        <div id="Answervar" class="answer col-12 text-center">
                         </div>
 
                     </div>
@@ -519,7 +598,6 @@
 
             </div>
         </div>
-
 
     </div>
     <!--ico area end-->

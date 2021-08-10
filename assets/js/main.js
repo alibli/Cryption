@@ -43,7 +43,7 @@
         }
     });
 
-        
+
     //roadmap carosusel active
     $(".roadmap-carousel").owlCarousel({
        loop:true,
@@ -86,7 +86,7 @@
     });
         //animation active
     new WOW().init();
-    //menu scrollr    
+    //menu scrollr
     $('.main-menu li a').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
     && location.hostname == this.hostname) {
@@ -102,9 +102,9 @@
     }
   });
 
-    //scrolling menu adding active class 
+    //scrolling menu adding active class
     var scrolllink = $('.scroll');
-    
+
     $(window).scroll(function(){
         var scrollbarLocation = $(this).scrollTop();
         scrolllink.each(function(){
@@ -139,11 +139,11 @@
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         // Display the result in the element with id="demo"
-            //ali commentted these lines :
-       	// document.getElementById("days").innerHTML = days;  
-        // document.getElementById("hours").innerHTML = hours;
-        // document.getElementById("minutes").innerHTML = minutes;
-        // document.getElementById("seconds").innerHTML = seconds;
+        //     ali commentted these lines :
+       	document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
 
         // If the count down is finished, write some text
         if (distance < 0) {
@@ -270,14 +270,14 @@
     );
 
   });
-    jQuery(window).on("load", function() { 
-    
+    jQuery(window).on("load", function() {
+
     //skroll active
     skrollr.init({
       forceHeight: false
     });
-  
-    
+
+
     });
 
 })(jQuery);

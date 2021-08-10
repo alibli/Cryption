@@ -50,6 +50,36 @@ function calc1(){
     }
 }
 
+function calcv(){
+
+    let seeda = document.getElementById("seedamount").value;
+    let seedp = document.getElementById("seed price").value;
+    let poisona = document.getElementById("poisonamount").value;
+    let poisonp = document.getElementById("poisonprice").value;
+    let fertilizera = document.getElementById("fertilizeramount").value;
+    let fertilizerp = document.getElementById("fertilizerprice").value;
+
+    let seed = document.getElementById("seed");
+    let poison = document.getElementById("poison");
+    let fertil = document.getElementById("fertilizer");
+
+    seed.innerHTML = " هزینه بذر: " + seeda * seedp ;
+    poison.innerHTML = " هزینه سم: " +  poisona * poisonp;
+    fertil.innerHTML = " هزینه کود: " + fertilizera * fertilizerp;
+
+
+
+    console.log(seeda*seedp)
+    console.log(seed.innerHTML)
+    // if (!isNaN(answer.innerHTML)){
+    //     answer.innerHTML = "لطفا تمام فیلد ها را پر کنید";
+    //     answer.style.color = 'darkred'
+    // }else{
+    //     answer.innerHTML =  "اطلاعات با موفقیت ثبت شد"
+    //     answer.style.color = 'white'
+    // }
+}
+
 function calc2(){
 
     let farmprepare = document.getElementById('farmprepare').value;
