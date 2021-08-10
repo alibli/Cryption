@@ -59,6 +59,7 @@ function calcv(){
     let fertilizera = document.getElementById("fertilizeramount").value;
     let fertilizerp = document.getElementById("fertilizerprice").value;
 
+    let answerval = document.getElementById("Answervar");
     let seed = document.getElementById("seed");
     let poison = document.getElementById("poison");
     let fertil = document.getElementById("fertilizer");
@@ -66,8 +67,6 @@ function calcv(){
     seed.innerHTML = " هزینه بذر: " + seeda * seedp ;
     poison.innerHTML = " هزینه سم: " +  poisona * poisonp;
     fertil.innerHTML = " هزینه کود: " + fertilizera * fertilizerp;
-
-
 
     console.log(seeda*seedp)
     console.log(seed.innerHTML)

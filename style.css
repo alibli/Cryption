@@ -102,9 +102,19 @@ legend.variable{
   margin-right: 50px;
   margin-bottom: 20px;
 }
+#seed{
+  width: 520px;
+}
+#poison{
+  width: 280px;
+}
+#fertilizer{
+  width: 350px;
+  text-align: left;
+}
 .varanswer{
-  border: #0c4128;
-  border-style: solid;
+  /*border: #0c4128;*/
+  /*border-style: solid;*/
   text-align: center;
   margin-top: 20px;
   color: white;
