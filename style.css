@@ -85,9 +85,18 @@ h6
 {
 	color: #fff;
 	font-family: 'Montserrat', sans-serif;
-    font-family: 'iransans';
+  font-family: 'iransans';
 	text-transform: capitalize;
 }
+
+#calculate{
+
+  height: 600px;
+  
+  margin: 10px;
+
+}
+
 @font-face {
   font-family: 'iransans';
   src: url('assets/fonts/IRANSans_Medium.ttf');
@@ -102,22 +111,21 @@ legend.variable{
   margin-right: 50px;
   margin-bottom: 20px;
 }
-/*#seed{*/
-/*  width: 520px;*/
-/*}*/
-/*#poison{*/
-/*  width: 280px;*/
-/*}*/
-/*#fertilizer{*/
-/*  width: 350px;*/
-/*  text-align: left;*/
-/*}*/
+/* #seed{
+  width: 520px;
+}
+#poison{
+  width: 280px;
+}
+#fertilizer{
+  width: 350px;
+  text-align: left;
+} */
 .varanswer{
   /*border: #0c4128;*/
   /*border-style: solid;*/
   text-align: center;
-  margin-top: 40px;
-
+  margin-top: 20px;
   color: white;
 }
 input[type=text]:focus {
@@ -341,7 +349,7 @@ a.single-about,
 }
 
 .welcome-btn {
-  margin-right: 10px;
+  /* margin-right: 10px; */
 }
 
 .welcome-area::before {
@@ -418,7 +426,7 @@ a.single-about,
 .about-mid-img {
   position: relative;
   left: -18%;
-  margin-right: 30px;
+  /* margin-right: 30px; */
   width: 580px;
 }
 
@@ -1885,7 +1893,7 @@ a.gradient-btn:hover:after{
 .form-cell {
   background-color : #062489 ;
    caret-color : #F0F0F0	;
-   margin-right : 50px;
+   /* margin-right : 50px; */
    
 }
 

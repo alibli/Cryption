@@ -4,7 +4,7 @@
     <title>امکان سنجی بهشتی</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- carousel CSS -->
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
@@ -31,7 +31,7 @@
 
       
     <!--header area start-->
-    <div class="header-area wow fadeInDown header-absolate" id="nav" data-0="position:fixed;" data-top-top="position:fixed;top:0;" data-edge-strategy="set">
+    <div class="header-area wow fadeInDown header-absolate" id="nav"  data-top-top="position:fixed;top:0;" data-edge-strategy="set">
         <div class="container">
             <div class="row">
                 <div class="col-4 d-block d-lg-none">
@@ -39,7 +39,7 @@
                 </div>
                 <div class="col-4 col-lg-2">
                     <div class="logo-area">
-                        <a href="#"><img src="assets/img/logo-top.png" alt=""></a>
+                        <a href="#"><img src="assets/img/logo-top.png" alt="FS"></a>
                     </div>
                 </div>
                 <div class="col-4 col-lg-8 d-none d-lg-block">
@@ -72,7 +72,7 @@
 
     <!--welcome area start-->
 
-    <div class="welcome-area wow fadeInUp" id="home">
+    <div class="welcome-area wow fadeInUp container" id="home">
         <div id="particles-js"></div>
         <div class="container">
             <div class="row">
@@ -108,7 +108,7 @@
     <div class="single-about-area wow fadeInUp">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-sm-12">
                     <a href="#" class="single-about">
                         <div class="single-about-img">
                             <img src="assets/img/about-icon-2.png" alt="">
@@ -125,7 +125,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-sm-12">
                     <a href="#" class="single-about">
                         <div class="single-about-img">
                             <img src="assets/img/about-icon-1.png" alt="">
@@ -139,7 +139,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-sm-12">
                     <a href="#" class="single-about">
                         <div class="single-about-img">
                             <img src="assets/img/about-icon-3.png" alt="">
@@ -161,11 +161,10 @@
 
     <!--calculate area start-->
 
-    <div class="team-bg" style="background-color: #93bbe5;">
 
-    <div id="calculate" class="section-padding wow fadeInUp ico-area">
+    <div id="calculate" class="section-padding wow fadeInUp ico-area row">
 
-        <ul class="nav nav-pills mb-2 mx-auto justify-content-center" id="pills-tab" role="tablist">
+        <ul class="nav nav-pills mb-2 mx-auto justify-content-center container row col-lg-2 col-md-2" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="pills-general-tab" data-bs-toggle="pill" data-bs-target="#pills-general" type="button" role="tab" aria-controls="pills-home" aria-selected="true">اطلاعات کلی</button>
             </li>
@@ -185,7 +184,7 @@
                 <button class="nav-link" id="pills-contact-tab2" data-bs-toggle="pill" data-bs-target="#pills-contact2" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">مدل</button>
             </li>
         </ul> <br><br><br>
-        <div class="tab-content" id="pills-tabContent">
+        <div class="tab-content col-lg-10 col-md-10" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-general" role="tabpanel" aria-labelledby="pills-home-tab">
 
                 <div class="container">
@@ -199,14 +198,15 @@
                     <div class="space-60"></div>
                     <div class="row">
         
-            <form class="container" >
+            <form class="container justify-content-center" >
+                
                 <div class="form">
                     <div class="row">
 <!--                        <legend style="text-align : right ">اطلاعات عمومی</legend>-->
-                        <div class="col-lg-6 col-sm-12" >
-                            <input id="projectname" type="text" class="form-control form-cell" placeholder="نام پروژه" required>
+                        <div class="col" >
+                            <input style="margin-left: 10px;" id="projectname" type="text" class="form-control form-cell" placeholder="نام پروژه" required>
                         </div>
-                        <div class="col-lg-6 col-sm-12">
+                        <div class="col">
                             <select name="cars" id="product">
                                 <option class="dropdown-first" value="-1"  selected hidden>محصول اصلی</option>
                                 <option value="1">گندم</option>
@@ -216,7 +216,9 @@
                         </div>
                     </div>
                 </div>
+
                 </br>
+                
                 <div class="form">
                     <div class="row">
 <!--                        <legend style="text-align : right ">مفروضات هزینه های درصدی</legend>-->
@@ -349,12 +351,23 @@
                     <div class="space-60"></div>
                     <div class="row">
 
+                        <form class="container" >
+                            
+                            <div class="row form">
+                                <div class="row col-lg-4 col-sm-12">
+                                    <legend class="variable" style="text-align : center ">بذر</legend>
+                                </div>
+                                <div class="row col-lg-4 col-sm-12">
+                                    <legend class="variable" style="text-align : center ">سم</legend>
+                                </div>
+                                <div class="row col-lg-4 col-sm-12">
+                                    <legend class="variable" style="text-align : center ">کود</legend>
+                                </div>
+                            </div>
 
-            <form class="container" >
-
-                <div class=" row form">
-                    <div class="row col-lg-4 col-sm-12">
-                        <legend class="variable" style="text-align : center ">بذر</legend>
+                            <div class=" row form">
+                                <div class="row col-lg-4 col-sm-12">
+                        <!-- <legend class="variable" style="text-align : center ">بذر</legend> -->
                         <div class="col-lg-6 col-sm-12" >
                             <input id="seedamount" type="text" class="form-control form-cell" placeholder="مقدار بذر مصرف شده" >
                         </div>
@@ -363,7 +376,7 @@
                         </div>
                     </div>
                     <div class="row col-lg-4 col-sm-12">
-                        <legend class="variable" style="text-align : center ">سم</legend>
+                        <!-- <legend class="variable" style="text-align : center ">سم</legend> -->
                         <div class="col-lg-6 col-sm-12" >
                             <input id="poisonamount" type="text" class="form-control form-cell" placeholder="مقدار سم مصرف شده" >
                         </div>
@@ -372,7 +385,7 @@
                         </div>
                     </div>
                     <div class="row col-lg-4 col-sm-12">
-                        <legend class="variable" style="text-align : center ">کود</legend>
+                        <!-- <legend class="variable" style="text-align : center ">کود</legend> -->
                         <div class="col-lg-6 col-sm-12" >
                             <input id="fertilizeramount" type="text" class="form-control form-cell" placeholder="مقدار کود مصرف شده" >
                         </div>
@@ -386,6 +399,7 @@
                     </div>
 
 
+
                     <div class="row">
                         <div class="col-12 text-center">
                             <a  onclick="calcv()"  class="gradient-btn v2">محاسبه</a>
@@ -394,17 +408,9 @@
                         <br><br>
 
                         <div class="row">
-
-
-                            <div class="col-lg-4 col-sm-12 varanswer" id="seed" >
-
-                            </div>
-                            <div class="col-lg-4 col-sm-12 varanswer" id="poison">
-
-                            </div>
-                            <div class="col-lg-4 col-sm-12 varanswer" id="fertilizer">
-
-                            </div>
+                            <div class="col-lg-4 col-sm-12 varanswer" id="seed" ></div>
+                            <div class="col-lg-4 col-sm-12 varanswer" id="poison"></div>
+                            <div class="col-lg-4 col-sm-12 varanswer" id="fertilizer"></div>
                         </div>
 
                     </div>
@@ -599,8 +605,6 @@
 
             </div>
         </div>
-
-    </div>
 
     </div>
     <!--ico area end-->
