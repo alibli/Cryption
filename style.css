@@ -1921,3 +1921,8 @@ input[type="text"].form-cell::-webkit-input-placeholder {
  /* background-color: #93bbe5; */
   background-color: #668aff;
 }
+
+.pre-next-btn{
+  margin: auto;
+
+}

@@ -233,3 +233,54 @@ new Chart(document.getElementById("bar-chart"), {
         }
     }
 });
+
+// 2 Mehr 1400
+    btns = document.getElementsByClassName('nav-link');
+    tabPane = document.getElementsByClassName('tab-pane');
+
+    function next() {
+        document.getElementById('prevBtnId').disabled = false;
+
+        for (let i = 0; i < btns.length - 1 ; i++){
+            if (btns[i].classList.contains('active')){
+                btns[i].classList.remove('active');
+                btns[i].ariaSelected = false;
+                tabPane[i].classList.remove('active');
+                tabPane[i].classList.remove('show');
+
+                btns[i+1].classList.add('active');
+                btns[i+1].ariaSelected = true;
+                tabPane[i+1].classList.add('active');
+                tabPane[i+1].classList.add('show');
+                if (btns[5].classList.contains('active')){
+                    document.getElementById('nextBtnId').disabled = true;
+                }
+                break;
+            }
+        }
+    }
+
+    function prev() {
+        document.getElementById('nextBtnId').disabled = false;
+
+        for (let i = 1 ; i < btns.length ; i++){
+            if (btns[i].classList.contains('active')){
+                btns[i].classList.remove('active');
+                btns[i].ariaSelected = false;
+                tabPane[i].classList.remove('active');
+                tabPane[i].classList.remove('show');
+
+                btns[i-1].classList.add('active');
+                btns[i-1].ariaSelected = true;
+                tabPane[i-1].classList.add('active');
+                tabPane[i-1].classList.add('show');
+                if (btns[0].classList.contains('active')){
+                    document.getElementById('prevBtnId').disabled = true;
+                }
+                break;
+            }
+        }
+    }
+if (btns[0].classList.contains('active')){
+    document.getElementById('prevBtnId').disabled = true;
+}
