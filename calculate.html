@@ -311,19 +311,19 @@
                             
                             <div class="row form">
                                 <div class="row col-lg-4 col-sm-12">
-                                    <legend class="variable" style="text-align : center ">بذر</legend>
+                                    <legend class="variable" >بذر</legend>
                                 </div>
                                 <div class="row col-lg-4 col-sm-12">
-                                    <legend class="variable" style="text-align : center ">سم</legend>
+                                    <legend class="variable" >سم</legend>
                                 </div>
                                 <div class="row col-lg-4 col-sm-12">
-                                    <legend class="variable" style="text-align : center ">کود</legend>
+                                    <legend class="variable" >کود</legend>
                                 </div>
                             </div>
 
                             <div class=" row form">
                                 <div class="row col-lg-4 col-sm-12">
-                        <!-- <legend class="variable" style="text-align : center ">بذر</legend> -->
+<!--                         <legend class="variable" style="text-align : center ">بذر</legend>-->
                         <div class="col-lg-6 col-sm-12" >
                             <label for="seedamount">مقدار بذر مصرف شده</label>
                             <input id="seedamount" type="text" class="form-control form-cell" placeholder="" >
@@ -356,6 +356,40 @@
                         </div>
                     </div>
                 </div>
+
+<br><br>
+                            <div class="row form">
+                                <div class="row col-lg-4 col-sm-12">
+                                    <legend class="variable" >پرسنل</legend>
+                                </div>
+                                <div class="row col-lg-4 col-sm-12">
+                                    <legend class="variable" >سایر</legend>
+                                </div>
+                            </div>
+
+
+                            <div class=" row form">
+                                <div class="row col-lg-4 col-sm-12">
+                                    <!--                         <legend class="variable" style="text-align : center ">بذر</legend>-->
+                                    <div class="col-lg-8 col-sm-12" >
+                                        <label for="salary">حقوق پرسنل</label>
+                                        <input id="salary" type="text" class="form-control form-cell" placeholder="" >
+                                    </div>
+
+                                </div>
+
+                                <div class="row col-lg-4 col-sm-12">
+                                    <!-- <legend class="variable" style="text-align : center ">سم</legend> -->
+                                    <div class="col-lg-8 col-sm-12" >
+                                        <label for="othercosts">سایر هزینه‌ها</label>
+                                        <input id="othercosts" type="text" class="form-control form-cell" placeholder="" >
+                                    </div>
+                                    <div class="col-lg-6 col-sm-12">
+<!--                                        <label for="poisonprice">هزینه هر کیلو سم</label>-->
+<!--                                        <input id="poisonprice" type="text" class="form-control form-cell" placeholder="" >-->
+                                    </div>
+                                </div>
+                                </div>
             </form>
                         <br><br><br>
                     </div>
@@ -584,12 +618,14 @@
 
             </div>
 
-            <button id="prevBtnId" class="btn btn-success pre-next-btn text-center" onclick="prev()">prev</button>
-            <button id="nextBtnId" class="btn btn-success pre-next-btn text-center" onclick="next()">next</button>
-
         </div>
         <!-- End of calculator aria -->
     </div>
+    <div class="mx-auto justify-content-center">
+            <button id="prevBtnId" class="btn btn-success pre-next-btn text-center" onclick="prev()">prev</button>
+            <button id="nextBtnId" class="btn btn-success pre-next-btn text-center" onclick="next()">next</button>
+    </div>
+
     <!--ico area end-->
 
 
