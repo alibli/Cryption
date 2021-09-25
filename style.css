@@ -66,35 +66,35 @@ css list:
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,800');
 
 body{
-	background: #062489;
-	background: #668aff;      
+	/*background: #062489;*/
+	background: #edffef;  /*main background*/
 	font-family: 'Montserrat', sans-serif;
 	font-family: 'iransans';
 	font-size: 14px;
-	color: #cbe5ff;
+	color: #52ef67;   /*رنگ لیبل های قسمت محاسبات*/
   overflow-x: hidden;
 
 }
 
-h1,
 h2,
 h3,
 h4,
 h5,
 h6
 {
-	color: #fff;
+	/*color: #fff;*/
+  color: #1f1f1f;
 	font-family: 'Montserrat', sans-serif;
   font-family: 'iransans';
 	text-transform: capitalize;
 }
+h1{
+  color: #16a031;
+}
 
 #calculate{
-
   height: 600px;
-  
   margin: 10px;
-
 }
 
 @font-face {
@@ -129,7 +129,7 @@ legend.variable{
   color: white;
 }
 input[type=text]:focus {
-  background-color: #0042de;
+  background-color: #c3cb38;
   color: white;
 }
 
@@ -160,12 +160,17 @@ button{
 }
 select{
   color: white;
-  background-color: #062489;
+  background-color: #16a031;
   margin-right: 50px;
   width: 500px;
   height: 35px;
   border-radius: 3px;
 }
+
+select:focus{
+  background-color: #c3cb38;
+}
+
 canvas#bar-chart{
   width: 500px;
   height: 250px;
@@ -260,7 +265,7 @@ a.single-about,
 
 .header-area.header-absolate.skrollable.skrollable-after {
   padding-top: 15px;
-  background: #000D47;
+  background: #127437;
   padding-bottom: 15px;
 }
 
@@ -271,14 +276,14 @@ a.single-about,
 }
 
 .main-menu li.active a{
-  color: #26754a;
+  color: #f6ff41;
 }
 
 .main-menu li a {
   display: block;
   padding: 10px;
   font-size: 20px;
-  color: #fff;
+  color: #1c1c1c;
   text-transform: capitalize;
   margin-left: 55px;
 }
@@ -450,7 +455,7 @@ a.single-about {
   color: #cbe5ff;
   display: block;
   padding: 50px 25px;
-  background: #1938a2;
+  background: #16a031; /*بک گراند*/
   text-align: center;
   -webkit-transform: translateY(0px);
   -ms-transform: translateY(0px);
@@ -458,7 +463,7 @@ a.single-about {
 }
 
 a.single-about:hover {
-  background: #122e91;
+  background: #c3cb38;  /*hover بک گراند*/
   -webkit-transform: translateY(-5px);
   -ms-transform: translateY(-5px);
   transform: translateY(-5px);
@@ -470,7 +475,7 @@ ico area css
 
 .ico-area {
   /*background: #031b69;*/
-  background: #93bbe5;
+  background: #ececec;  /*ico area background*/
   /* //rang */
 }
 
@@ -917,6 +922,8 @@ team bg area css
 .team-bg {
   position: relative;
   z-index: 2;
+  /*background-color: #93bbe5;*/
+  background-color: #ececec;
 }
 
 .team-bg::after {
@@ -1073,7 +1080,7 @@ community area css
 .community-area {
   position: relative;
   z-index: 2;
-  background: #668aff;
+  background: #127437;  /*footer color*/
   overflow:hidden;
 }
 
@@ -1891,7 +1898,8 @@ a.gradient-btn:hover:after{
 /*===================================== end =================================*/
 
 .form-cell {
-  background-color : #062489 ;
+  /*background-color : #062489 ;*/
+  background-color: #16a031; /*بک گراند*/
    caret-color : #F0F0F0	;
    /* margin-right : 50px; */
    
@@ -1901,7 +1909,6 @@ a.gradient-btn:hover:after{
   background-color : #99c4ef;
   
 }
-
 
 #main-text{
   line-height: 35px;
@@ -1919,10 +1926,26 @@ input[type="text"].form-cell::-webkit-input-placeholder {
 
 .chart-area{
  /* background-color: #93bbe5; */
-  background-color: #668aff;
+  background-color: #edffef;
 }
 
 .pre-next-btn{
   margin: auto;
 
+}
+
+/*overwrite bootstrap class :*/
+.nav-link{
+  color: #16a031;
+}
+.nav-pills .nav-link.active{
+  background-color: #e7ef3d;
+}
+
+.nav-link:focus , .nav-link:hover{
+  color: #e7ef3d;
+}
+
+legend{
+  color: #16a031;
 }
