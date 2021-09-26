@@ -55,46 +55,134 @@ css list:
 
 /*===================
      base css
+
+     #668aff
+     #93bbe5
+
 =====================*/
+
+
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,800');
 
 body{
-	background: #062489;
+	/*background: #062489;*/
+	background: #edffef;  /*main background*/
 	font-family: 'Montserrat', sans-serif;
+	font-family: 'iransans';
 	font-size: 14px;
-	color: #cbe5ff;
+	color: #52ef67;   /*رنگ لیبل های قسمت محاسبات*/
   overflow-x: hidden;
 
 }
 
-h1,
 h2,
 h3,
 h4,
 h5,
 h6
 {
-	color: #fff;
+	/*color: #fff;*/
+  color: #1f1f1f;
 	font-family: 'Montserrat', sans-serif;
+  font-family: 'iransans';
 	text-transform: capitalize;
 }
+h1{
+  color: #16a031;
+}
+
+#calculate{
+<<<<<<< HEAD
+  height: 600px;
+=======
+
+  height: 650px;
+  
+>>>>>>> 01a589e2b12d0961bc772fa16af971f5dcf3baa7
+  margin: 10px;
+}
+
 @font-face {
   font-family: 'iransans';
   src: url('assets/fonts/IRANSans_Medium.ttf');
 }
 legend{
   font-family: iransans;
+  color: #f9748f;
+  color: #ffffff;
 }
 
+legend.variable{
+  /*margin-right: 50px;*/
+  margin-bottom: 20px;
+}
+/* #seed{
+  width: 520px;
+}
+#poison{
+  width: 280px;
+}
+#fertilizer{
+  width: 350px;
+  text-align: left;
+} */
+.varanswer{
+  /*border: #0c4128;*/
+  /*border-style: solid;*/
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+}
 input[type=text]:focus {
-  background-color: #0042de;
+  background-color: #c3cb38;
+  color: white;
+}
+
+input[type=text] {
+  /*background-color: #0042de;*/
+  color: white;
 }
 
 .form-cell::placeholder{
   color: white;
 }
 
+#Answerz{
+  color: white;
+  display: inline;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.answer{
+  color: white;
+  display: inline;
+  margin-top: 30px;
+  text-align: center;
+}
+button{
+  margin-right: 50px;
+}
+select{
+  color: white;
+  background-color: #16a031;
+  margin-right: 50px;
+  width: 500px;
+  height: 35px;
+  border-radius: 3px;
+}
+
+select:focus{
+  background-color: #c3cb38;
+}
+
+canvas#bar-chart{
+  width: 500px;
+  height: 250px;
+  background-color: rgb(170, 207, 243);
+  position: center;
+}
 
 ul{
   margin: 0;
@@ -104,6 +192,7 @@ ul{
 
 a, a:hover{
   text-decoration: none;
+  cursor: grab;
 }
 
 input:focus, button:focus, textarea:focus {
@@ -113,6 +202,10 @@ input:focus, button:focus, textarea:focus {
 input, textarea{
   color: #fff;
   text-transform: capitalize;
+}
+
+.dropdown-first{
+  color: rgba(255, 255, 255, 0.5) !important ;
 }
 
 a.gradient-btn:hover:after, 
@@ -178,7 +271,7 @@ a.single-about,
 
 .header-area.header-absolate.skrollable.skrollable-after {
   padding-top: 15px;
-  background: #000D47;
+  background: #127437;
   padding-bottom: 15px;
 }
 
@@ -189,15 +282,16 @@ a.single-about,
 }
 
 .main-menu li.active a{
-  color: #FB9A8C;
+  color: #f6ff41;
 }
 
 .main-menu li a {
   display: block;
   padding: 10px;
-  font-size: 14px;
-  color: #fff;
+  font-size: 20px;
+  color: #1c1c1c;
   text-transform: capitalize;
+  margin-left: 55px;
 }
 
 .main-menu li ul {
@@ -205,7 +299,7 @@ a.single-about,
   left: 0;
   top: 70px;
   z-index: 999;
-  background: #001763;
+  background: #062489;
   border-radius: 5px;
   visibility: hidden;;
   opacity: 1;
@@ -221,7 +315,7 @@ a.single-about,
 
 .main-menu li ul li a:hover {
   background: #062489;
-  padding-left: 15px;
+  padding-left: 25px;
 }
 
 .main-menu li:hover ul {
@@ -266,7 +360,7 @@ a.single-about,
 }
 
 .welcome-btn {
-  margin-right: 10px;
+  /* margin-right: 10px; */
 }
 
 .welcome-area::before {
@@ -275,7 +369,7 @@ a.single-about,
   height: 161%;
   content: "";
   background: url(assets/img/Group1.png) no-repeat;
-  background: ;
+  /* background: ; */
   top: -62%;
   left: -29%;
   z-index: -1;
@@ -343,7 +437,7 @@ a.single-about,
 .about-mid-img {
   position: relative;
   left: -18%;
-  margin-right: 30px;
+  /* margin-right: 30px; */
   width: 580px;
 }
 
@@ -367,7 +461,7 @@ a.single-about {
   color: #cbe5ff;
   display: block;
   padding: 50px 25px;
-  background: #1938a2;
+  background: #16a031; /*بک گراند*/
   text-align: center;
   -webkit-transform: translateY(0px);
   -ms-transform: translateY(0px);
@@ -375,7 +469,7 @@ a.single-about {
 }
 
 a.single-about:hover {
-  background: #122e91;
+  background: #c3cb38;  /*hover بک گراند*/
   -webkit-transform: translateY(-5px);
   -ms-transform: translateY(-5px);
   transform: translateY(-5px);
@@ -386,7 +480,9 @@ ico area css
 ======================*/
 
 .ico-area {
-  background: #031b69;
+  /*background: #031b69;*/
+  background: #ececec;  /*ico area background*/
+  /* //rang */
 }
 
 
@@ -397,12 +493,13 @@ ico area css
 }
 
 .ico-heading h1 a {
-  color: #f9748f;
+  
+  color: #ffffff;
   text-transform: uppercase;
 }
 
 .ico-heading h1 a:hover {
-  color: #F6D266;
+  color: #aaf1e2;
 }
 
 .ico-area h5 {
@@ -412,6 +509,7 @@ ico area css
 
 .single-ico a {
   color: #f9748f;
+  color: #ffffff;
   padding-right: 10px;
   font-size: 18px;
 }
@@ -468,7 +566,7 @@ ico area css
 }
 
 .ico-area {
-  position: relative;
+  /* position: relative; */ /*bug e select nashodane input ha*/
   z-index: 2;
   overflow: hidden;
 }
@@ -568,6 +666,7 @@ Documentation area css
 
 .single-document:hover .single-document-text span {
   color: #FB9A8C;
+  color: #186b0d;
 }
 
 button.single-document-text {
@@ -691,7 +790,7 @@ team area css
 ======================*/
 
 .single-team-img img {
-  border-radius: 35px;
+  border-radius: 20px;
 }
 
 .single-team-content h3 {
@@ -736,6 +835,15 @@ team area css
 .single-team-social li a.ico-3 {
   background: #55acee;
 }
+
+.single-team-social li a.ico-4 { /*ali added*/
+  background: #c9224b;
+}
+
+.single-team-social li a.ico-5 { /*ali added  telegram*/
+  background: #0088cc;
+}
+
 
 /*===================
 faq area css
@@ -820,6 +928,8 @@ team bg area css
 .team-bg {
   position: relative;
   z-index: 2;
+  /*background-color: #93bbe5;*/
+  background-color: #ececec;
 }
 
 .team-bg::after {
@@ -976,7 +1086,7 @@ community area css
 .community-area {
   position: relative;
   z-index: 2;
-  background: #031b69;
+  background: #127437;  /*footer color*/
   overflow:hidden;
 }
 
@@ -1065,6 +1175,7 @@ community area css
 
 .single-community a.behance i {
   background: #B4B4B4;
+  visibility: hidden;
 }
 
 .single-community a.youtube i {
@@ -1449,7 +1560,7 @@ blog page css
   z-index: -1;
 }
 .single-blog-image {
-  background: ;
+  /* background: ; */
   background-position: center !important;
   background-size: cover !important;
   height: 300px;
@@ -1547,7 +1658,7 @@ a.single-blog-top:hover {
   display: block;
   color: #676767;
   background: #f8f8f8;
-  font-size: ;
+  /* font-size: ; */
   text-transform: capitalize;
   height: 40px;
   width: 91px;
@@ -1740,7 +1851,7 @@ a.gradient-btn {
   color: #fff;
   text-transform: uppercase;
   font-weight: 700;
-  background: -webkit-linear-gradient(right,#fe998b,#fa768d,#f78ca0);
+  background: -webkit-linear-gradient(right,#5d96c5,#a1b1e6,#5d96c5);
   padding: 10px 20px;
   border-radius: 5px;
   position: relative;
@@ -1754,7 +1865,7 @@ a.gradient-btn:after {
   left: 0;
   top: 0;
   content: "";
-  background: -webkit-linear-gradient(right,#072487,#fa768d,#fe998b);
+  background: -webkit-linear-gradient(right,#a1b1e6,#5d96c5,#a1b1e6);
   height: 100%;
   width: 100%;
   z-index: -1;
@@ -1779,6 +1890,11 @@ a.gradient-btn:hover:after{
   height: 100%;
   width: 100%;
 }
+.single-team-img{
+  height: 250px;
+  width: 260px;
+  margin-right: 25px;
+}
 
 ::-webkit-input-placeholder{color:#fff}
 :-ms-input-placeholder{color:#fff}
@@ -1788,18 +1904,54 @@ a.gradient-btn:hover:after{
 /*===================================== end =================================*/
 
 .form-cell {
-  background-color : #062489 ;
-   caret-color : white;
-   margin-right : 50px;
+  /*background-color : #062489 ;*/
+  background-color: #16a031; /*بک گراند*/
+   caret-color : #F0F0F0	;
+   /* margin-right : 50px; */
+   
 }
-<<<<<<< HEAD
 
 .form-cell:focus{
   background-color : #99c4ef;
+  
 }
 
-::placeholder{
-  color : red ;
+#main-text{
+  line-height: 35px;
+  text-align :right;
 }
-=======
->>>>>>> 3e4dae8bc7287b31f9ef56741331fdaee608859f
+.tahlil-text{
+  line-height: 30px;
+  text-align: right;
+}
+
+input[type="text"].form-cell::-webkit-input-placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+.chart-area{
+ /* background-color: #93bbe5; */
+  background-color: #edffef;
+}
+
+.pre-next-btn{
+  margin: auto;
+
+}
+
+/*overwrite bootstrap class :*/
+.nav-link{
+  color: #16a031;
+}
+.nav-pills .nav-link.active{
+  background-color: #e7ef3d;
+}
+
+.nav-link:focus , .nav-link:hover{
+  color: #e7ef3d;
+}
+
+legend{
+  color: #16a031;
+}
