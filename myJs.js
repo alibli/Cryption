@@ -164,12 +164,22 @@ function calc4(){
 
     let answer = document.getElementById("Answer4");
 
+    // let seedp = parseInt(document.getElementById("seed price").value);
+    let tavarom = 1.15;
+    seedp = 45000;
+    const cashflow = [0];
+    console.log(seedp);
 
-    const cashflow = [parseInt(b0), parseInt(b1), parseInt(b2), parseInt(b3), parseInt(b4)];
+    for (let i = 2; i < 6; i++) {
+        cashflow.push(seedp*Math.pow(tavarom, i));
+        console.log(seedp*Math.pow(tavarom, i));
+    }
 
-    const NPV = (cashflow, discountRate) => cashflow
-        .reduce((acc, val, i) => acc + val / Math.pow((1 + discountRate), i), 0);
-    console.log(NPV(cashflow, return_percent)); // 476.19047619047524
+    // const cashflow = [parseInt(b0), parseInt(b1), parseInt(b2), parseInt(b3), parseInt(b4)];
+
+    // const NPV = (cashflow, discountRate) => cashflow
+    //     .reduce((acc, val, i) => acc + val / Math.pow((1 + discountRate), i), 0);
+    // console.log(NPV(cashflow, return_percent)); // 476.19047619047524
 
     var initialCost = 0;
     var x = getNPV(return_percent, initialCost, cashflow)
