@@ -93,9 +93,7 @@ h1{
 }
 
 #calculate{
-
-  height: 650px;
-  
+  height: 500px;
   margin: 10px;
 }
 
@@ -372,8 +370,10 @@ a.single-about,
 }
 
 .gradient-btn.v2 {
-  height: 55px;
-  line-height: 36px;
+  height: 50px;
+  width: 200px;
+  font-size: 18px;
+  line-height: 30px;
   padding-left: 30px;
   padding-right: 30px;
   margin-top : 40px;
@@ -1847,7 +1847,7 @@ a.gradient-btn {
   color: #fff;
   text-transform: uppercase;
   font-weight: 700;
-  background: -webkit-linear-gradient(right,#5d96c5,#a1b1e6,#5d96c5);
+  background: -webkit-linear-gradient(right, #bcbe3d, #edf53f, #bcbe3d);
   padding: 10px 20px;
   border-radius: 5px;
   position: relative;
@@ -1861,7 +1861,7 @@ a.gradient-btn:after {
   left: 0;
   top: 0;
   content: "";
-  background: -webkit-linear-gradient(right,#a1b1e6,#5d96c5,#a1b1e6);
+  background: -webkit-linear-gradient(right, #43a93c, #34e644, #43a93c);
   height: 100%;
   width: 100%;
   z-index: -1;
