@@ -72,12 +72,14 @@
 
     <!--welcome area start-->
 
-    <div class="welcome-area wow fadeInUp container" id="home">
+    <div class="space-50"></div>
 
-        <div class="container">
+    <div class="welcome-area wow fadeInUp container" id="home" >
 
-            <div class="row">
-                <div class="space-30"></div>
+        <div class="container" >
+
+            <div class="row" >
+
                 <div class="col-12 col-md-6 align-self-center">
 <!--                    <div class="heading">-->
 <!--                        <h5>We are featured in</h5>-->
@@ -90,45 +92,42 @@
 <!--                    <div class="space-30"></div>-->
 <!--                    <a href="#" class="gradient-btn v2 about-btn"> <i class="fa fa-send-o"></i> join us on telegraph</a>-->
                 </div>
-<!--                <div class="col-12 col-md-6">-->
-<!--                    <div class="about-mid-img">-->
-<!--                        <img src="assets/img/about-left.png" alt="">-->
-<!--                    </div>-->
-<!--                </div>-->
-
+                <div class="col-12 col-md-6">
+                    <div class="about-mid-img">
+                        <img src="assets/img/Agricultural4.jpg" alt="">
+                    </div>
+                </div>
             </div>
-
         </div>
     </div>
-
 
     <br>
     <!--welcome area end-->
 
 
-
-
     <!--calculate area start-->
 
-<!-- ali 2mehr  -->
+
+
     <div id="calculate" class="section-padding wow fadeInUp ico-area row">
 
         <ul class="nav nav-pills mb-2 mx-auto justify-content-center container row col-lg-2 col-md-2" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="pills-general-tab" data-bs-toggle="pill" data-bs-target="#pills-general" type="button" role="tab" aria-controls="pills-home" aria-selected="true">اطلاعات کلی</button>
             </li>
+<!--            <li class="nav-item" role="presentation">-->
+<!--                <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">فرضیات</button>-->
+<!--            </li>-->
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">فرضیات</button>
+                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">هزینه های ثابت</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="pills-variable-tab" data-bs-toggle="pill" data-bs-target="#pills-variable" type="button" role="tab" aria-controls="pills-home" aria-selected="true">هزینه های متغیر</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">درآمد ها</button>
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">درآمد ها</button>
             </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">هزینه های ثابت</button>
-            </li>
+
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="pills-contact-tab2" data-bs-toggle="pill" data-bs-target="#pills-contact2" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">مدل</button>
             </li>
@@ -147,334 +146,114 @@
                     </div>
                     <div class="space-60"></div>
                     <div class="row">
-        
-            <form class="container justify-content-center" >
-                
-                <div class="form">
-                    <div class="row">
-<!--                        <legend style="text-align : right ">اطلاعات عمومی</legend>-->
-                        <div class="col" >
-                            <label for="projectname">نام پروژه</label>
-                            <input style="margin-left: 10px;" id="projectname" type="text" class="form-control form-cell" placeholder="" required>
-                        </div>
-                        <div class="col">
-                            <select name="cars" id="product">
-                                <option class="dropdown-first" value="-1"  selected hidden>محصول اصلی</option>
-                                <option value="1">گندم</option>
-                                <option value="2">جو</option>
-                                <option value="3">ذرت</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
 
-                </br>
-                
-                <div class="form">
-                    <div class="row">
-<!--                        <legend style="text-align : right ">مفروضات هزینه های درصدی</legend>-->
-                        <div class="col-lg-6 col-sm-12" >
-                            <label for="productarea">سطح زیر کشت محصول</label>
-                            <input id="productarea" type="text" class="form-control form-cell" placeholder="" required >
-                        </div>
-                        <div class="col-lg-6 col-sm-12">
-                            <select name="provinces" id="city">
-                                <option class="dropdown-first" value="-1"  selected hidden>استان</option>                                
-				                <option value="2">آذربایجان شرقی</option>
-				                <option value="3">آذربایجان غربی</option>
-				                <option value="4">اردبیل</option>
-				                <option value="5">اصفهان</option>
-				                <option value="6">البرز</option>
-				                <option value="7">ایلام</option>
-				                <option value="8">بوشهر</option>
-				                <option value="9">تهران</option>
-				                <option value="10">چهار محال و بختیاری</option>
-				                <option value="11">خراسان جنوبی</option>
-				                <option value="12">خراسان رضوی</option>
-				                <option value="13">خراسان شمالی</option>
-				                <option value="14">خوزستان</option>
-				                <option value="15">زنجان</option>
-				                <option value="16">سمنان</option>
-				                <option value="17">سیستان و بلوچستان</option>
-				                <option value="18">فارس</option>
-				                <option value="19">قزوین</option>
-				                <option value="20">قم</option>
-				                <option value="21">کردستان</option>
-				                <option value="22">کرمان</option>
-				                <option value="23">کرمانشاه</option>
-				                <option value="24">کهگیلویه و بویراحمد</option>
-				                <option value="25">گلستان</option>
-				                <option value="26">گیلان</option>
-				                <option value="27">لرستان</option>
-				                <option value="28">مازندران</option>
-				                <option value="29">مرکزی</option>
-				                <option value="30">هرمزگان</option>
-				                <option value="31">همدان</option>
-				                <option value="32">یزد</option>
-                            </select>
-<!--                            TODO: using bootstrap dropdown-->
+                        <form class="container justify-content-center" >
 
-
-                        </div>
-                    </div>
-                </div>
-            </form>
-                        <br><br>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <a  onclick="calc1()"  class="gradient-btn v2">محاسبه</a>
-                        </div>
-        
-                        <div id="Answer1" class="answer col-12 text-center">
-                        </div>
-        
-                    </div>
-                </div>
-            </div>
-
-            <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <div class="ico-heading">
-                                <h1>فرضیات</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="space-60"></div>
-                    <div class="row">
-
-            <form class="container" >
-                <div class="form">
-                    <div class="row">
-                        <legend style="text-align : right ">اطلاعات عمومی</legend>
-                        <div class="col-lg-6 col-sm-12" >
-                            <label for="farmArea">مساحت مزرعه</label>
-                            <input id="farmArea" type="text" class="form-control form-cell" placeholder="" >
-                        </div>
-                        <div class="col-lg-6 col-sm-12">
-                            <label for="plantNumber">تعداد کاشت</label>
-                            <input id="plantNumber" type="text" class="form-control form-cell" placeholder="" >
-                        </div>
-                    </div>
-                </div>
-                </br>
-                <div class="form">
-                    <div class="row">
-                        <legend style="text-align : right ">مفروضات هزینه های درصدی</legend>
-                        <div class="col-lg-4 col-sm-12" >
-                            <label for="costPer">درصد هزینه</label>
-                            <input id="costPer" type="text" class="form-control form-cell" placeholder="" >
-                        </div>
-                        <div class="col-lg-4 col-sm-12">
-                            <label for="interstRatio">  ضریب دوره بهره برداری</label>
-                            <input id="interstRatio" type="text" class="form-control form-cell" placeholder="" >
-                        </div>
-                        <div class="col-lg-4 col-sm-12">
-                            <label for="performRatio">ضریب دوره اجرا</label>
-                            <input id="performRatio" type="text" class="form-control form-cell" placeholder="" >
-                        </div>
-                    </div>
-                </div>
-            </form>
-                        <br><br>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <a  onclick="calc()"  class="gradient-btn v2">محاسبه</a>
-                        </div>
-
-                        <div id="Answerz" class="answer col-12 text-center">
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="tab-pane fade" id="pills-variable" role="tabpanel" aria-labelledby="pills-home-tab">
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <div class="ico-heading">
-                                <h1>هزینه های متغیر</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="space-60"></div>
-                    <div class="row">
-
-                        <form class="container" >
-                            
-                            <div class="row form">
-                                <div class="row col-lg-4 col-sm-12">
-                                    <legend class="variable" >بذر</legend>
-                                </div>
-                                <div class="row col-lg-4 col-sm-12">
-                                    <legend class="variable" >سم</legend>
-                                </div>
-                                <div class="row col-lg-4 col-sm-12">
-                                    <legend class="variable" >کود</legend>
-                                </div>
-                            </div>
-
-                            <div class=" row form">
-                                <div class="row col-lg-4 col-sm-12">
-<!--                         <legend class="variable" style="text-align : center ">بذر</legend>-->
-                        <div class="col-lg-6 col-sm-12" >
-                            <label for="seedamount">مقدار بذر مصرف شده</label>
-                            <input id="seedamount" type="text" class="form-control form-cell" placeholder="" >
-                        </div>
-                        <div class="col-lg-6 col-sm-12">
-                            <label for="seedprice">هزینه هر کیلو بذر</label>
-                            <input id="seedprice" type="text" class="form-control form-cell" placeholder="" >
-                        </div>
-                    </div>
-                    <div class="row col-lg-4 col-sm-12">
-                        <!-- <legend class="variable" style="text-align : center ">سم</legend> -->
-                        <div class="col-lg-6 col-sm-12" >
-                            <label for="poisonamount">مقدار سم مصرف شده</label>
-                            <input id="poisonamount" type="text" class="form-control form-cell" placeholder="" >
-                        </div>
-                        <div class="col-lg-6 col-sm-12">
-                            <label for="poisonprice">هزینه هر کیلو سم</label>
-                            <input id="poisonprice" type="text" class="form-control form-cell" placeholder="" >
-                        </div>
-                    </div>
-                    <div class="row col-lg-4 col-sm-12">
-                        <!-- <legend class="variable" style="text-align : center ">کود</legend> -->
-                        <div class="col-lg-6 col-sm-12" >
-                            <label for="fertilizeramount">مقدار کود مصرف شده</label>
-                            <input id="fertilizeramount" type="text" class="form-control form-cell" placeholder="" >
-                        </div>
-                        <div class="col-lg-6 col-sm-12">
-                            <label for="fertilizerprice">هزینه هر کیلو کود</label>
-                            <input id="fertilizerprice" type="text" class="form-control form-cell" placeholder="" >
-                        </div>
-                    </div>
-                </div>
-
-<br><br>
-                            <div class="row form">
-                                <div class="row col-lg-4 col-sm-12">
-                                    <legend class="variable" >پرسنل</legend>
-                                </div>
-                                <div class="row col-lg-4 col-sm-12">
-                                    <legend class="variable" >سایر</legend>
-                                </div>
-                            </div>
-
-
-                            <div class=" row form">
-                                <div class="row col-lg-4 col-sm-12">
-                                    <!--                         <legend class="variable" style="text-align : center ">بذر</legend>-->
-                                    <div class="col-lg-8 col-sm-12" >
-                                        <label for="salary">حقوق پرسنل</label>
-                                        <input id="salary" type="text" class="form-control form-cell" placeholder="" >
-                                    </div>
-
-                                </div>
-
-                                <div class="row col-lg-4 col-sm-12">
-                                    <!-- <legend class="variable" style="text-align : center ">سم</legend> -->
-                                    <div class="col-lg-8 col-sm-12" >
-                                        <label for="othercosts">سایر هزینه‌ها</label>
-                                        <input id="othercosts" type="text" class="form-control form-cell" placeholder="" >
-                                    </div>
-                                    <div class="col-lg-6 col-sm-12">
-<!--                                        <label for="poisonprice">هزینه هر کیلو سم</label>-->
-<!--                                        <input id="poisonprice" type="text" class="form-control form-cell" placeholder="" >-->
-                                    </div>
-                                </div>
-                                </div>
-            </form>
-                        <br><br><br>
-                    </div>
-
-
-
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <a  onclick="calcv()"  class="gradient-btn v2">محاسبه</a>
-                        </div>
-
-                        <br><br>
-
-                        <div class="row">
-                            <div class="col-lg-4 col-sm-12 varanswer" id="seed" ></div>
-                            <div class="col-lg-4 col-sm-12 varanswer" id="poison"></div>
-                            <div class="col-lg-4 col-sm-12 varanswer" id="fertilizer"></div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <div class="ico-heading">
-                                <h1>درآمد ها</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="space-60"></div>
-                    <div class="row">
-
-                        <form class="container" >
                             <div class="form">
                                 <div class="row">
-                                    <legend style="text-align : right ">هزینه های مزرعه</legend>
+                                    <!--                        <legend style="text-align : right ">اطلاعات عمومی</legend>-->
+                                    <div class="col" >
+                                        <label for="projectname">نام پروژه</label>
+                                        <input style="margin-left: 10px;" id="projectname" type="text" class="form-control form-cell" placeholder="" required>
+                                    </div>
+                                    <div class="col">
+                                        <label for="projectname" style="margin-right: 50px">نوع محصول</label>
+                                        <select name="cars" id="product">
+                                            <option class="dropdown-first" value="-1"  selected hidden>محصول اصلی</option>
+                                            <option value="1">گندم</option>
+                                            <option value="2">جو</option>
+                                            <option value="3">ذرت</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            </br>
+
+                            <div class="form">
+                                <div class="row">
+                                    <!--                        <legend style="text-align : right ">مفروضات هزینه های درصدی</legend>-->
                                     <div class="col-lg-6 col-sm-12" >
-                                        <label for="farmprepare">هزینه های آماده سازی زمین</label>
-                                        <input id="farmprepare" type="text" class="form-control form-cell" placeholder="" >
+                                        <label for="productarea">سطح زیر کشت محصول</label>
+                                        <input id="productarea" type="text" class="form-control form-cell" placeholder="" required >
                                     </div>
                                     <div class="col-lg-6 col-sm-12">
-                                        <label for="farmrent">اجاره بها زمین</label>
-                                        <input id="farmrent" type="text" class="form-control form-cell" placeholder="" >
+                                        <label for="projectname" style="margin-right: 50px">استان</label>
+
+                                        <select name="provinces" id="city">
+                                            <option class="dropdown-first" value="-1"  selected hidden>استان</option>
+                                            <option value="2">آذربایجان شرقی</option>
+                                            <option value="3">آذربایجان غربی</option>
+                                            <option value="4">اردبیل</option>
+                                            <option value="5">اصفهان</option>
+                                            <option value="6">البرز</option>
+                                            <option value="7">ایلام</option>
+                                            <option value="8">بوشهر</option>
+                                            <option value="9">تهران</option>
+                                            <option value="10">چهار محال و بختیاری</option>
+                                            <option value="11">خراسان جنوبی</option>
+                                            <option value="12">خراسان رضوی</option>
+                                            <option value="13">خراسان شمالی</option>
+                                            <option value="14">خوزستان</option>
+                                            <option value="15">زنجان</option>
+                                            <option value="16">سمنان</option>
+                                            <option value="17">سیستان و بلوچستان</option>
+                                            <option value="18">فارس</option>
+                                            <option value="19">قزوین</option>
+                                            <option value="20">قم</option>
+                                            <option value="21">کردستان</option>
+                                            <option value="22">کرمان</option>
+                                            <option value="23">کرمانشاه</option>
+                                            <option value="24">کهگیلویه و بویراحمد</option>
+                                            <option value="25">گلستان</option>
+                                            <option value="26">گیلان</option>
+                                            <option value="27">لرستان</option>
+                                            <option value="28">مازندران</option>
+                                            <option value="29">مرکزی</option>
+                                            <option value="30">هرمزگان</option>
+                                            <option value="31">همدان</option>
+                                            <option value="32">یزد</option>
+                                        </select>
+                                        <!--                            TODO: using bootstrap dropdown-->
+
+
                                     </div>
                                 </div>
+
                             </div>
-                            </br></br></br>
+                            <br>
                             <div class="form">
                                 <div class="row">
-
+<!--                                    <legend style="text-align : right ">مفروضات هزینه های درصدی</legend>-->
                                     <div class="col-lg-4 col-sm-12" >
-                                        <label for="plant">کاشت</label>
-                                        <input id="plant" type="text" class="form-control form-cell" placeholder="" >
+                                        <label for="costPer">سال پایه</label>
+                                        <input id="costPer" type="text" class="form-control form-cell" placeholder="" >
                                     </div>
                                     <div class="col-lg-4 col-sm-12">
-                                        <label for="grow">داشت</label>
-                                        <input id="grow" type="text" class="form-control form-cell" placeholder="" >
+                                        <label for="interstRatio">  طول دوره بهره برداری</label>
+                                        <input id="interstRatio" type="text" class="form-control form-cell" placeholder="" >
                                     </div>
                                     <div class="col-lg-4 col-sm-12">
-                                        <label for="harvest">برداشت</label>
-                                        <input id="harvest" type="text" class="form-control form-cell" placeholder="" >
+                                        <label for="performRatio">طول دوره اجرا</label>
+                                        <input id="performRatio" type="text" class="form-control form-cell" placeholder="" >
                                     </div>
                                 </div>
                             </div>
                         </form>
+                        </form>
                         <br><br>
                     </div>
 
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <a  onclick="calc2()"  class="gradient-btn v2">محاسبه</a>
-                        </div>
-
-                        <div id="Answer2" class="answer col-12 text-center">
-                        </div>
-
-                    </div>
+                    <!--<div class="row">-->
+                    <!--<div class="col-12 text-center">-->
+                    <!--<a  onclick="calc1()"  class="gradient-btn v2">محاسبه</a>-->
+                    <!--</div>-->
+                    <!---->
+                    <!--<div id="Answer1" class="answer col-12 text-center">-->
+                    <!--</div>-->
+                    <!---->
+                    <!--</div>-->
                 </div>
-
             </div>
 
             <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
@@ -545,18 +324,263 @@
                         <br><br>
                     </div>
 
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <a  onclick="calc3()"  class="gradient-btn v2">محاسبه</a>
-                        </div>
+                    <!--<div class="row">-->
+                    <!--<div class="col-12 text-center">-->
+                    <!--<a  onclick="calc3()"  class="gradient-btn v2">محاسبه</a>-->
+                    <!--</div>-->
 
-                        <div id="Answer3" class="answer col-12 text-center">
-                        </div>
+                    <!--<div id="Answer3" class="answer col-12 text-center">-->
+                    <!--</div>-->
 
-                    </div>
+                    <!--</div>-->
                 </div>
 
             </div>
+
+
+            <!--            <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">-->
+<!--                <div class="container">-->
+<!--                    <div class="row">-->
+<!--                        <div class="col-12 text-center">-->
+<!--                            <div class="ico-heading">-->
+<!--                                <h1>فرضیات</h1>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="space-60"></div>-->
+<!--                    <div class="row">-->
+
+<!--                        <form class="container" >-->
+<!--                            <div class="form">-->
+<!--                                <div class="row">-->
+<!--                                    <legend style="text-align : right ">اطلاعات عمومی</legend>-->
+<!--                                    <div class="col-lg-6 col-sm-12" >-->
+<!--                                        <label for="farmArea">مساحت مزرعه</label>-->
+<!--                                        <input id="farmArea" type="text" class="form-control form-cell" placeholder="" >-->
+<!--                                    </div>-->
+<!--                                    <div class="col-lg-6 col-sm-12">-->
+<!--                                        <label for="plantNumber">تعداد کاشت</label>-->
+<!--                                        <input id="plantNumber" type="text" class="form-control form-cell" placeholder="" >-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            </br>-->
+<!--                            <div class="form">-->
+<!--                                <div class="row">-->
+<!--                                    <legend style="text-align : right ">مفروضات هزینه های درصدی</legend>-->
+<!--                                    <div class="col-lg-4 col-sm-12" >-->
+<!--                                        <label for="costPer">درصد هزینه</label>-->
+<!--                                        <input id="costPer" type="text" class="form-control form-cell" placeholder="" >-->
+<!--                                    </div>-->
+<!--                                    <div class="col-lg-4 col-sm-12">-->
+<!--                                        <label for="interstRatio">  ضریب دوره بهره برداری</label>-->
+<!--                                        <input id="interstRatio" type="text" class="form-control form-cell" placeholder="" >-->
+<!--                                    </div>-->
+<!--                                    <div class="col-lg-4 col-sm-12">-->
+<!--                                        <label for="performRatio">ضریب دوره اجرا</label>-->
+<!--                                        <input id="performRatio" type="text" class="form-control form-cell" placeholder="" >-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </form>-->
+<!--                        <br><br>-->
+<!--                    </div>-->
+
+<!--                    &lt;!&ndash;<div class="row">&ndash;&gt;-->
+<!--                    &lt;!&ndash;<div class="col-12 text-center">&ndash;&gt;-->
+<!--                    &lt;!&ndash;<a  onclick="calc()"  class="gradient-btn v2">محاسبه</a>&ndash;&gt;-->
+<!--                    &lt;!&ndash;</div>&ndash;&gt;-->
+
+<!--                    &lt;!&ndash;<div id="Answerz" class="answer col-12 text-center">&ndash;&gt;-->
+<!--                    &lt;!&ndash;</div>&ndash;&gt;-->
+
+<!--                    &lt;!&ndash;</div>&ndash;&gt;-->
+<!--                </div>-->
+<!--            </div>-->
+
+            <div class="tab-pane fade" id="pills-variable" role="tabpanel" aria-labelledby="pills-home-tab">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <div class="ico-heading">
+                                <h1>هزینه های متغیر</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-60"></div>
+                    <div class="row">
+
+                        <form class="container" >
+
+                            <div class="row form">
+                                <div class="row col-lg-4 col-sm-12">
+                                    <legend class="variable" >بذر</legend>
+                                </div>
+                                <div class="row col-lg-4 col-sm-12">
+                                    <legend class="variable" >سم</legend>
+                                </div>
+                                <div class="row col-lg-4 col-sm-12">
+                                    <legend class="variable" >کود</legend>
+                                </div>
+                            </div>
+
+                            <div class=" row form">
+                                <div class="row col-lg-4 col-sm-12">
+                                    <!--                         <legend class="variable" style="text-align : center ">بذر</legend>-->
+                                    <div class="col-lg-6 col-sm-12" >
+                                        <label for="seedamount">مقدار بذر مصرف شده</label>
+                                        <input id="seedamount" type="text" class="form-control form-cell" placeholder="" >
+                                    </div>
+                                    <div class="col-lg-6 col-sm-12">
+                                        <label for="seedprice">هزینه هر کیلو بذر</label>
+                                        <input id="seedprice" type="text" class="form-control form-cell" placeholder="" >
+                                    </div>
+                                </div>
+                                <div class="row col-lg-4 col-sm-12">
+                                    <!-- <legend class="variable" style="text-align : center ">سم</legend> -->
+                                    <div class="col-lg-6 col-sm-12" >
+                                        <label for="poisonamount">مقدار سم مصرف شده</label>
+                                        <input id="poisonamount" type="text" class="form-control form-cell" placeholder="" >
+                                    </div>
+                                    <div class="col-lg-6 col-sm-12">
+                                        <label for="poisonprice">هزینه هر کیلو سم</label>
+                                        <input id="poisonprice" type="text" class="form-control form-cell" placeholder="" >
+                                    </div>
+                                </div>
+                                <div class="row col-lg-4 col-sm-12">
+                                    <!-- <legend class="variable" style="text-align : center ">کود</legend> -->
+                                    <div class="col-lg-6 col-sm-12" >
+                                        <label for="fertilizeramount">مقدار کود مصرف شده</label>
+                                        <input id="fertilizeramount" type="text" class="form-control form-cell" placeholder="" >
+                                    </div>
+                                    <div class="col-lg-6 col-sm-12">
+                                        <label for="fertilizerprice">هزینه هر کیلو کود</label>
+                                        <input id="fertilizerprice" type="text" class="form-control form-cell" placeholder="" >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br><br>
+                            <div class="row form">
+                                <div class="row col-lg-4 col-sm-12">
+                                    <legend class="variable" >پرسنل</legend>
+                                </div>
+                                <div class="row col-lg-4 col-sm-12">
+                                    <legend class="variable" >سایر</legend>
+                                </div>
+                            </div>
+
+
+                            <div class=" row form">
+                                <div class="row col-lg-4 col-sm-12">
+                                    <!--                         <legend class="variable" style="text-align : center ">بذر</legend>-->
+                                    <div class="col-lg-8 col-sm-12" >
+                                        <label for="salary">حقوق پرسنل</label>
+                                        <input id="salary" type="text" class="form-control form-cell" placeholder="" >
+                                    </div>
+
+                                </div>
+
+                                <div class="row col-lg-4 col-sm-12">
+                                    <!-- <legend class="variable" style="text-align : center ">سم</legend> -->
+                                    <div class="col-lg-8 col-sm-12" >
+                                        <label for="othercosts">سایر هزینه‌ها</label>
+                                        <input id="othercosts" type="text" class="form-control form-cell" placeholder="" >
+                                    </div>
+                                    <div class="col-lg-6 col-sm-12">
+                                        <!--                                        <label for="poisonprice">هزینه هر کیلو سم</label>-->
+                                        <!--                                        <input id="poisonprice" type="text" class="form-control form-cell" placeholder="" >-->
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <br><br><br>
+                    </div>
+
+
+
+                    <div class="row">
+<!--                        <div class="col-12 text-center">-->
+<!--                            <a  onclick="calcv()"  class="gradient-btn v2">محاسبه</a>-->
+<!--                        </div>-->
+
+                        <br><br>
+
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-12 varanswer" id="seed" ></div>
+                            <div class="col-lg-4 col-sm-12 varanswer" id="poison"></div>
+                            <div class="col-lg-4 col-sm-12 varanswer" id="fertilizer"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <div class="ico-heading">
+                                <h1>درآمد ها</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-60"></div>
+                    <div class="row">
+
+                        <form class="container" >
+                            <div class="form">
+                                <div class="row">
+                                    <legend style="text-align : right ">هزینه های مزرعه</legend>
+                                    <div class="col-lg-6 col-sm-12" >
+                                        <label for="farmprepare">هزینه های آماده سازی زمین</label>
+                                        <input id="farmprepare" type="text" class="form-control form-cell" placeholder="" >
+                                    </div>
+                                    <div class="col-lg-6 col-sm-12">
+                                        <label for="farmrent">اجاره بها زمین</label>
+                                        <input id="farmrent" type="text" class="form-control form-cell" placeholder="" >
+                                    </div>
+                                </div>
+                            </div>
+                            </br></br></br>
+                            <div class="form">
+                                <div class="row">
+
+                                    <div class="col-lg-4 col-sm-12" >
+                                        <label for="plant">کاشت</label>
+                                        <input id="plant" type="text" class="form-control form-cell" placeholder="" >
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12">
+                                        <label for="grow">داشت</label>
+                                        <input id="grow" type="text" class="form-control form-cell" placeholder="" >
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12">
+                                        <label for="harvest">برداشت</label>
+                                        <input id="harvest" type="text" class="form-control form-cell" placeholder="" >
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <br><br>
+                    </div>
+
+                    <!--<div class="row">-->
+                    <!--<div class="col-12 text-center">-->
+                    <!--<a  onclick="calc2()"  class="gradient-btn v2">محاسبه</a>-->
+                    <!--</div>-->
+
+                    <!--<div id="Answer2" class="answer col-12 text-center">-->
+                    <!--</div>-->
+
+                    <!--</div>-->
+                </div>
+
+            </div>
+
 
             <div class="tab-pane fade" id="pills-contact2" role="tabpanel" aria-labelledby="pills-contact-tab">
 
@@ -618,15 +642,12 @@
 
             </div>
 
+            <button id="prevBtnId" class="btn btn-outline-success pre-next-btn text-center" onclick="prev()">قبلی</button>
+            <button id="nextBtnId" class="btn btn-outline-success pre-next-btn text-center" onclick="next()">بعدی</button>
+
         </div>
         <!-- End of calculator aria -->
     </div>
-    <div class="mx-auto justify-content-center">
-            <button id="prevBtnId" class="btn btn-success pre-next-btn text-center" onclick="prev()">prev</button>
-            <button id="nextBtnId" class="btn btn-success pre-next-btn text-center" onclick="next()">next</button>
-    </div>
-
-    <!--ico area end-->
 
 
     <div class=" chart-area">
@@ -676,9 +697,7 @@
                     <div class="single-community mid-social">
                         <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
                     </div>
-
                 </div>
-                
             </div>
         </div>
     </div>
