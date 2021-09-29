@@ -194,7 +194,8 @@ function calc4(){
         answer.style.color = 'darkred'
     }else{
         answer.innerHTML =  "NPV: "+ answer.innerHTML
-        answer.style.color = 'white'
+        // answer.style.color = 'white'
+        answer.style.color = 'green'
     }
 }
 

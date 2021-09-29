@@ -925,7 +925,8 @@ team bg area css
   position: relative;
   z-index: 2;
   /*background-color: #93bbe5;*/
-  background-color: #ececec;
+  /* background-color: #ececec; */
+  background-color: #edffef;
 }
 
 .team-bg::after {
