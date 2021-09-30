@@ -37,7 +37,7 @@
             </div>
             <div class="col-4 col-lg-2">
                 <div class="logo-area">
-                    <a href="#"><img src="assets/img/logo-top.png" alt="FS"></a>
+                    <a href="index.html"><img src="assets/img/logo-top.png" alt="FS"></a>
                 </div>
             </div>
             <div class="col-4 col-lg-8 d-none d-lg-block">
@@ -104,13 +104,10 @@
 <!-- ali 2mehr  -->
 <div id="calculate" class="section-padding wow fadeInUp ico-area row">
 
-    <ul class="nav nav-pills mb-2 mx-auto justify-content-center container row col-lg-2 col-md-2" id="pills-tab" role="tablist" style="background-color: #e3e3e3; height: 450px">
+    <ul class="nav nav-pills mb-2 mx-auto justify-content-center container row col-lg-2 col-md-2" id="pills-tab" role="tablist" style="background-color: #e3e3e3; height: 450px; font-family: 'B Davat' , serif; font-size: 20px; font-weight: bolder">
         <li class="nav-item" role="presentation">
             <button class="nav-link active" id="pills-general-tab" data-bs-toggle="pill" data-bs-target="#pills-general" type="button" role="tab" aria-controls="pills-home" aria-selected="true">اطلاعات کلی</button>
         </li>
-        <!--            <li class="nav-item" role="presentation">-->
-        <!--                <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">فرضیات</button>-->
-        <!--            </li>-->
         <li class="nav-item" role="presentation">
             <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">هزینه های ثابت</button>
         </li>
@@ -267,7 +264,7 @@
                             <div class="row">
                                 <legend style="text-align : right ">محاسبه اجزا و میزان سرمایه ثابت</legend>
                                 <div class="col-lg-4 col-sm-12" >
-                                    <label for="farm">زمین</label>
+                                    <label for="farm"> زمین (متر مربع)</label>
                                     <input id="farm" type="text" class="form-control form-cell" placeholder="" >
                                 </div>
                                 <div class="col-lg-4 col-sm-12">
@@ -303,11 +300,11 @@
                                     <input id="officeequipment" type="text" class="form-control form-cell" placeholder="" >
                                 </div>
                                 <div class="col-lg-4 col-sm-12">
-                                    <label for="costbefore">هزینه های قبل از بهره برداری</label>
+                                    <label for="costbefore">هزینه های پیش از بهره برداری (میلیون ریال)</label>
                                     <input id="costbefore" type="text" class="form-control form-cell" placeholder="" >
                                 </div>
                                 <div class="col-lg-4 col-sm-12">
-                                    <label for="unpredictedcosts">هزینه های پیش بینی نشده</label>
+                                    <label for="unpredictedcosts">هزینه های پیش بینی نشده (میلیون ریال)</label>
                                     <input id="unpredictedcosts" type="text" class="form-control form-cell" placeholder="" >
                                 </div>
                             </div>
@@ -459,9 +456,9 @@
                             <div class="row col-lg-4 col-sm-12">
                                 <legend class="variable" >نیروی کار</legend>
                             </div>
-                            <div class="row col-lg-4 col-sm-12">
-                                <legend class="variable" >سایر</legend>
-                            </div>
+                            <!--<div class="row col-lg-4 col-sm-12">-->
+                                <!--<legend class="variable" >سایر</legend>-->
+                            <!--</div>-->
                         </div>
 
 
@@ -475,17 +472,6 @@
 
                             </div>
 
-                            <div class="row col-lg-4 col-sm-12">
-                                <!-- <legend class="variable" style="text-align : center ">سم</legend> -->
-                                <div class="col-lg-8 col-sm-12" >
-                                    <label for="othercosts">سایر هزینه‌ها</label>
-                                    <input id="othercosts" type="text" class="form-control form-cell" placeholder="" >
-                                </div>
-                                <div class="col-lg-6 col-sm-12">
-                                    <!--                                        <label for="poisonprice">هزینه هر کیلو سم</label>-->
-                                    <!--                                        <input id="poisonprice" type="text" class="form-control form-cell" placeholder="" >-->
-                                </div>
-                            </div>
                         </div>
                     </form>
                     <br><br><br>
