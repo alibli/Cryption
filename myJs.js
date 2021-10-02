@@ -49,11 +49,11 @@ function calc1(){
         answer.style.color = 'white'
     }
 }
-
+// variable costs
 function calcv(){
 
     let seeda = document.getElementById("seedamount").value;
-    let seedp = document.getElementById("seed price").value;
+    let seedp = document.getElementById("seedprice").value;
     let poisona = document.getElementById("poisonamount").value;
     let poisonp = document.getElementById("poisonprice").value;
     let fertilizera = document.getElementById("fertilizeramount").value;
@@ -122,6 +122,7 @@ function calc2(){
     }
 }
 
+// fixed costs
 function calc3(){
 
     let farm = document.getElementById('farm').value;
@@ -153,7 +154,7 @@ function calc3(){
 }
 
 
-function calc4(){
+function calculate(){
 
     let return_percent = document.getElementById('return-percent').value;
     let b0 = document.getElementById('1400').value;
@@ -164,7 +165,38 @@ function calc4(){
 
     let answer = document.getElementById("Answer4");
 
-    // let seedp = parseInt(document.getElementById("seed price").value);
+
+    //fixed cost
+    let farm = document.getElementById('farm').value;
+    let areaconstruction = document.getElementById('areaconstruction').value;
+    let building = document.getElementById('building').value;
+    let machinery = document.getElementById('machinery').value;
+    let equipment = document.getElementById('equipment').value;
+    let transportation = document.getElementById("transportation").value;
+    let officeequipment = document.getElementById("officeequipment").value;
+    let costbefore = document.getElementById("costbefore").value;
+    let unpredictedcosts = document.getElementById("unpredictedcosts").value;
+
+    fixedcost =  (parseInt(farm) + parseInt(areaconstruction) +parseInt(building)  +
+                    parseInt(machinery) + parseInt(equipment) + parseInt(transportation) +
+                    parseInt(officeequipment) + parseInt(costbefore) + parseInt(unpredictedcosts)) ;
+
+    // variable costs
+    let seeda = document.getElementById("seedamount").value;
+    let seedp = document.getElementById("seedprice").value;
+    let poisona = document.getElementById("poisonamount").value;
+    let poisonp = document.getElementById("poisonprice").value;
+    let fertilizera = document.getElementById("fertilizeramount").value;
+    let fertilizerp = document.getElementById("fertilizerprice").value;
+    let salary = document.getElementById("salary").value;
+    let employee = document.getElementById("employee").value;
+
+    seedsum = seeda * seedp;
+    poisonsum = poisona * poisonp;
+    fertilsum = fertilizera * fertilizerp;
+    salarysum = salary * employee;
+
+
     let tavarom = 1.15;
     seedp = 45000;
     const cashflow = [0];
@@ -181,6 +213,8 @@ function calc4(){
     //     .reduce((acc, val, i) => acc + val / Math.pow((1 + discountRate), i), 0);
     // console.log(NPV(cashflow, return_percent)); // 476.19047619047524
 
+
+    
     var initialCost = 0;
     var x = getNPV(return_percent, initialCost, cashflow)
 
@@ -207,8 +241,6 @@ function getNPV(rate, initialCost, cashFlows){
 
 
 // Bar chart
-
-
 // var ctx = document.getElementById("bar-chart");
 
 new Chart(document.getElementById("bar-chart"), {
@@ -245,7 +277,8 @@ new Chart(document.getElementById("bar-chart"), {
     }
 });
 
-// 2 Mehr 1400
+
+// next & prev
     btns = document.getElementsByClassName('nav-link');
     tabPane = document.getElementsByClassName('tab-pane');
 
@@ -292,6 +325,7 @@ new Chart(document.getElementById("bar-chart"), {
             }
         }
     }
+
 if (btns[0].classList.contains('active')){
     document.getElementById('prevBtnId').disabled = true;
 }
