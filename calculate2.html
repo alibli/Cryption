@@ -521,35 +521,41 @@
                     <form class="container" >
                         <div class="form">
                             <div class="row">
-                                <legend style="text-align : right ">هزینه های مزرعه</legend>
+                                <!--<legend style="text-align : right ">میزان تولید</legend>-->
                                 <div class="col-lg-6 col-sm-12" >
-                                    <label for="farmprepare">هزینه های آماده سازی زمین</label>
-                                    <input id="farmprepare" type="text" class="form-control form-cell" placeholder="" >
+                                    <label for="farmProduce">میزان تولید</label>
+                                    <input id="farmProduce" type="text" class="form-control form-cell" placeholder="" >
                                 </div>
                                 <div class="col-lg-6 col-sm-12">
-                                    <label for="farmrent">اجاره بها زمین</label>
-                                    <input id="farmrent" type="text" class="form-control form-cell" placeholder="" >
+                                    <label for="farmMoney">قیمت واحد (ریال)</label>
+                                    <input id="farmMoney" type="text" class="form-control form-cell" placeholder="" >
                                 </div>
+                                <div class="col-12 text-center">
+                                    <a  onclick="incomeMult()"  class="gradient-btn v2">درآمد کل</a>
+                                </div>
+                                <div id="answer5" class="answer col-12 text-center">
+                                </div>
+
                             </div>
                         </div>
                         </br></br></br>
-                        <div class="form">
-                            <div class="row">
+                        <!--<div class="form">-->
+                            <!--<div class="row">-->
 
-                                <div class="col-lg-4 col-sm-12" >
-                                    <label for="plant">کاشت</label>
-                                    <input id="plant" type="text" class="form-control form-cell" placeholder="" >
-                                </div>
-                                <div class="col-lg-4 col-sm-12">
-                                    <label for="grow">داشت</label>
-                                    <input id="grow" type="text" class="form-control form-cell" placeholder="" >
-                                </div>
-                                <div class="col-lg-4 col-sm-12">
-                                    <label for="harvest">برداشت</label>
-                                    <input id="harvest" type="text" class="form-control form-cell" placeholder="" >
-                                </div>
-                            </div>
-                        </div>
+                                <!--<div class="col-lg-4 col-sm-12" >-->
+                                    <!--<label for="plant">کاشت</label>-->
+                                    <!--<input id="plant" type="text" class="form-control form-cell" placeholder="" >-->
+                                <!--</div>-->
+                                <!--<div class="col-lg-4 col-sm-12">-->
+                                    <!--<label for="grow">داشت</label>-->
+                                    <!--<input id="grow" type="text" class="form-control form-cell" placeholder="" >-->
+                                <!--</div>-->
+                                <!--<div class="col-lg-4 col-sm-12">-->
+                                    <!--<label for="harvest">برداشت</label>-->
+                                    <!--<input id="harvest" type="text" class="form-control form-cell" placeholder="" >-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
                     </form>
                     <br><br>
                 </div>

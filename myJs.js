@@ -295,3 +295,13 @@ new Chart(document.getElementById("bar-chart"), {
 if (btns[0].classList.contains('active')){
     document.getElementById('prevBtnId').disabled = true;
 }
+
+let answer5 = document.getElementById('answer5');
+function incomeMult(){
+    let fMoney = document.getElementById('farmMoney').value;
+    console.log(fMoney);
+    let fProduce = document.getElementById('farmProduce').value;
+    console.log(fProduce);
+    answer5.innerHTML = "درآمد : " + fMoney * fProduce;
+    // return fMoney * fProduce;
+}
