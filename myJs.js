@@ -197,26 +197,55 @@ function calculate(){
     let salary = document.getElementById("salary").value;
     let employee = document.getElementById("employee").value;
 
-    seedsum = seeda * seedp;
-    poisonsum = poisona * poisonp;
-    fertilsum = fertilizera * fertilizerp;
-    salarysum = salary * employee;
+    let seedsum = seeda * seedp;
+    let poisonsum = poisona * poisonp;
+    let fertilsum = fertilizera * fertilizerp;
+    let salarysum = salary * employee;
 
+
+    //      test        //
+    fixedcost = 3469376;
+    seedsum = 45000;
+    poisonsum = 6968;
+    fertilsum = 50254;
+    salarysum = 459000;
+    income = 1350000;
 
     let tavarom = 1.15;
-    const cashflow = [0];
+    let seed_cashflow = [0];
+    let poison_cashflow = [0];
+    let fertil_cashflow = [0];
+    let salary_cashflow = [0];
+    let income_cashflow = [0];
+    let fixedcost_cashflow = [fixedcost]
+    let variablecost_cashflow = []
 
     for (let i = 2; i < 6; i++) {
-        cashflow.push(seedp*Math.pow(tavarom, i));
-        console.log(seedp*Math.pow(tavarom, i));
+        seed_cashflow.push(Math.round(seedsum*Math.pow(tavarom, i)));
+        poison_cashflow.push(Math.round(poisonsum*Math.pow(tavarom, i)));
+        fertil_cashflow.push(Math.round(fertilsum*Math.pow(tavarom, i)));
+        salary_cashflow.push(Math.round(salarysum*Math.pow(tavarom, i)));
+        income_cashflow.push(Math.round(income*Math.pow(tavarom, i)));
+        fixedcost_cashflow.push(0);
+        // console.log(seedsum*Math.pow(tavarom, i));
+    }
+    for (let i = 0 ; i < 5; i++){
+        variablecost_cashflow.push(seed_cashflow[i] + poison_cashflow[i] + fertil_cashflow[i] + salary_cashflow[i]);
     }
 
-    // const cashflow = [parseInt(b0), parseInt(b1), parseInt(b2), parseInt(b3), parseInt(b4)];
+    console.log(seed_cashflow)
+    console.log(poison_cashflow)
+    console.log(fertil_cashflow)
+    console.log(salary_cashflow)
+    console.log("variable",variablecost_cashflow);
+    console.log("income",income_cashflow);
 
-    // const NPV = (cashflow, discountRate) => cashflow
-    //     .reduce((acc, val, i) => acc + val / Math.pow((1 + discountRate), i), 0);
-    // console.log(NPV(cashflow, return_percent)); // 476.19047619047524
+    final_cashflow=[]
+    for (let i = 0; i<5; i++){
+            final_cashflow.push(income_cashflow[i] - fixedcost_cashflow[i] - variablecost_cashflow[i])
+    }
 
+    console.log(final_cashflow)
 
     
     var initialCost = 0;
