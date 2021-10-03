@@ -183,7 +183,7 @@ function calculate(){
     let costbefore = document.getElementById("costbefore").value;
     let unpredictedcosts = document.getElementById("unpredictedcosts").value;
 
-    let fixedcost =  (parseInt(farm) + parseInt(areaconstruction) +parseInt(building)  +
+    let fixedcost = 1.15 * (parseInt(farm) + parseInt(areaconstruction) +parseInt(building)  +
                     parseInt(machinery) + parseInt(equipment) + parseInt(transportation) +
                     parseInt(officeequipment) + parseInt(costbefore) + parseInt(unpredictedcosts)) ;
 
@@ -204,19 +204,24 @@ function calculate(){
 
 
     //      test        //
-    fixedcost = 3469376;
+    fixedcost = 3469376*1.15;
     seedsum = 45000;
     poisonsum = 6968;
     fertilsum = 50254;
     salarysum = 459000;
     income = 1350000;
 
+    let other = -136740;
+
+    discount_Rate = 0.25;
     let tavarom = 1.15;
     let seed_cashflow = [0];
     let poison_cashflow = [0];
     let fertil_cashflow = [0];
     let salary_cashflow = [0];
     let income_cashflow = [0];
+    let other_cashflow = [0];
+
     let fixedcost_cashflow = [fixedcost]
     let variablecost_cashflow = []
 
@@ -226,28 +231,35 @@ function calculate(){
         fertil_cashflow.push(Math.round(fertilsum*Math.pow(tavarom, i)));
         salary_cashflow.push(Math.round(salarysum*Math.pow(tavarom, i)));
         income_cashflow.push(Math.round(income*Math.pow(tavarom, i)));
+        other_cashflow.push(Math.round(other*Math.pow(tavarom, i)));
         fixedcost_cashflow.push(0);
         // console.log(seedsum*Math.pow(tavarom, i));
     }
     for (let i = 0 ; i < 5; i++){
-        variablecost_cashflow.push(seed_cashflow[i] + poison_cashflow[i] + fertil_cashflow[i] + salary_cashflow[i]);
+        variablecost_cashflow.push(seed_cashflow[i] + poison_cashflow[i] + fertil_cashflow[i] + salary_cashflow[i] + other_cashflow[i]);
     }
 
-    console.log(seed_cashflow)
-    console.log(poison_cashflow)
-    console.log(fertil_cashflow)
-    console.log(salary_cashflow)
+    console.log(seed_cashflow);
+    console.log(poison_cashflow);
+    console.log(fertil_cashflow);
+    console.log(salary_cashflow);
+    console.log(other_cashflow);
+
     console.log("variable",variablecost_cashflow);
     console.log("income",income_cashflow);
 
-    final_cashflow=[]
+    IRR_cashflow = [];
+
     for (let i = 0; i<5; i++){
-            final_cashflow.push(income_cashflow[i] - fixedcost_cashflow[i] - variablecost_cashflow[i])
+            IRR_cashflow.push(income_cashflow[i] - fixedcost_cashflow[i] - variablecost_cashflow[i]);
     }
 
-    console.log(final_cashflow)
+    console.log(IRR_cashflow);
 
+    console.log(NPV([0].concat(IRR_cashflow), discount_Rate));
+    console.log(IRR(IRR_cashflow));
     
+
     var initialCost = 0;
     var x = getNPV(return_percent, initialCost, cashflow)
 
@@ -265,6 +277,7 @@ function calculate(){
         answer.style.color = 'green'
     }
 }
+
 const NPV = (cashflow, discountRate) => cashflow
     .reduce((acc, val, i) => acc + val / Math.pow((1 + discountRate), i ), 0);
 
