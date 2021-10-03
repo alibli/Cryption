@@ -165,6 +165,12 @@ function calculate(){
 
     let answer = document.getElementById("Answer4");
 
+    //income
+    let productp = document.getElementById('productprice').value;
+    let producta = document.getElementById('productamount').value;
+
+    let income = producta * productp;
+
 
     //fixed cost
     let farm = document.getElementById('farm').value;
@@ -177,7 +183,7 @@ function calculate(){
     let costbefore = document.getElementById("costbefore").value;
     let unpredictedcosts = document.getElementById("unpredictedcosts").value;
 
-    fixedcost =  (parseInt(farm) + parseInt(areaconstruction) +parseInt(building)  +
+    let fixedcost =  (parseInt(farm) + parseInt(areaconstruction) +parseInt(building)  +
                     parseInt(machinery) + parseInt(equipment) + parseInt(transportation) +
                     parseInt(officeequipment) + parseInt(costbefore) + parseInt(unpredictedcosts)) ;
 
@@ -198,9 +204,7 @@ function calculate(){
 
 
     let tavarom = 1.15;
-    seedp = 45000;
     const cashflow = [0];
-    console.log(seedp);
 
     for (let i = 2; i < 6; i++) {
         cashflow.push(seedp*Math.pow(tavarom, i));
@@ -231,6 +235,26 @@ function calculate(){
         // answer.style.color = 'white'
         answer.style.color = 'green'
     }
+}
+const NPV = (cashflow, discountRate) => cashflow
+    .reduce((acc, val, i) => acc + val / Math.pow((1 + discountRate), i ), 0);
+
+const IRR = (cashflow, initialGuess = 0.1) => {
+    const maxTries = 10000;
+    const delta = 0.001;
+    let guess = initialGuess;
+    const multiplier = NPV(cashflow, guess) > 0 ? 1 : -1;
+    let i = 0;
+    while ( i < maxTries ) {
+        const guessedNPV = NPV(cashflow, guess);
+        if ( multiplier * guessedNPV > delta ) {
+            guess += (multiplier * delta);
+            i += 1;
+        }
+        else break;
+    }
+    console.log(`Found IRR = ${guess} in ${i} trials`);
+    return guess;
 }
 
 /** * Calculates the Net Present Value of a given initial investment * cost and an array of cash flow values with the specified discount rate. * * @param{number}rate - The discount rate percentage * @param{number}initialCost - The initial investment * @param{array}cashFlows - An array of future payment amounts * @return{number}The calculated Net Present Value */
@@ -332,9 +356,9 @@ if (btns[0].classList.contains('active')){
 
 let answer5 = document.getElementById('answer5');
 function incomeMult(){
-    let fMoney = document.getElementById('farmMoney').value;
+    let fMoney = document.getElementById('productprice').value;
     console.log(fMoney);
-    let fProduce = document.getElementById('farmProduce').value;
+    let fProduce = document.getElementById('productamount').value;
     console.log(fProduce);
     answer5.innerHTML = "درآمد : " + fMoney * fProduce;
     // return fMoney * fProduce;
