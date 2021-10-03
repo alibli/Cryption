@@ -213,7 +213,8 @@ function calculate(){
 
     let other = -136740;
 
-    discount_Rate = 0.25;
+    let initial_year = 1400;
+    let discount_Rate = 0.25;
     let tavarom = 1.15;
     let seed_cashflow = [0];
     let poison_cashflow = [0];
@@ -251,14 +252,16 @@ function calculate(){
     IRR_cashflow = [];
 
     for (let i = 0; i<5; i++){
-            IRR_cashflow.push(income_cashflow[i] - fixedcost_cashflow[i] - variablecost_cashflow[i]);
+            data = income_cashflow[i] - fixedcost_cashflow[i] - variablecost_cashflow[i];
+            IRR_cashflow.push(data);
+            addData(mychart, initial_year + i, data);
     }
 
     console.log(IRR_cashflow);
 
     console.log(NPV([0].concat(IRR_cashflow), discount_Rate));
     console.log(IRR(IRR_cashflow));
-    
+
 
     var initialCost = 0;
     var x = getNPV(return_percent, initialCost, cashflow)
@@ -276,6 +279,8 @@ function calculate(){
         // answer.style.color = 'white'
         answer.style.color = 'green'
     }
+
+
 }
 
 const NPV = (cashflow, discountRate) => cashflow
@@ -309,17 +314,25 @@ function getNPV(rate, initialCost, cashFlows){
 // Bar chart
 // var ctx = document.getElementById("bar-chart");
 
-new Chart(document.getElementById("bar-chart"), {
+function addData(chart, label, data) {
+    chart.data.labels.push(label);
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data.push(data);
+    });
+    chart.update();
+}
+
+var mychart = new Chart(document.getElementById("bar-chart"), {
     type: 'bar',
 
     data: {
-      labels: ["1400", "1401", "1402", "1403", "1404"],
+      labels: [],
       datasets: [
         {
 
           // label: "تجمعی",
           backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-          data: [-3470803,-2562083,-1653364,-744644,164076],
+          data: [],
 
         }
       ]
