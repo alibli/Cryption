@@ -378,6 +378,9 @@ var mychart = new Chart(document.getElementById("bar-chart"), {
                 if (btns[5].classList.contains('active')){
                     document.getElementById('nextBtnId').disabled = true;
                 }
+                if (!btns[0].classList.contains('active')){
+                    document.getElementById('preBtnId').disabled = true;
+                }
                 break;
             }
         }
@@ -405,9 +408,10 @@ var mychart = new Chart(document.getElementById("bar-chart"), {
         }
     }
 
-if (btns[0].classList.contains('active')){
-    document.getElementById('prevBtnId').disabled = true;
-}
+    if (btns[0].classList.contains('active')){
+        document.getElementById('prevBtnId').disabled = true;
+    }
+
 
 let answer5 = document.getElementById('answer5');
 function incomeMult(){
