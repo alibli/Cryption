@@ -1932,11 +1932,6 @@ input[type="text"].form-cell::-webkit-input-placeholder {
   background-color: #edffef;
 }
 
-.pre-next-btn{
-  margin: auto;
-
-}
-
 /*overwrite bootstrap class :*/
 .nav-link{
   color: #16a031;
@@ -1978,4 +1973,9 @@ legend{
 }
 label{
   color: #008100;
+}
+
+#preNextBtn{
+    width: 100px;
+    margin: auto;
 }
