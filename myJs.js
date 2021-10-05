@@ -245,11 +245,11 @@ function calculate(){
         variablecost_cashflow.push(103/100*(seed_cashflow[i] + poison_cashflow[i] + fertil_cashflow[i] + salary_cashflow[i] + other_cashflow[i]));
     }
 
-    console.log(seed_cashflow);
-    console.log(poison_cashflow);
-    console.log(fertil_cashflow);
-    console.log(salary_cashflow);
-    console.log(other_cashflow);
+    // console.log(seed_cashflow);
+    // console.log(poison_cashflow);
+    // console.log(fertil_cashflow);
+    // console.log(salary_cashflow);
+    // console.log(other_cashflow);
 
     console.log("variable",variablecost_cashflow);
     console.log("income",income_cashflow);
@@ -269,28 +269,38 @@ function calculate(){
         addData(cumulative_chart, initial_year + i, tajamoe[i]);
     }
 
-    console.log(IRR_cashflow);
+    console.log("final",IRR_cashflow);
 
-    console.log(NPV([0].concat(IRR_cashflow), discount_Rate));
+    // ######################################
+    // ##########    Results    #############
+    // ######################################
+
+    // NPV
+    let final_NPV = NPV([0].concat(IRR_cashflow), discount_Rate);
+    console.log(final_NPV);
+    // IRR
     console.log(IRR(IRR_cashflow));
+    // PI
+    let fixed_cost_NPV = NPV([0].concat(fixedcost_cashflow), discount_Rate);
+    let variable_cost_NPV = NPV([0].concat(variablecost_cashflow), discount_Rate);
+    let PI = final_NPV/(fixed_cost_NPV + variable_cost_NPV);
+    // console.log(fixed_cost_NPV);
+    // console.log(variable_cost_NPV);
+    console.log(parseInt(PI*100));
 
-
-    var initialCost = 0;
-    var x = getNPV(return_percent, initialCost, cashflow)
-
-    answer.innerHTML = x.toFixed(2)
-
-    console.log(answer)
-    console.log(isNaN(answer.innerHTML))
-
-    if (isNaN(answer.innerHTML)){
-        answer.innerHTML = "لطفا تمام فیلد ها را پر کنید";
-        answer.style.color = 'darkred'
-    }else{
-        answer.innerHTML =  "NPV: "+ answer.innerHTML
-        // answer.style.color = 'white'
-        answer.style.color = 'green'
-    }
+    // answer.innerHTML = x.toFixed(2)
+    //
+    // console.log(answer)
+    // console.log(isNaN(answer.innerHTML))
+    //
+    // if (isNaN(answer.innerHTML)){
+    //     answer.innerHTML = "لطفا تمام فیلد ها را پر کنید";
+    //     answer.style.color = 'darkred'
+    // }else{
+    //     answer.innerHTML =  "NPV: "+ answer.innerHTML
+    //     // answer.style.color = 'white'
+    //     answer.style.color = 'green'
+    // }
 
 
 }
@@ -312,8 +322,8 @@ const IRR = (cashflow, initialGuess = 0.1) => {
         }
         else break;
     }
-    console.log(`Found IRR = ${guess} in ${i} trials`);
     return guess;
+    console.log(`Found IRR = ${guess} in ${i} trials`);
 }
 
 /** * Calculates the Net Present Value of a given initial investment * cost and an array of cash flow values with the specified discount rate. * * @param{number}rate - The discount rate percentage * @param{number}initialCost - The initial investment * @param{array}cashFlows - An array of future payment amounts * @return{number}The calculated Net Present Value */
