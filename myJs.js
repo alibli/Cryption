@@ -288,6 +288,11 @@ function calculate(){
     // console.log(variable_cost_NPV);
     console.log(parseInt(PI*100));
 
+    // B/C
+    let income_NPV = NPV([0].concat(income_cashflow), discount_Rate);
+    let BC = income_NPV / (fixed_cost_NPV + variable_cost_NPV)
+    console.log(BC.toFixed(3))
+
     // answer.innerHTML = x.toFixed(2)
     //
     // console.log(answer)
