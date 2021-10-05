@@ -237,8 +237,12 @@ function calculate(){
         fixedcost_cashflow.push(0);
         // console.log(seedsum*Math.pow(tavarom, i));
     }
+
     for (let i = 0 ; i < 5; i++){
-        variablecost_cashflow.push(seed_cashflow[i] + poison_cashflow[i] + fertil_cashflow[i] + salary_cashflow[i] + other_cashflow[i]);
+        // console.log(seed_cashflow[i] + poison_cashflow[i] + fertil_cashflow[i] + salary_cashflow[i] + other_cashflow[i]);
+        // console.log(103/100*(seed_cashflow[i] + poison_cashflow[i] + fertil_cashflow[i] + salary_cashflow[i] + other_cashflow[i]));
+        // adding 3% for unexpected costs
+        variablecost_cashflow.push(103/100*(seed_cashflow[i] + poison_cashflow[i] + fertil_cashflow[i] + salary_cashflow[i] + other_cashflow[i]));
     }
 
     console.log(seed_cashflow);
