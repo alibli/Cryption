@@ -154,160 +154,170 @@ function calc3(){
 }
 
 
+let bool = true;
 function calculate(){
 
-    // let return_percent = document.getElementById('return-percent').value;
-    // let b0 = document.getElementById('1400').value;
-    // let b1 = document.getElementById('1401').value;
-    // let b2 = document.getElementById('1402').value;
-    // let b3 = document.getElementById('1403').value;
-    // let b4 = document.getElementById('1404').value;
+    if(bool) {
 
-    let answer = document.getElementById("Answer4");
+        // let return_percent = document.getElementById('return-percent').value;
+        // let b0 = document.getElementById('1400').value;
+        // let b1 = document.getElementById('1401').value;
+        // let b2 = document.getElementById('1402').value;
+        // let b3 = document.getElementById('1403').value;
+        // let b4 = document.getElementById('1404').value;
 
-    //income
-    let productp = document.getElementById('productprice').value;
-    let producta = document.getElementById('productamount').value;
+        // let answer = document.getElementById("Answer4");
 
-    let income = producta * productp;
+        //income
+        let productp = document.getElementById('productprice').value;
+        let producta = document.getElementById('productamount').value;
 
-
-    //fixed cost
-    let farm = document.getElementById('farm').value;
-    let areaconstruction = document.getElementById('areaconstruction').value;
-    let building = document.getElementById('building').value;
-    let machinery = document.getElementById('machinery').value;
-    let equipment = document.getElementById('equipment').value;
-    let transportation = document.getElementById("transportation").value;
-    let officeequipment = document.getElementById("officeequipment").value;
-    let costbefore = document.getElementById("costbefore").value;
-    let unpredictedcosts = document.getElementById("unpredictedcosts").value;
-
-    let fixedcost = 1.15 * (parseInt(farm) + parseInt(areaconstruction) +parseInt(building)  +
-                    parseInt(machinery) + parseInt(equipment) + parseInt(transportation) +
-                    parseInt(officeequipment) + parseInt(costbefore) + parseInt(unpredictedcosts)) ;
-
-    // variable costs
-    let seeda = document.getElementById("seedamount").value;
-    let seedp = document.getElementById("seedprice").value;
-    let poisona = document.getElementById("poisonamount").value;
-    let poisonp = document.getElementById("poisonprice").value;
-    let fertilizera = document.getElementById("fertilizeramount").value;
-    let fertilizerp = document.getElementById("fertilizerprice").value;
-    let salary = document.getElementById("salary").value;
-    let employee = document.getElementById("employee").value;
-
-    let seedsum = seeda * seedp;
-    let poisonsum = poisona * poisonp;
-    let fertilsum = fertilizera * fertilizerp;
-    let salarysum = salary * employee;
+        let income = producta * productp;
 
 
-    //      test        //
-    fixedcost = 3469376*1.15;
-    seedsum = 45000;
-    poisonsum = 6968;
-    fertilsum = 50254;
-    salarysum = 459000;
-    income = 1350000;
+        //fixed cost
+        let farm = document.getElementById('farm').value;
+        let areaconstruction = document.getElementById('areaconstruction').value;
+        let building = document.getElementById('building').value;
+        let machinery = document.getElementById('machinery').value;
+        let equipment = document.getElementById('equipment').value;
+        let transportation = document.getElementById("transportation").value;
+        let officeequipment = document.getElementById("officeequipment").value;
+        let costbefore = document.getElementById("costbefore").value;
+        let unpredictedcosts = document.getElementById("unpredictedcosts").value;
 
-    let other = -136740;
+        let fixedcost = 1.15 * (parseInt(farm) + parseInt(areaconstruction) + parseInt(building) +
+            parseInt(machinery) + parseInt(equipment) + parseInt(transportation) +
+            parseInt(officeequipment) + parseInt(costbefore) + parseInt(unpredictedcosts));
 
-    let initial_year = 1400;
-    let discount_Rate = 0.25;
-    let tavarom = 1.15;
+        // variable costs
+        let seeda = document.getElementById("seedamount").value;
+        let seedp = document.getElementById("seedprice").value;
+        let poisona = document.getElementById("poisonamount").value;
+        let poisonp = document.getElementById("poisonprice").value;
+        let fertilizera = document.getElementById("fertilizeramount").value;
+        let fertilizerp = document.getElementById("fertilizerprice").value;
+        let salary = document.getElementById("salary").value;
+        let employee = document.getElementById("employee").value;
 
-    let seed_cashflow = [0];
-    let poison_cashflow = [0];
-    let fertil_cashflow = [0];
-    let salary_cashflow = [0];
-    let income_cashflow = [0];
-    let other_cashflow = [0];
+        let seedsum = seeda * seedp;
+        let poisonsum = poisona * poisonp;
+        let fertilsum = fertilizera * fertilizerp;
+        let salarysum = salary * employee;
 
-    let fixedcost_cashflow = [fixedcost]
-    let variablecost_cashflow = []
 
-    for (let i = 2; i < 6; i++) {
-        seed_cashflow.push(Math.round(seedsum*Math.pow(tavarom, i)));
-        poison_cashflow.push(Math.round(poisonsum*Math.pow(tavarom, i)));
-        fertil_cashflow.push(Math.round(fertilsum*Math.pow(tavarom, i)));
-        salary_cashflow.push(Math.round(salarysum*Math.pow(tavarom, i)));
-        income_cashflow.push(Math.round(income*Math.pow(tavarom, i)));
-        other_cashflow.push(Math.round(other*Math.pow(tavarom, i)));
-        fixedcost_cashflow.push(0);
-        // console.log(seedsum*Math.pow(tavarom, i));
-    }
+        //      test        //
+        // fixedcost = 3469376 * 1.15;
+        // seedsum = 45000;
+        // poisonsum = 6968;
+        // fertilsum = 50254;
+        // salarysum = 459000;
+        // income = 1350000;
 
-    for (let i = 0 ; i < 5; i++){
-        // console.log(seed_cashflow[i] + poison_cashflow[i] + fertil_cashflow[i] + salary_cashflow[i] + other_cashflow[i]);
-        // console.log(103/100*(seed_cashflow[i] + poison_cashflow[i] + fertil_cashflow[i] + salary_cashflow[i] + other_cashflow[i]));
-        // adding 3% for unexpected costs
-        variablecost_cashflow.push(103/100*(seed_cashflow[i] + poison_cashflow[i] + fertil_cashflow[i] + salary_cashflow[i] + other_cashflow[i]));
-    }
+        let other = -136740;
 
-    // console.log(seed_cashflow);
-    // console.log(poison_cashflow);
-    // console.log(fertil_cashflow);
-    // console.log(salary_cashflow);
-    // console.log(other_cashflow);
+        let initial_year = 1400;
+        let discount_Rate = 0.25;
+        let tavarom = 1.15;
 
-    console.log("variable",variablecost_cashflow);
-    console.log("income",income_cashflow);
+        let seed_cashflow = [0];
+        let poison_cashflow = [0];
+        let fertil_cashflow = [0];
+        let salary_cashflow = [0];
+        let income_cashflow = [0];
+        let other_cashflow = [0];
 
-    IRR_cashflow = [];
+        let fixedcost_cashflow = [fixedcost]
+        let variablecost_cashflow = []
 
-    for (let i = 0; i<5; i++){
+        for (let i = 2; i < 6; i++) {
+            seed_cashflow.push(Math.round(seedsum * Math.pow(tavarom, i)));
+            poison_cashflow.push(Math.round(poisonsum * Math.pow(tavarom, i)));
+            fertil_cashflow.push(Math.round(fertilsum * Math.pow(tavarom, i)));
+            salary_cashflow.push(Math.round(salarysum * Math.pow(tavarom, i)));
+            income_cashflow.push(Math.round(income * Math.pow(tavarom, i)));
+            other_cashflow.push(Math.round(other * Math.pow(tavarom, i)));
+            fixedcost_cashflow.push(0);
+            // console.log(seedsum*Math.pow(tavarom, i));
+        }
+
+        for (let i = 0; i < 5; i++) {
+            // console.log(seed_cashflow[i] + poison_cashflow[i] + fertil_cashflow[i] + salary_cashflow[i] + other_cashflow[i]);
+            // console.log(103/100*(seed_cashflow[i] + poison_cashflow[i] + fertil_cashflow[i] + salary_cashflow[i] + other_cashflow[i]));
+            // adding 3% for unexpected costs
+            variablecost_cashflow.push(103 / 100 * (seed_cashflow[i] + poison_cashflow[i] + fertil_cashflow[i] + salary_cashflow[i] + other_cashflow[i]));
+        }
+
+        // console.log(seed_cashflow);
+        // console.log(poison_cashflow);
+        // console.log(fertil_cashflow);
+        // console.log(salary_cashflow);
+        // console.log(other_cashflow);
+
+        console.log("variable", variablecost_cashflow);
+        console.log("income", income_cashflow);
+
+        IRR_cashflow = [];
+
+        for (let i = 0; i < 5; i++) {
             data = income_cashflow[i] - fixedcost_cashflow[i] - variablecost_cashflow[i];
             IRR_cashflow.push(data);
             addData(net_chart, initial_year + i, data);
+        }
+
+        const cumulativeSum = (sum => value => sum += value)(0);
+
+        let tajamoe = IRR_cashflow.map(cumulativeSum);
+        for (let i = 0; i < 5; i++) {
+            addData(cumulative_chart, initial_year + i, tajamoe[i]);
+        }
+
+        console.log("final", IRR_cashflow);
+
+        // ######################################
+        // ##########    Results    #############
+        // ######################################
+
+        // NPV
+        let final_NPV = NPV([0].concat(IRR_cashflow), discount_Rate);
+        console.log(final_NPV);
+        document.getElementById('npvResult').innerHTML = final_NPV.toFixed(3);
+
+        // IRR
+        console.log(IRR(IRR_cashflow));
+        document.getElementById('irrResult').innerHTML = IRR(IRR_cashflow).toFixed(2);
+        // console.log(fixed_cost_NPV);
+
+        // PI
+        let fixed_cost_NPV = NPV([0].concat(fixedcost_cashflow), discount_Rate);
+        let variable_cost_NPV = NPV([0].concat(variablecost_cashflow), discount_Rate);
+        let PI = final_NPV / (fixed_cost_NPV + variable_cost_NPV);
+        // console.log(variable_cost_NPV);
+        console.log(parseInt(PI * 100));
+        document.getElementById('piResult').innerHTML = parseInt(PI * 100 );
+
+        // B/C
+        let income_NPV = NPV([0].concat(income_cashflow), discount_Rate);
+        let BC = income_NPV / (fixed_cost_NPV + variable_cost_NPV);
+        console.log(BC.toFixed(3));
+        document.getElementById('bcResult').innerHTML = BC.toFixed(2);
+
+        // answer.innerHTML = x.toFixed(2)
+        //
+        // console.log(answer)
+        // console.log(isNaN(answer.innerHTML))
+        //
+        // if (isNaN(answer.innerHTML)){
+        //     answer.innerHTML = "لطفا تمام فیلد ها را پر کنید";
+        //     answer.style.color = 'darkred'
+        // }else{
+        //     answer.innerHTML =  "NPV: "+ answer.innerHTML
+        //     // answer.style.color = 'white'
+        //     answer.style.color = 'green'
+        // }
+
+        bool = false;
     }
-
-    const cumulativeSum = (sum => value => sum += value)(0);
-
-    let tajamoe = IRR_cashflow.map(cumulativeSum);
-    for (let i = 0; i<5; i++){
-        addData(cumulative_chart, initial_year + i, tajamoe[i]);
-    }
-
-    console.log("final",IRR_cashflow);
-
-    // ######################################
-    // ##########    Results    #############
-    // ######################################
-
-    // NPV
-    let final_NPV = NPV([0].concat(IRR_cashflow), discount_Rate);
-    console.log(final_NPV);
-    // IRR
-    console.log(IRR(IRR_cashflow));
-    // PI
-    let fixed_cost_NPV = NPV([0].concat(fixedcost_cashflow), discount_Rate);
-    let variable_cost_NPV = NPV([0].concat(variablecost_cashflow), discount_Rate);
-    let PI = final_NPV/(fixed_cost_NPV + variable_cost_NPV);
-    // console.log(fixed_cost_NPV);
-    // console.log(variable_cost_NPV);
-    console.log(parseInt(PI*100));
-
-    // B/C
-    let income_NPV = NPV([0].concat(income_cashflow), discount_Rate);
-    let BC = income_NPV / (fixed_cost_NPV + variable_cost_NPV)
-    console.log(BC.toFixed(3))
-
-    // answer.innerHTML = x.toFixed(2)
-    //
-    // console.log(answer)
-    // console.log(isNaN(answer.innerHTML))
-    //
-    // if (isNaN(answer.innerHTML)){
-    //     answer.innerHTML = "لطفا تمام فیلد ها را پر کنید";
-    //     answer.style.color = 'darkred'
-    // }else{
-    //     answer.innerHTML =  "NPV: "+ answer.innerHTML
-    //     // answer.style.color = 'white'
-    //     answer.style.color = 'green'
-    // }
-
-
 }
 
 const NPV = (cashflow, discountRate) => cashflow
@@ -374,7 +384,7 @@ let net_chart = new Chart(document.getElementById("net-chart"), {
             },
             title: {
                 display: true,
-                text: 'خالص تجمعی جریان وجوه نقد',
+                text: 'خالص جریان وجوه نقد',
                     font: {
                         family: "iransans"
                     }
