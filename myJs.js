@@ -156,12 +156,12 @@ function calc3(){
 
 function calculate(){
 
-    let return_percent = document.getElementById('return-percent').value;
-    let b0 = document.getElementById('1400').value;
-    let b1 = document.getElementById('1401').value;
-    let b2 = document.getElementById('1402').value;
-    let b3 = document.getElementById('1403').value;
-    let b4 = document.getElementById('1404').value;
+    // let return_percent = document.getElementById('return-percent').value;
+    // let b0 = document.getElementById('1400').value;
+    // let b1 = document.getElementById('1401').value;
+    // let b2 = document.getElementById('1402').value;
+    // let b3 = document.getElementById('1403').value;
+    // let b4 = document.getElementById('1404').value;
 
     let answer = document.getElementById("Answer4");
 
@@ -216,6 +216,7 @@ function calculate(){
     let initial_year = 1400;
     let discount_Rate = 0.25;
     let tavarom = 1.15;
+
     let seed_cashflow = [0];
     let poison_cashflow = [0];
     let fertil_cashflow = [0];
@@ -254,7 +255,14 @@ function calculate(){
     for (let i = 0; i<5; i++){
             data = income_cashflow[i] - fixedcost_cashflow[i] - variablecost_cashflow[i];
             IRR_cashflow.push(data);
-            addData(mychart, initial_year + i, data);
+            addData(net_chart, initial_year + i, data);
+    }
+
+    const cumulativeSum = (sum => value => sum += value)(0);
+
+    let tajamoe = IRR_cashflow.map(cumulativeSum);
+    for (let i = 0; i<5; i++){
+        addData(cumulative_chart, initial_year + i, tajamoe[i]);
     }
 
     console.log(IRR_cashflow);
@@ -322,7 +330,41 @@ function addData(chart, label, data) {
     chart.update();
 }
 
-var mychart = new Chart(document.getElementById("bar-chart"), {
+let net_chart = new Chart(document.getElementById("net-chart"), {
+    type: 'bar',
+
+    data: {
+      labels: [],
+      datasets: [
+        {
+
+          // label: "تجمعی",
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+          data: [],
+
+        }
+      ]
+    },
+    options: {
+        responsive: false,
+      legend: { display: false },
+
+        plugins: {
+            legend: {
+                display: false
+            },
+            title: {
+                display: true,
+                text: 'خالص تجمعی جریان وجوه نقد',
+                    font: {
+                        family: "iransans"
+                    }
+            }
+        }
+    }
+});
+
+let cumulative_chart = new Chart(document.getElementById("cumulative -chart"), {
     type: 'bar',
 
     data: {
