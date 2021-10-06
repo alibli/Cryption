@@ -157,73 +157,11 @@ function calc3(){
 function calculate(){
 
 
-    let net_chart = new Chart(document.getElementById("net-chart"), {
-        type: 'bar',
-
-        data: {
-            labels: [],
-            datasets: [
-                {
-
-                    // label: "تجمعی",
-                    backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-                    data: [],
-
-                }
-            ]
-        },
-        options: {
-            responsive: false,
-            legend: { display: false },
-
-            plugins: {
-                legend: {
-                    display: false
-                },
-                title: {
-                    display: true,
-                    text: 'خالص تجمعی جریان وجوه نقد',
-                    font: {
-                        family: "iransans"
-                    }
-                }
-            }
-        }
-    });
-
-    let cumulative_chart = new Chart(document.getElementById("cumulative -chart"), {
-        type: 'bar',
-
-        data: {
-            labels: [],
-            datasets: [
-                {
-
-                    // label: "تجمعی",
-                    backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-                    data: [],
-
-                }
-            ]
-        },
-        options: {
-            responsive: false,
-            legend: { display: false },
-
-            plugins: {
-                legend: {
-                    display: false
-                },
-                title: {
-                    display: true,
-                    text: 'خالص تجمعی جریان وجوه نقد',
-                    font: {
-                        family: "iransans"
-                    }
-                }
-            }
-        }
-    });
+    // remove chart data
+    for (let i = 0 ; i < 5; i++) {
+        removeData(cumulative_chart);
+        removeData(net_chart);
+    }
 
     // let return_percent = document.getElementById('return-percent').value;
     // let b0 = document.getElementById('1400').value;
@@ -273,12 +211,12 @@ function calculate(){
 
 
     //      test        //
-    fixedcost = 3469376*1.15;
-    seedsum = 45000;
-    poisonsum = 6968;
-    fertilsum = 50254;
-    salarysum = 459000;
-    income = 1350000;
+    // fixedcost = 3469376*1.15;
+    // seedsum = 45000;
+    // poisonsum = 6968;
+    // fertilsum = 50254;
+    // salarysum = 459000;
+    // income = 1350000;
 
     let other = -136740;
 
@@ -423,6 +361,83 @@ function addData(chart, label, data) {
     });
     chart.update();
 }
+
+function removeData(chart) {
+    chart.data.labels.pop();
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data.pop();
+    });
+    chart.update();
+}
+
+let net_chart = new Chart(document.getElementById("net-chart"), {
+    type: 'bar',
+
+    data: {
+        labels: [],
+        datasets: [
+            {
+
+                // label: "تجمعی",
+                backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+                data: [],
+
+            }
+        ]
+    },
+    options: {
+        responsive: false,
+        legend: { display: false },
+
+        plugins: {
+            legend: {
+                display: false
+            },
+            title: {
+                display: true,
+                text: 'خالص تجمعی جریان وجوه نقد',
+                font: {
+                    family: "iransans"
+                }
+            }
+        }
+    }
+});
+
+let cumulative_chart = new Chart(document.getElementById("cumulative -chart"), {
+    type: 'bar',
+
+    data: {
+        labels: [],
+        datasets: [
+            {
+
+                // label: "تجمعی",
+                backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+                data: [],
+
+            }
+        ]
+    },
+    options: {
+        responsive: false,
+        legend: { display: false },
+
+        plugins: {
+            legend: {
+                display: false
+            },
+            title: {
+                display: true,
+                text: 'خالص تجمعی جریان وجوه نقد',
+                font: {
+                    family: "iransans"
+                }
+            }
+        }
+    }
+});
+
 
 
 
