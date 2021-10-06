@@ -163,7 +163,7 @@ function calculate(){
     // let b3 = document.getElementById('1403').value;
     // let b4 = document.getElementById('1404').value;
 
-    let answer = document.getElementById("Answer4");
+    // let answer = document.getElementById("Answer4");
 
     //income
     let productp = document.getElementById('productprice').value;
@@ -204,12 +204,12 @@ function calculate(){
 
 
     //      test        //
-    fixedcost = 3469376*1.15;
-    seedsum = 45000;
-    poisonsum = 6968;
-    fertilsum = 50254;
-    salarysum = 459000;
-    income = 1350000;
+    // fixedcost = 3469376*1.15;
+    // seedsum = 45000;
+    // poisonsum = 6968;
+    // fertilsum = 50254;
+    // salarysum = 459000;
+    // income = 1350000;
 
     let other = -136740;
 
