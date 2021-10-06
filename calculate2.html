@@ -119,7 +119,7 @@
         </li>
 
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-contact-tab2" data-bs-toggle="pill" data-bs-target="#pills-contact2" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">نتیجه محاسبات</button>
+            <button class="nav-link" id="pills-contact-tab2" data-bs-toggle="pill" data-bs-target="#pills-contact2" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" onclick="calculate()">نتیجه محاسبات</button>
         </li>
     </ul>
     <!-- start calculator aria -->
@@ -619,45 +619,42 @@
                         <!--</div>-->
                     <!--</form>-->
 
-                    <div class="row col-lg-8">
-                        <canvas dir="ltr" id="net-chart" class="mx-auto justify-content-center" ></canvas>
-                        <canvas dir="ltr" id="cumulative -chart" class="mx-auto justify-content-center" ></canvas>
-                    </div>
 
-                    <div class="row col-lg-4">
+
+                    <div class="row col-lg-3" style="margin: auto ; text-align: center"  dir="ltr">
                         <table class="table  table-bordered table-secondary">
                             <thead>
                             <tr class="table-secondary">
-                                <th scope="col">شاخص</th>
-                                <th scope="col">مقدار</th>
+                                <th scope="col">NPV</th>
+                                <th scope="col">IRR</th>
+                                <th scope="col">PI</th>
+                                <th scope="col">B/C</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr class="table-success">
-                                <th scope="row">NPV</th>
-                                <td>10</td>
-                            </tr>
-                            <tr class="table-warning">
-                                <th scope="row">IRR</th>
-                                <td>20</td>
-
+                                <td scope="row" id="npvResult"></td>
+                                <td id="irrResult"></td>
+                                <td id="piResult"></td>
+                                <td id="bcResult"></td>
                             </tr>
                             </tbody>
                         </table>
                     </div>
-
-
-                </div>
-
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <a  onclick="calculate()"  class="gradient-btn v2">محاسبه</a>
-                    </div>
-
-                    <div id="Answer4" class="answer col-12 text-center">
+                    <br><br>
+                    <div class="row col-lg-12">
+                        <canvas dir="ltr" id="net-chart" class="mx-auto justify-content-center" style="width: 500px"></canvas>
+                        <canvas dir="ltr" id="cumulative -chart" class="mx-auto justify-content-center" style="width: 500px"></canvas>
                     </div>
 
                 </div>
+
+
+                <!--<div class="row">&ndash;&gt;-->
+                    <!--<div class="col-12 text-center">-->
+                        <!--<a  onclick="calculate()"  class="gradient-btn v2">محاسبه</a>-->
+                    <!--</div>-->
+                <!--</div>-->
 
             </div>
 
@@ -666,8 +663,8 @@
 
     </div>
     <div class="row" id="preNextBtn">
-        <button id="prevBtnId" class="btn btn-outline-success  text-center" onclick="prev()">قبلی</button>
-        <button id="nextBtnId" class="btn btn-outline-success  text-center" onclick="next()">بعدی</button>
+        <button id="prevBtnId" class="btn btn-outline-success  text-center " onclick="prev()" style="">قبلی</button>
+        <button id="nextBtnId" class="btn btn-outline-success  text-center " onclick="next()" style="">بعدی</button>
     </div>
     <!-- End of calculator aria -->
 </div>

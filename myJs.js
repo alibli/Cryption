@@ -163,7 +163,7 @@ function calculate(){
     // let b3 = document.getElementById('1403').value;
     // let b4 = document.getElementById('1404').value;
 
-    // let answer = document.getElementById("Answer4");
+    let answer = document.getElementById("Answer4");
 
     //income
     let productp = document.getElementById('productprice').value;
