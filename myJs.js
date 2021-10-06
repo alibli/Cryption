@@ -347,21 +347,27 @@ function calculate(){
     // NPV
     let final_NPV = NPV([0].concat(IRR_cashflow), discount_Rate);
     console.log(final_NPV);
+    document.getElementById('npvResult').innerHTML = final_NPV.toFixed(3);
+
     // IRR
-    console.log(IRR(IRR_cashflow));
+    let final_IRR = IRR(IRR_cashflow);
+    console.log(final_IRR);
+    document.getElementById('irrResult').innerHTML = final_IRR.toFixed(2);
+    // console.log(fixed_cost_NPV);
+
     // PI
     let fixed_cost_NPV = NPV([0].concat(fixedcost_cashflow), discount_Rate);
     let variable_cost_NPV = NPV([0].concat(variablecost_cashflow), discount_Rate);
-    let PI = final_NPV/(fixed_cost_NPV + variable_cost_NPV);
-    // console.log(fixed_cost_NPV);
+    let PI = final_NPV / (fixed_cost_NPV + variable_cost_NPV);
     // console.log(variable_cost_NPV);
-    console.log(parseInt(PI*100));
+    console.log(parseInt(PI * 100));
+    document.getElementById('piResult').innerHTML = parseInt(PI * 100 );
 
     // B/C
     let income_NPV = NPV([0].concat(income_cashflow), discount_Rate);
-    let BC = income_NPV / (fixed_cost_NPV + variable_cost_NPV)
-    console.log(BC.toFixed(3))
-
+    let BC = income_NPV / (fixed_cost_NPV + variable_cost_NPV);
+    console.log(BC.toFixed(3));
+    document.getElementById('bcResult').innerHTML = BC.toFixed(2);
     // answer.innerHTML = x.toFixed(2)
     //
     // console.log(answer)
