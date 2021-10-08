@@ -51,7 +51,7 @@
                             <!-- <li><a class="scroll" href="#Paper">White Paper</a></li>
                             <li><a class="scroll" href="#token">Token Sale</a></li>
                             <li><a class="scroll" href="#roadmap">Roadmap</a></li> -->
-                            <li><a class="scroll" href="#team">تیم</a></li>
+                            <!--<li><a class="scroll" href="#team">تیم</a></li>-->
                             <!-- <li><a class="scroll" href="#apps">APP</a></li>
                             <li><a class="scroll" href="#faq">FAQ</a></li> -->
                             <li><a class="scroll" href="#contact">تماس با ما</a></li>
@@ -164,7 +164,7 @@
                             <div class="row">
                                 <!--                        <legend style="text-align : right ">مفروضات هزینه های درصدی</legend>-->
                                 <div class="col-lg-6 col-sm-12" >
-                                    <label for="productarea">سطح زیر کشت محصول</label>
+                                    <label for="productarea">سطح زیر کشت محصول(هکتار)</label>
                                     <input id="productarea" type="text" class="form-control form-cell" placeholder="" required >
                                 </div>
                                 <div class="col-lg-6 col-sm-12">
@@ -262,9 +262,9 @@
                     <form class="container" >
                         <div class="form">
                             <div class="row">
-                                <legend style="text-align : right ">محاسبه اجزا و میزان سرمایه ثابت</legend>
+                                <legend style="text-align : right "> محاسبه اجزا و میزان سرمایه ثابت <p style="font-size: 15px">(*واحد تمامی مقادیر هزار ریال میباشد)</p> </legend>
                                 <div class="col-lg-4 col-sm-12" >
-                                    <label for="farm"> زمین (متر مربع)</label>
+                                    <label for="farm"> زمین </label>
                                     <input id="farm" type="text" class="form-control form-cell" placeholder="" >
                                 </div>
                                 <div class="col-lg-4 col-sm-12">
@@ -300,11 +300,11 @@
                                     <input id="officeequipment" type="text" class="form-control form-cell" placeholder="" >
                                 </div>
                                 <div class="col-lg-4 col-sm-12">
-                                    <label for="costbefore">هزینه های پیش از بهره برداری (میلیون ریال)</label>
+                                    <label for="costbefore">هزینه های پیش از بهره برداری </label>
                                     <input id="costbefore" type="text" class="form-control form-cell" placeholder="" >
                                 </div>
                                 <div class="col-lg-4 col-sm-12">
-                                    <label for="unpredictedcosts">هزینه های پیش بینی نشده (میلیون ریال)</label>
+                                    <label for="unpredictedcosts">هزینه های پیش بینی نشده </label>
                                     <input id="unpredictedcosts" type="text" class="form-control form-cell" placeholder="" >
                                 </div>
                             </div>
@@ -408,18 +408,17 @@
                                 <!--<legend class="variable" >بذر</legend>-->
                             <!--</div>-->
                             <div class="row col-lg-12 col-sm-12">
-                                <div class="col-lg-4 col-sm-12" >
+                                <div class="col-lg-6 col-sm-12" >
                                     <label for="seedamount">مقدار بذر مصرف شده (kg)</label>
                                     <input id="seedamount" type="text" class="form-control form-cell" placeholder="" >
                                 </div>
-                                <div class="col-lg-4 col-sm-12">
-                                    <label for="seedprice">هزینه هر کیلو بذر</label>
+                                <div class="col-lg-6 col-sm-12">
+                                    <label for="seedprice">هزینه هر کیلو بذر(هزار ريال)</label>
                                     <input id="seedprice" type="text" class="form-control form-cell" placeholder="" >
                                 </div>
-                                <div class="col-lg-4 col-sm-12 text-center" >
-                                    <label for="seedprice">هزینه کل بذر</label>
-
-                                </div>
+                                <!--<div class="col-lg-4 col-sm-12 text-center" >-->
+                                    <!--<label for="seedprice">هزینه کل بذر</label>-->
+                                <!--</div>-->
                             </div>
                             <br><br><br><br>
 
@@ -428,17 +427,17 @@
                             <!--</div>-->
                             <div class="row col-lg-12 col-sm-12">
                                 <!-- <legend class="variable" style="text-align : center ">سم</legend> -->
-                                <div class="col-lg-4 col-sm-12" >
+                                <div class="col-lg-6 col-sm-12" >
                                     <label for="poisonamount"> مقدار سم مصرف شده (kg)</label>
                                     <input id="poisonamount" type="text" class="form-control form-cell" placeholder="" >
                                 </div>
-                                <div class="col-lg-4 col-sm-12">
-                                    <label for="poisonprice">هزینه هر کیلو سم</label>
+                                <div class="col-lg-6 col-sm-12">
+                                    <label for="poisonprice">هزینه هر کیلو سم(هزار ريال)</label>
                                     <input id="poisonprice" type="text" class="form-control form-cell" placeholder="" >
                                 </div>
-                                <div class="col-lg-4 col-sm-12 text-center">
-                                    <label for="poisonprice">هزینه کل سم</label>
-                                </div>
+                                <!--<div class="col-lg-4 col-sm-12 text-center">-->
+                                    <!--<label for="poisonprice">هزینه کل سم</label>-->
+                                <!--</div>-->
                             </div>
                             <br><br><br><br>
                             <!--<div class="row col-lg-4 col-sm-12">-->
@@ -446,17 +445,17 @@
                             <!--</div>-->
                             <div class="row col-lg-12 col-sm-12">
                                 <!-- <legend class="variable" style="text-align : center ">سم</legend> -->
-                                <div class="col-lg-4 col-sm-12" >
+                                <div class="col-lg-6 col-sm-12" >
                                     <label for="fertilizeramount">مقدار کود مصرف شده (kg)</label>
                                     <input id="fertilizeramount" type="text" class="form-control form-cell" placeholder="" >
                                 </div>
-                                <div class="col-lg-4 col-sm-12">
-                                    <label for="fertilizerprice">هزینه هر کیلو کود</label>
+                                <div class="col-lg-6 col-sm-12">
+                                    <label for="fertilizerprice">هزینه هر کیلو کود(هزار ريال)</label>
                                     <input id="fertilizerprice" type="text" class="form-control form-cell" placeholder="" >
                                 </div>
-                                <div class="col-lg-4 col-sm-12 text-center">
-                                    <label for="poisonprice">هزینه کل کود</label>
-                                </div>
+                                <!--<div class="col-lg-4 col-sm-12 text-center">-->
+                                    <!--<label for="poisonprice">هزینه کل کود</label>-->
+                                <!--</div>-->
                             </div>
 
                             <br>
@@ -465,17 +464,17 @@
                             </div>
                             <div class="row col-lg-12 col-sm-12">
                                 <!-- <legend class="variable" style="text-align : center ">سم</legend> -->
-                                <div class="col-lg-4 col-sm-12" >
+                                <div class="col-lg-6 col-sm-12" >
                                     <label for="salary">حقوق نیروی کار(هر نفر)</label>
                                     <input id="salary" type="text" class="form-control form-cell" placeholder="" >
                                 </div>
-                                <div class="col-lg-4 col-sm-12">
-                                    <label for="employee">تعداد نیروی کار</label>
+                                <div class="col-lg-6 col-sm-12">
+                                    <label for="employee">تعداد نیروی کار(هزار ريال)</label>
                                     <input id="employee" type="text" class="form-control form-cell" placeholder="" >
                                 </div>
-                                <div class="col-lg-4 col-sm-12 text-center">
-                                    <label >هزینه کل نیروی کار</label>
-                                </div>
+                                <!--<div class="col-lg-4 col-sm-12 text-center">-->
+                                    <!--<label >هزینه کل نیروی کار</label>-->
+                                <!--</div>-->
                             </div>
 
                         </div>
@@ -523,19 +522,23 @@
                             <div class="row">
                                 <!--<legend style="text-align : right ">میزان تولید</legend>-->
                                 <div class="col-lg-6 col-sm-12" >
-                                    <label for="productamount">میزان تولید</label>
+                                    <label for="productamount">میزان تولید(kg)</label>
                                     <input id="productamount" type="text" class="form-control form-cell" placeholder="" >
                                 </div>
-                                <div class="col-lg-6 col-sm-12">
-                                    <label for="productprice">قیمت واحد (ریال)</label>
-                                    <input id="productprice" type="text" class="form-control form-cell" placeholder="" >
-                                </div>
-                                <div class="col-12 text-center">
-                                    <a  onclick="incomeMult()"  class="gradient-btn v2">درآمد کل</a>
-                                </div>
+                                <!--<div class="col-lg-6 col-sm-12">-->
+                                    <!--<label for="productprice">قیمت واحد (ریال)</label>-->
+                                    <!--<input id="productprice" type="text" class="form-control form-cell" placeholder="" >-->
+                                <!--</div>-->
+                                <!--<div class="col-12 text-center">-->
+                                    <!--<a  onclick="incomeMult()"  class="gradient-btn v2">درآمد کل</a>-->
+                                <!--</div>-->
                                 <div id="answer5" class="answer col-12 text-center">
                                 </div>
 
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="productprice">قیمت واحد(ریال)</label>
+                                <input id="productprice" type="text" class="form-control form-cell" placeholder="" >
                             </div>
                         </div>
                         </br></br></br>
