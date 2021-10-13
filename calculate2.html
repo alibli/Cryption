@@ -109,13 +109,13 @@
             <button class="nav-link active" id="pills-general-tab" data-bs-toggle="pill" data-bs-target="#pills-general" type="button" role="tab" aria-controls="pills-home" aria-selected="true">اطلاعات کلی</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">هزینه های ثابت</button>
+            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" onclick="checkInfo()">هزینه های ثابت</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-variable-tab" data-bs-toggle="pill" data-bs-target="#pills-variable" type="button" role="tab" aria-controls="pills-home" aria-selected="true">هزینه های متغیر</button>
+            <button class="nav-link" id="pills-variable-tab" data-bs-toggle="pill" data-bs-target="#pills-variable" type="button" role="tab" aria-controls="pills-home" aria-selected="true" onclick="checkFixedCost()">هزینه های متغیر</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">درآمد ها</button>
+            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" onclick="checkvariabledCost()">درآمد ها</button>
         </li>
 
         <li class="nav-item" role="presentation">
@@ -165,7 +165,7 @@
                                 <!--                        <legend style="text-align : right ">مفروضات هزینه های درصدی</legend>-->
                                 <div class="col-lg-6 col-sm-12" >
                                     <label for="productarea">سطح زیر کشت محصول(هکتار)</label>
-                                    <input id="productarea" type="text" class="form-control form-cell" placeholder="" required >
+                                    <input id="productarea" type="text" onkeyup="splitDigit(this)" class="form-control form-cell" placeholder="" required >
                                 </div>
                                 <div class="col-lg-6 col-sm-12">
                                     <label for="projectname" style="margin-right: 50px">استان</label>
@@ -212,9 +212,8 @@
 
                         </div>
                         <br>
-                        <div class="form">
+                        <!-- <div class="form">
                             <div class="row">
-                                <!--                                    <legend style="text-align : right ">مفروضات هزینه های درصدی</legend>-->
                                 <div class="col-lg-4 col-sm-12" >
                                     <label for="costPer">سال پایه</label>
                                     <input id="costPer" type="text" class="form-control form-cell" placeholder="" >
@@ -228,7 +227,7 @@
                                     <input id="performRatio" type="text" class="form-control form-cell" placeholder="" >
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </form>
                     </form>
                     <br><br>
@@ -265,15 +264,15 @@
                                 <legend style="text-align : right "> محاسبه اجزا و میزان سرمایه ثابت <p style="font-size: 15px">(*واحد تمامی مقادیر هزار ریال میباشد)</p> </legend>
                                 <div class="col-lg-4 col-sm-12" >
                                     <label for="farm"> زمین </label>
-                                    <input id="farm" type="text" class="form-control form-cell" placeholder="" >
+                                    <input id="farm" type="text" onkeyup="splitDigit(this)" class="form-control form-cell" placeholder="" >
                                 </div>
                                 <div class="col-lg-4 col-sm-12">
                                     <label for="areaconstruction">محوطه سازی </label>
-                                    <input id="areaconstruction" type="text" class="form-control form-cell" placeholder="" >
+                                    <input id="areaconstruction" type="text" onkeyup="splitDigit(this)" class="form-control form-cell" placeholder="" >
                                 </div>
                                 <div class="col-lg-4 col-sm-12">
                                     <label for="building">ساختمان</label>
-                                    <input id="building" type="text" class="form-control form-cell" placeholder=" " >
+                                    <input id="building" type="text" onkeyup="splitDigit(this)" class="form-control form-cell" placeholder=" " >
                                 </div>
                             </div>
                         </div>  <br>
@@ -281,15 +280,15 @@
                             <div class="row">
                                 <div class="col-lg-4 col-sm-12" >
                                     <label for="machinery">ماشین آلات </label>
-                                    <input id="machinery" type="text" class="form-control form-cell" placeholder="" >
+                                    <input id="machinery" type="text" onkeyup="splitDigit(this)" class="form-control form-cell" placeholder="" >
                                 </div>
                                 <div class="col-lg-4 col-sm-12">
                                     <label for="equipment">تجهیزات</label>
-                                    <input id="equipment" type="text" class="form-control form-cell" placeholder=" " >
+                                    <input id="equipment" type="text" onkeyup="splitDigit(this)" class="form-control form-cell" placeholder=" " >
                                 </div>
                                 <div class="col-lg-4 col-sm-12">
                                     <label for="transportation">حمل و نقل</label>
-                                    <input id="transportation" type="text" class="form-control form-cell" placeholder="" >
+                                    <input id="transportation" type="text" onkeyup="splitDigit(this)" class="form-control form-cell" placeholder="" >
                                 </div>
                             </div>
                         </div> <br>
@@ -297,15 +296,15 @@
                             <div class="row">
                                 <div class="col-lg-4 col-sm-12" >
                                     <label for="officeequipment">تجهیزات دفتری </label>
-                                    <input id="officeequipment" type="text" class="form-control form-cell" placeholder="" >
+                                    <input id="officeequipment" type="text" onkeyup="splitDigit(this)" class="form-control form-cell" placeholder="" >
                                 </div>
                                 <div class="col-lg-4 col-sm-12">
                                     <label for="costbefore">هزینه های پیش از بهره برداری </label>
-                                    <input id="costbefore" type="text" class="form-control form-cell" placeholder="" >
+                                    <input id="costbefore" type="text" onkeyup="splitDigit(this)" class="form-control form-cell" placeholder="" >
                                 </div>
                                 <div class="col-lg-4 col-sm-12">
                                     <label for="unpredictedcosts">هزینه های پیش بینی نشده </label>
-                                    <input id="unpredictedcosts" type="text" class="form-control form-cell" placeholder="" >
+                                    <input id="unpredictedcosts" type="text" onkeyup="splitDigit(this)" class="form-control form-cell" placeholder="" >
                                 </div>
                             </div>
                         </div>
@@ -410,11 +409,11 @@
                             <div class="row col-lg-12 col-sm-12">
                                 <div class="col-lg-6 col-sm-12" >
                                     <label for="seedamount">مقدار بذر مصرف شده (kg)</label>
-                                    <input id="seedamount" type="text" class="form-control form-cell" placeholder="" >
+                                    <input id="seedamount" type="text" onkeyup="splitDigit(this)" class="form-control form-cell" placeholder="" >
                                 </div>
                                 <div class="col-lg-6 col-sm-12">
                                     <label for="seedprice">هزینه هر کیلو بذر(هزار ريال)</label>
-                                    <input id="seedprice" type="text" class="form-control form-cell" placeholder="" >
+                                    <input id="seedprice" type="text" onkeyup="splitDigit(this)" class="form-control form-cell" placeholder="" >
                                 </div>
                                 <!--<div class="col-lg-4 col-sm-12 text-center" >-->
                                     <!--<label for="seedprice">هزینه کل بذر</label>-->
@@ -429,11 +428,11 @@
                                 <!-- <legend class="variable" style="text-align : center ">سم</legend> -->
                                 <div class="col-lg-6 col-sm-12" >
                                     <label for="poisonamount"> مقدار سم مصرف شده (kg)</label>
-                                    <input id="poisonamount" type="text" class="form-control form-cell" placeholder="" >
+                                    <input id="poisonamount" type="text" onkeyup="splitDigit(this)" class="form-control form-cell" placeholder="" >
                                 </div>
                                 <div class="col-lg-6 col-sm-12">
                                     <label for="poisonprice">هزینه هر کیلو سم(هزار ريال)</label>
-                                    <input id="poisonprice" type="text" class="form-control form-cell" placeholder="" >
+                                    <input id="poisonprice" type="text" onkeyup="splitDigit(this)" class="form-control form-cell" placeholder="" >
                                 </div>
                                 <!--<div class="col-lg-4 col-sm-12 text-center">-->
                                     <!--<label for="poisonprice">هزینه کل سم</label>-->
@@ -446,31 +445,31 @@
                             <div class="row col-lg-12 col-sm-12">
                                 <!-- <legend class="variable" style="text-align : center ">سم</legend> -->
                                 <div class="col-lg-6 col-sm-12" >
-                                    <label for="fertilizeramount">مقدار کود مصرف شده (kg)</label>
-                                    <input id="fertilizeramount" type="text" class="form-control form-cell" placeholder="" >
+                                    <label for="fertilizeramount">مقدار کود شیمیایی مصرف شده (kg)</label>
+                                    <input id="fertilizeramount" type="text" onkeyup="splitDigit(this)" class="form-control form-cell" placeholder="" >
                                 </div>
                                 <div class="col-lg-6 col-sm-12">
-                                    <label for="fertilizerprice">هزینه هر کیلو کود(هزار ريال)</label>
-                                    <input id="fertilizerprice" type="text" class="form-control form-cell" placeholder="" >
+                                    <label for="fertilizerprice">هزینه هر کیلو کود شیمیایی(هزار ريال)</label>
+                                    <input id="fertilizerprice" type="text" onkeyup="splitDigit(this)" class="form-control form-cell" placeholder="" >
                                 </div>
                                 <!--<div class="col-lg-4 col-sm-12 text-center">-->
                                     <!--<label for="poisonprice">هزینه کل کود</label>-->
                                 <!--</div>-->
                             </div>
 
-                            <br>
-                            <div class="row col-lg-4 col-sm-12">
+                            <br><br><br><br>
+                            <!-- <div class="row col-lg-4 col-sm-12">
                             <legend class="variable" >نیروی کار</legend>
-                            </div>
+                            </div> -->
                             <div class="row col-lg-12 col-sm-12">
                                 <!-- <legend class="variable" style="text-align : center ">سم</legend> -->
                                 <div class="col-lg-6 col-sm-12" >
-                                    <label for="salary">حقوق نیروی کار(هر نفر)</label>
+                                    <label for="salary">تعداد نیروی کار(هر نفر)</label>
                                     <input id="salary" type="text" class="form-control form-cell" placeholder="" >
                                 </div>
                                 <div class="col-lg-6 col-sm-12">
-                                    <label for="employee">تعداد نیروی کار(هزار ريال)</label>
-                                    <input id="employee" type="text" class="form-control form-cell" placeholder="" >
+                                    <label for="employee">دستمزد نیروی کار(هزار ريال)</label>
+                                    <input id="employee" type="text" onkeyup="splitDigit(this)" class="form-control form-cell" placeholder="" >
                                 </div>
                                 <!--<div class="col-lg-4 col-sm-12 text-center">-->
                                     <!--<label >هزینه کل نیروی کار</label>-->
@@ -523,7 +522,7 @@
                                 <!--<legend style="text-align : right ">میزان تولید</legend>-->
                                 <div class="col-lg-6 col-sm-12" >
                                     <label for="productamount">میزان تولید(kg)</label>
-                                    <input id="productamount" type="text" class="form-control form-cell" placeholder="" >
+                                    <input id="productamount" type="text" onkeyup="splitDigit(this)" class="form-control form-cell" placeholder="" >
                                 </div>
                                 <!--<div class="col-lg-6 col-sm-12">-->
                                     <!--<label for="productprice">قیمت واحد (ریال)</label>-->
@@ -537,7 +536,7 @@
 
                                 <div class="col-lg-6 col-sm-12">
                                     <label for="productprice">قیمت واحد(ریال)</label>
-                                    <input id="productprice" type="text" class="form-control form-cell" placeholder="" >
+                                    <input id="productprice" type="text" onkeyup="splitDigit(this)" class="form-control form-cell" placeholder="" >
                                 </div>
                             </div>
                         </div>
