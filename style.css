@@ -93,7 +93,7 @@ h1{
 }
 
 #calculate{
-  height: 1650px;
+  /* height: 1650px; */
   margin: 10px;
 }
 
@@ -190,7 +190,7 @@ a, a:hover{
 }
 
 input:focus, button:focus, textarea:focus {
-  outline: none
+  outline: none;
 }
 
 input, textarea{
