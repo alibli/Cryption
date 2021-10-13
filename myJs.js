@@ -154,14 +154,143 @@ function calc3(){
 }
 
 
-function calculate(){
+let net_chart = new Chart(document.getElementById("net-chart"), {
+    type: 'bar',
 
+    data: {
+        labels: [],
+        datasets: [
+            {
+
+                // label: "تجمعی",
+                backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+                data: [],
+
+            }
+        ]
+    },
+    options: {
+        responsive: false,
+        legend: { display: false },
+
+        plugins: {
+            legend: {
+                display: false
+            },
+            title: {
+                display: true,
+                text: 'خالص تجمعی جریان وجوه نقد',
+                font: {
+                    family: "iransans"
+                }
+            }
+        }
+    }
+});
+
+let cumulative_chart = new Chart(document.getElementById("cumulative -chart"), {
+    type: 'bar',
+    data: {
+        labels: [],
+        datasets: [
+            {
+                // label: "تجمعی",
+                backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+                data: [],
+            }
+        ]
+    },
+    options: {
+        responsive: false,
+        legend: { display: false },
+
+        plugins: {
+            legend: {
+                display: false
+            },
+            title: {
+                display: true,
+                text: 'خالص تجمعی جریان وجوه نقد',
+                font: {
+                    family: "iransans"
+                }
+            }
+        }
+    }
+});
+
+let mixedChart = new Chart(document.getElementById("mix -chart"), {
+    type: 'bar',
+    data: {
+        datasets: [{
+            label: 'Variable Costs',
+            data: [],
+            backgroundColor: "blue",
+            // this dataset is drawn below
+            order: 2
+        }, {
+            label: 'Fixed Costs',
+            data: [],
+            type: 'bar',
+            backgroundColor: "red",
+            // this dataset is drawn on top
+            order: 1
+        },{
+            label: 'Income',
+            data: [],
+            type: 'bar',
+            backgroundColor: "green",
+                // this dataset is drawn on top
+                order: 1
+            }
+        ],
+        labels: []
+    }
+});
+
+function addData(chart, label, data) {
+    chart.data.labels.push(label);
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data.push(data);
+    });
+    chart.update();
+}
+
+
+
+function addData2(chart, label, data) {
+    chart.data.labels.push(label);
+    for (let i = 0; i< data.length; ++i){
+        chart.data.datasets[i].data.push(data[i]);
+    }
+    // chart.data.datasets.forEach((dataset) => {
+    //     dataset.data.push(data);
+    // });
+    chart.update();
+}
+// mixedChart.data.datasets[0].data.push(100);
+// mixedChart.update();
+// console.log(mixedChart.data.datasets[0].data);
+
+
+function removeData(chart) {
+    chart.data.labels.pop();
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data.pop();
+    });
+    chart.update();
+}
+
+
+function calculate(){
 
     // remove chart data
     for (let i = 0 ; i < 5; i++) {
+        removeData(mixedChart);
         removeData(cumulative_chart);
         removeData(net_chart);
     }
+
 
     // let return_percent = document.getElementById('return-percent').value;
     // let b0 = document.getElementById('1400').value;
@@ -211,12 +340,12 @@ function calculate(){
 
 
     //      test        //
-    // fixedcost = 3469376*1.15;
-    // seedsum = 45000;
-    // poisonsum = 6968;
-    // fertilsum = 50254;
-    // salarysum = 459000;
-    // income = 1350000;
+    fixedcost = 3469376*1.15;
+    seedsum = 45000;
+    poisonsum = 6968;
+    fertilsum = 50254;
+    salarysum = 459000;
+    income = 1350000;
 
     let other = -136740;
 
@@ -274,7 +403,10 @@ function calculate(){
     let tajamoe = IRR_cashflow.map(cumulativeSum);
     for (let i = 0; i<5; i++){
         addData(cumulative_chart, initial_year + i, tajamoe[i]);
+
+        addData2(mixedChart, initial_year + i, [-1 * variablecost_cashflow[i], -1*fixedcost_cashflow[i], income_cashflow[i] ] );
     }
+
 
     console.log("final",IRR_cashflow);
 
@@ -354,89 +486,8 @@ function getNPV(rate, initialCost, cashFlows){
 // Bar chart
 // var ctx = document.getElementById("bar-chart");
 
-function addData(chart, label, data) {
-    chart.data.labels.push(label);
-    chart.data.datasets.forEach((dataset) => {
-        dataset.data.push(data);
-    });
-    chart.update();
-}
 
-function removeData(chart) {
-    chart.data.labels.pop();
-    chart.data.datasets.forEach((dataset) => {
-        dataset.data.pop();
-    });
-    chart.update();
-}
 
-let net_chart = new Chart(document.getElementById("net-chart"), {
-    type: 'bar',
-
-    data: {
-        labels: [],
-        datasets: [
-            {
-
-                // label: "تجمعی",
-                backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-                data: [],
-
-            }
-        ]
-    },
-    options: {
-        responsive: false,
-        legend: { display: false },
-
-        plugins: {
-            legend: {
-                display: false
-            },
-            title: {
-                display: true,
-                text: 'خالص تجمعی جریان وجوه نقد',
-                font: {
-                    family: "iransans"
-                }
-            }
-        }
-    }
-});
-
-let cumulative_chart = new Chart(document.getElementById("cumulative -chart"), {
-    type: 'bar',
-
-    data: {
-        labels: [],
-        datasets: [
-            {
-
-                // label: "تجمعی",
-                backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-                data: [],
-
-            }
-        ]
-    },
-    options: {
-        responsive: false,
-        legend: { display: false },
-
-        plugins: {
-            legend: {
-                display: false
-            },
-            title: {
-                display: true,
-                text: 'خالص تجمعی جریان وجوه نقد',
-                font: {
-                    family: "iransans"
-                }
-            }
-        }
-    }
-});
 
 
 
