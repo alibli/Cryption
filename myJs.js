@@ -557,3 +557,69 @@ function incomeMult(){
     answer5.innerHTML = "درآمد : " + fMoney * fProduce;
     // return fMoney * fProduce;
 }
+
+function splitDigit(inp){
+    var nStr = inp.value + '';
+    nStr = nStr.replace( /\,/g, "");
+    var x = nStr.split( '.' );
+    var x1 = x[0];
+    var x2 = x.length > 1 ? '.' + x[1] : '';
+    var rgx = /(\d+)(\d{3})/;
+    while ( rgx.test(x1) ) {
+        x1 = x1.replace( rgx, '$1' + ',' + '$2' );
+    }
+    inp.value = x1 + x2;
+
+}
+
+let product = document.getElementById('product');  
+let productArea = document.getElementById('productarea');  
+let projectName = document.getElementById('projectname');  
+
+function checkInfo(){
+    if(productArea.value == '' || projectName.value == '' || product.value === '---')
+        alert('لطفا تمام فیلد های اطلاعات کلی را پر کنید');  
+}
+
+let farm = document.getElementById('farm');
+let areaConstruction = document.getElementById('areaconstruction');
+let building = document.getElementById('building');
+let machinery = document.getElementById('machinery');
+let equipment = document.getElementById('equipment');
+let transportation = document.getElementById('transportation');
+let officeEquipment = document.getElementById('officeequipment');
+let costBefore = document.getElementById('costbefore');
+let unPredictedCosts = document.getElementById('unpredictedcosts');
+
+function checkFixedCost(){
+    if(farm.value == '' || areaConstruction.value == '' || building.value == '' || machinery.value == '' || equipment.value == '' || 
+        transportation.value == '' || officeEquipment.value == ''  || costBefore.value == '' || unPredictedCosts.value == ''
+    )
+        alert('لطفا تمام فیلد های هزینه های ثابت را پر کنید');
+}
+
+
+let seedAmount = document.getElementById('seedamount');
+let seedPrice = document.getElementById('seedprice');
+let poisonAmount = document.getElementById('poisonamount');
+let poisonPrice = document.getElementById('poisonprice');
+let fertilizerAmount = document.getElementById('fertilizeramount');
+let fertilizerPrice = document.getElementById('fertilizerprice');
+let salary = document.getElementById('salary');
+let employee = document.getElementById('employee');
+
+function checkvariabledCost(){
+    if(seedAmount.value == '' || seedPrice.value == '' || poisonAmount.value == '' || poisonPrice.value == '' || fertilizerAmount.value == '' ||
+    fertilizerPrice.value == '' || salary.value == '' || employee.value == ''
+    )
+        alert('لطفا تمام فیلد های هزینه های متغیر را پر کنید');
+}
+
+
+let productAmount = document.getElementById('productamount');
+let productPrice = document.getElementById('productprice');
+
+function checkIncome(){
+    if(productAmount.value == '' || productPrice.value == '')
+        alert('لطفا تمام فیلد های درآمد را پر کنید')
+}
