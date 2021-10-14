@@ -593,14 +593,22 @@
                 <div class="row">
 
 
-                    <div class="row col-lg-3" style="margin: auto ; text-align: center"  dir="ltr">
+                    <div class="row col-lg-6 " style="margin: auto ; text-align: center"  dir="ltr">
                         <table class="table  table-bordered table-secondary">
                             <thead>
                             <tr class="table-secondary">
                                 <th scope="col">NPV</th>
                                 <th scope="col">IRR</th>
-                                <th scope="col">PI</th>
+                                <th scope="col">PB</th>
                                 <th scope="col">B/C</th>
+                            </tr>
+                            </thead>                            
+							<thead>
+                            <tr class="table-secondary">
+                                <th scope="col">ارزش فعلی خالص</th>
+                                <th scope="col">نرخ بازده داخلی</th>
+                                <th scope="col">دوره بازگشت سرمایه</th>
+                                <th scope="col">نسبت فایده به هزینه</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -613,11 +621,15 @@
                             </tbody>
                         </table>
                     </div>
-                    <br><br>
-                    <div class="row col-lg-12">
+					
+					<div class="space-40"></div>
+                    
+					<div class="row col-lg-12">
                         <canvas dir="ltr" id="net-chart" class="mx-auto justify-content-center" style="width: 500px"></canvas>
                         <canvas dir="ltr" id="cumulative -chart" class="mx-auto justify-content-center" style="width: 500px"></canvas>
-                        <canvas dir="ltr" id="mix -chart" class="mx-auto justify-content-center" style="width: 500px"></canvas>
+						<div class="space-40"></div>
+						
+                        <canvas dir="ltr" id="mix -chart" class="mx-auto justify-content-center" style="width: 700px"></canvas>
 
                     </div>
 

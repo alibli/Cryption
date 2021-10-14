@@ -179,7 +179,7 @@ let net_chart = new Chart(document.getElementById("net-chart"), {
             },
             title: {
                 display: true,
-                text: 'خالص تجمعی جریان وجوه نقد',
+                text: 'خالص جریان وجوه نقد',
                 font: {
                     family: "iransans"
                 }
@@ -223,29 +223,47 @@ let mixedChart = new Chart(document.getElementById("mix -chart"), {
     type: 'bar',
     data: {
         datasets: [{
-            label: 'Variable Costs',
+            label: 'هزینه‌های متغیر',
             data: [],
             backgroundColor: "blue",
             // this dataset is drawn below
-            order: 2
+            order: 3
         }, {
-            label: 'Fixed Costs',
+            label: 'هزینه‌های ثابت',
             data: [],
             type: 'bar',
             backgroundColor: "red",
             // this dataset is drawn on top
             order: 1
         },{
-            label: 'Income',
+            label: 'درآمد',
             data: [],
             type: 'bar',
             backgroundColor: "green",
                 // this dataset is drawn on top
-                order: 1
+                order: 2
             }
         ],
         labels: []
+    },
+	    options: {
+        responsive: false,
+        legend: { display: false },
+
+        plugins: {
+            legend: {
+                display: true
+            },
+            title: {
+                display: true,
+                text: 'جدول جریان نقدی درآمد و هزینه ها به قیمت جاری',
+                font: {
+                    family: "iransans"
+                }
+            }
+        }
     }
+	
 });
 
 function addData(chart, label, data) {
@@ -347,8 +365,8 @@ function calculate(){
     salarysum = 459000;
     income = 1350000;
 
-    let other = -136740;
-
+    let other = 0.25 *(seedsum + poisonsum + salarysum + fertilsum) ;
+	console.log(other);
     let initial_year = 1400;
     let discount_Rate = 0.25;
     let tavarom = 1.15;
@@ -399,11 +417,15 @@ function calculate(){
     }
 
     const cumulativeSum = (sum => value => sum += value)(0);
-
+	
+	let payback = -1;
     let tajamoe = IRR_cashflow.map(cumulativeSum);
     for (let i = 0; i<5; i++){
         addData(cumulative_chart, initial_year + i, tajamoe[i]);
-
+		if (tajamoe[i] > 0){
+			payback = i+1;
+		}
+		
         addData2(mixedChart, initial_year + i, [-1 * variablecost_cashflow[i], -1*fixedcost_cashflow[i], income_cashflow[i] ] );
     }
 
@@ -417,21 +439,28 @@ function calculate(){
     // NPV
     let final_NPV = NPV([0].concat(IRR_cashflow), discount_Rate);
     console.log(final_NPV);
-    document.getElementById('npvResult').innerHTML = final_NPV.toFixed(3);
+    document.getElementById('npvResult').innerHTML = parseInt(final_NPV);
 
     // IRR
     let final_IRR = IRR(IRR_cashflow);
     console.log(final_IRR);
-    document.getElementById('irrResult').innerHTML = final_IRR.toFixed(2);
+    document.getElementById('irrResult').innerHTML = Math.round(final_IRR * 100) + "%";
     // console.log(fixed_cost_NPV);
+
+
+
+	// PAY BACK INSTEAD OF PI
+	
+	document.getElementById('piResult').innerHTML = payback ;
+
 
     // PI
     let fixed_cost_NPV = NPV([0].concat(fixedcost_cashflow), discount_Rate);
     let variable_cost_NPV = NPV([0].concat(variablecost_cashflow), discount_Rate);
-    let PI = final_NPV / (fixed_cost_NPV + variable_cost_NPV);
+    //let PI = final_NPV / (fixed_cost_NPV + variable_cost_NPV);
     // console.log(variable_cost_NPV);
-    console.log(parseInt(PI * 100));
-    document.getElementById('piResult').innerHTML = parseInt(PI * 100 );
+    //console.log(parseInt(PI * 100));
+    //document.getElementById('piResult').innerHTML = parseInt(PI * 100 );
 
     // B/C
     let income_NPV = NPV([0].concat(income_cashflow), discount_Rate);
