@@ -599,7 +599,11 @@ function splitDigit(inp){
     }
     inp.value = x1 + x2;
 
+    console.log(inp.value);
+    console.log(x1);
+    console.log(x);
 }
+
 
 let product = document.getElementById('product');  
 let productArea = document.getElementById('productarea');  
