@@ -163,7 +163,7 @@ let net_chart = new Chart(document.getElementById("net-chart"), {
             {
 
                 // label: "تجمعی",
-                backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+                backgroundColor: "#127437",
                 data: [],
 
             }
@@ -194,8 +194,8 @@ let cumulative_chart = new Chart(document.getElementById("cumulative -chart"), {
         labels: [],
         datasets: [
             {
-                // label: "تجمعی",
-                backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+                // label: "تجمعی", ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"]
+                backgroundColor: "#bbc71a",
                 data: [],
             }
         ]
@@ -225,21 +225,21 @@ let mixedChart = new Chart(document.getElementById("mix -chart"), {
         datasets: [{
             label: 'هزینه‌های متغیر',
             data: [],
-            backgroundColor: "blue",
+            backgroundColor: "#3e95cd",
             // this dataset is drawn below
             order: 3
         }, {
             label: 'هزینه‌های ثابت',
             data: [],
             type: 'bar',
-            backgroundColor: "red",
+            backgroundColor: "#c45850",
             // this dataset is drawn on top
             order: 1
         },{
             label: 'درآمد',
             data: [],
             type: 'bar',
-            backgroundColor: "green",
+            backgroundColor: "#3cba9f",
                 // this dataset is drawn on top
                 order: 2
             }
