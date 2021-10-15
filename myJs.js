@@ -1,323 +1,165 @@
-
-function calc(){
-
-    let farmArea = document.getElementById('farmArea').value;
-    let plantNumber = document.getElementById('plantNumber').value;
-    let costPer = document.getElementById('costPer').value;
-    let interstRatio = document.getElementById('interstRatio').value;
-    let performRatio = document.getElementById('performRatio').value;
-    let answer = document.getElementById("Answerz");
-
-    console.log(costPer)
-
-    answer.innerHTML =  (parseInt(farmArea) + parseInt(plantNumber) +parseInt(costPer)  + parseInt(interstRatio) + parseInt(performRatio)) ;
-
-    console.log(answer)
-    console.log(isNaN(answer.innerHTML))
-
-    if (isNaN(answer.innerHTML)){
-        answer.innerHTML = "لطفا تمام فیلد ها را پر کنید";
-        answer.style.color = 'darkred'
-    }else{
-        answer.innerHTML =  "نتیجه: "+ answer.innerHTML
-        answer.style.color = 'white'
-    }
-}
-
-function calc1(){
-
-    let projectname = document.getElementById("projectname").value;
-    let product = document.getElementById("product").value;
-    let productarea = document.getElementById("productarea").value;
-    let city = document.getElementById("city").value;
-    let answer = document.getElementById("Answer1");
-
-    answer.innerHTML =  productarea + projectname + product + city;
-
-    console.log(product)
-    console.log(projectname)
-    console.log(productarea)
-    console.log(city)
-    console.log(answer.innerHTML)
-    console.log(isNaN(answer.innerHTML))
-
-    if (!isNaN(answer.innerHTML)){
-        answer.innerHTML = "لطفا تمام فیلد ها را پر کنید";
-        answer.style.color = 'darkred'
-    }else{
-        answer.innerHTML =  "اطلاعات با موفقیت ثبت شد"
-        answer.style.color = 'white'
-    }
-}
-// variable costs
-function calcv(){
-
-    let seeda = document.getElementById("seedamount").value;
-    let seedp = document.getElementById("seedprice").value;
-    let poisona = document.getElementById("poisonamount").value;
-    let poisonp = document.getElementById("poisonprice").value;
-    let fertilizera = document.getElementById("fertilizeramount").value;
-    let fertilizerp = document.getElementById("fertilizerprice").value;
-
-    let answerval = document.getElementById("Answervar");
-    let seed = document.getElementById("seed");
-    let poison = document.getElementById("poison");
-    let fertil = document.getElementById("fertilizer");
-
-
-    sum = seeda * seedp +  poisona * poisonp + fertilizera * fertilizerp;
-    console.log(sum)
-
-    seedsum = seeda * seedp;
-    seedpercent = seedsum*100/sum;
-
-    poisonsum = poisona * poisonp;
-    poisonpercent = poisonsum*100/sum;
-
-    fertilsum = fertilizera * fertilizerp;
-    fertilpercent = fertilsum*100/sum;
-
-    seed.innerHTML = " هزینه بذر: " + seedsum ;
-    poison.innerHTML = " هزینه سم: " +  poisonsum;
-    fertil.innerHTML = " هزینه کود: " + fertilsum;
-
-    seed.innerHTML += '<br>';
-    seed.innerHTML += "درصد: " + seedpercent.toFixed(2) + '%';
-    poison.innerHTML += '<br>';
-    poison.innerHTML += "درصد: " + poisonpercent.toFixed(2) + '%';
-    fertil.innerHTML += '<br>';
-    fertil.innerHTML += "درصد: " + fertilpercent.toFixed(2) + '%';
-    console.log(seeda*seedp)
-    console.log(seed.innerHTML)
-    // if (!isNaN(answer.innerHTML)){
-    //     answer.innerHTML = "لطفا تمام فیلد ها را پر کنید";
-    //     answer.style.color = 'darkred'
-    // }else{
-    //     answer.innerHTML =  "اطلاعات با موفقیت ثبت شد"
-    //     answer.style.color = 'white'
-    // }
-}
-
-function calc2(){
-
-    let farmprepare = document.getElementById('farmprepare').value;
-    let farmrent = document.getElementById('farmrent').value;
-    let plant = document.getElementById('plant').value;
-    let grow = document.getElementById('grow').value;
-    let harvest = document.getElementById('harvest').value;
-    let answer = document.getElementById("Answer2");
-
-
-    answer.innerHTML =  (parseInt(farmprepare) + parseInt(farmrent) +parseInt(plant)  + parseInt(grow) + parseInt(harvest)) ;
-
-    console.log(answer)
-    console.log(isNaN(answer.innerHTML))
-
-    if (isNaN(answer.innerHTML)){
-        answer.innerHTML = "لطفا تمام فیلد ها را پر کنید";
-        answer.style.color = 'darkred'
-    }else{
-        answer.innerHTML =  "نتیجه: "+ answer.innerHTML
-        answer.style.color = 'white'
-    }
-}
-
-// fixed costs
-function calc3(){
-
-    let farm = document.getElementById('farm').value;
-    let areaconstruction = document.getElementById('areaconstruction').value;
-    let building = document.getElementById('building').value;
-    let machinery = document.getElementById('machinery').value;
-    let equipment = document.getElementById('equipment').value;
-    let transportation = document.getElementById("transportation").value;
-    let officeequipment = document.getElementById("officeequipment").value;
-    let costbefore = document.getElementById("costbefore").value;
-    let unpredictedcosts = document.getElementById("unpredictedcosts").value;
-
-    let answer = document.getElementById("Answer3");
-
-    answer.innerHTML =  (parseInt(farm) + parseInt(areaconstruction) +parseInt(building)  + parseInt(machinery) + parseInt(equipment) + parseInt(transportation) +
-                            parseInt(officeequipment) + parseInt(costbefore) + parseInt(unpredictedcosts)) ;
-
-    console.log(answer)
-    console.log(isNaN(answer.innerHTML))
-
-
-    if (isNaN(answer.innerHTML)){
-        answer.innerHTML = "لطفا تمام فیلد ها را پر کنید";
-        answer.style.color = 'darkred'
-    }else{
-        answer.innerHTML =  "نتیجه: "+ answer.innerHTML
-        answer.style.color = 'white'
-    }
-}
-
-
-let net_chart = new Chart(document.getElementById("net-chart"), {
-    type: 'bar',
-
-    data: {
-        labels: [],
-        datasets: [
-            {
-
-                // label: "تجمعی",
-                backgroundColor: "#127437",
-                data: [],
-
-            }
-        ]
-    },
-    options: {
-        responsive: false,
-        legend: { display: false },
-
-        plugins: {
-            legend: {
-                display: false
-            },
-            title: {
-                display: true,
-                text: 'خالص جریان وجوه نقد',
-                font: {
-                    family: "iransans"
-                }
-            }
-        }
-    }
-});
-
-let cumulative_chart = new Chart(document.getElementById("cumulative -chart"), {
-    type: 'bar',
-    data: {
-        labels: [],
-        datasets: [
-            {
-                // label: "تجمعی", ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"]
-                backgroundColor: "#bbc71a",
-                data: [],
-            }
-        ]
-    },
-    options: {
-        responsive: false,
-        legend: { display: false },
-
-        plugins: {
-            legend: {
-                display: false
-            },
-            title: {
-                display: true,
-                text: 'خالص تجمعی جریان وجوه نقد',
-                font: {
-                    family: "iransans"
-                }
-            }
-        }
-    }
-});
-
-let mixedChart = new Chart(document.getElementById("mix -chart"), {
-    type: 'bar',
-    data: {
-        datasets: [{
-            label: 'هزینه‌های متغیر',
-            data: [],
-            backgroundColor: "#3e95cd",
-            // this dataset is drawn below
-            order: 3
-        }, {
-            label: 'هزینه‌های ثابت',
-            data: [],
-            type: 'bar',
-            backgroundColor: "#c45850",
-            // this dataset is drawn on top
-            order: 1
-        },{
-            label: 'درآمد',
-            data: [],
-            type: 'bar',
-            backgroundColor: "#3cba9f",
-                // this dataset is drawn on top
-                order: 2
-            }
-        ],
-        labels: []
-    },
-	    options: {
-        responsive: false,
-        legend: { display: false },
-
-        plugins: {
-            legend: {
-                display: true
-            },
-            title: {
-                display: true,
-                text: 'جدول جریان نقدی درآمد و هزینه ها به قیمت جاری',
-                font: {
-                    family: "iransans"
-                }
-            }
-        }
-    }
-	
-});
-
-function addData(chart, label, data) {
-    chart.data.labels.push(label);
-    chart.data.datasets.forEach((dataset) => {
-        dataset.data.push(data);
-    });
-    chart.update();
-}
-
-
-
-function addData2(chart, label, data) {
-    chart.data.labels.push(label);
-    for (let i = 0; i< data.length; ++i){
-        chart.data.datasets[i].data.push(data[i]);
-    }
-    // chart.data.datasets.forEach((dataset) => {
-    //     dataset.data.push(data);
-    // });
-    chart.update();
-}
-// mixedChart.data.datasets[0].data.push(100);
-// mixedChart.update();
-// console.log(mixedChart.data.datasets[0].data);
-
-
-function removeData(chart) {
-    chart.data.labels.pop();
-    chart.data.datasets.forEach((dataset) => {
-        dataset.data.pop();
-    });
-    chart.update();
-}
-
+//
+// function calc(){
+//
+//     let farmArea = document.getElementById('farmArea').value;
+//     let plantNumber = document.getElementById('plantNumber').value;
+//     let costPer = document.getElementById('costPer').value;
+//     let interstRatio = document.getElementById('interstRatio').value;
+//     let performRatio = document.getElementById('performRatio').value;
+//     let answer = document.getElementById("Answerz");
+//
+//     console.log(costPer)
+//
+//     answer.innerHTML =  (parseInt(farmArea) + parseInt(plantNumber) +parseInt(costPer)  + parseInt(interstRatio) + parseInt(performRatio)) ;
+//
+//     console.log(answer)
+//     console.log(isNaN(answer.innerHTML))
+//
+//     if (isNaN(answer.innerHTML)){
+//         answer.innerHTML = "لطفا تمام فیلد ها را پر کنید";
+//         answer.style.color = 'darkred'
+//     }else{
+//         answer.innerHTML =  "نتیجه: "+ answer.innerHTML
+//         answer.style.color = 'white'
+//     }
+// }
+//
+// function calc1(){
+//
+//     let projectname = document.getElementById("projectname").value;
+//     let product = document.getElementById("product").value;
+//     let productarea = document.getElementById("productarea").value;
+//     let city = document.getElementById("city").value;
+//     let answer = document.getElementById("Answer1");
+//
+//     answer.innerHTML =  productarea + projectname + product + city;
+//
+//     console.log(product)
+//     console.log(projectname)
+//     console.log(productarea)
+//     console.log(city)
+//     console.log(answer.innerHTML)
+//     console.log(isNaN(answer.innerHTML))
+//
+//     if (!isNaN(answer.innerHTML)){
+//         answer.innerHTML = "لطفا تمام فیلد ها را پر کنید";
+//         answer.style.color = 'darkred'
+//     }else{
+//         answer.innerHTML =  "اطلاعات با موفقیت ثبت شد"
+//         answer.style.color = 'white'
+//     }
+// }
+// // variable costs
+// function calcv(){
+//
+//     let seeda = document.getElementById("seedamount").value;
+//     let seedp = document.getElementById("seedprice").value;
+//     let poisona = document.getElementById("poisonamount").value;
+//     let poisonp = document.getElementById("poisonprice").value;
+//     let fertilizera = document.getElementById("fertilizeramount").value;
+//     let fertilizerp = document.getElementById("fertilizerprice").value;
+//
+//     let answerval = document.getElementById("Answervar");
+//     let seed = document.getElementById("seed");
+//     let poison = document.getElementById("poison");
+//     let fertil = document.getElementById("fertilizer");
+//
+//
+//     sum = seeda * seedp +  poisona * poisonp + fertilizera * fertilizerp;
+//     console.log(sum)
+//
+//     seedsum = seeda * seedp;
+//     seedpercent = seedsum*100/sum;
+//
+//     poisonsum = poisona * poisonp;
+//     poisonpercent = poisonsum*100/sum;
+//
+//     fertilsum = fertilizera * fertilizerp;
+//     fertilpercent = fertilsum*100/sum;
+//
+//     seed.innerHTML = " هزینه بذر: " + seedsum ;
+//     poison.innerHTML = " هزینه سم: " +  poisonsum;
+//     fertil.innerHTML = " هزینه کود: " + fertilsum;
+//
+//     seed.innerHTML += '<br>';
+//     seed.innerHTML += "درصد: " + seedpercent.toFixed(2) + '%';
+//     poison.innerHTML += '<br>';
+//     poison.innerHTML += "درصد: " + poisonpercent.toFixed(2) + '%';
+//     fertil.innerHTML += '<br>';
+//     fertil.innerHTML += "درصد: " + fertilpercent.toFixed(2) + '%';
+//     console.log(seeda*seedp)
+//     console.log(seed.innerHTML)
+//     // if (!isNaN(answer.innerHTML)){
+//     //     answer.innerHTML = "لطفا تمام فیلد ها را پر کنید";
+//     //     answer.style.color = 'darkred'
+//     // }else{
+//     //     answer.innerHTML =  "اطلاعات با موفقیت ثبت شد"
+//     //     answer.style.color = 'white'
+//     // }
+// }
+//
+// function calc2(){
+//
+//     let farmprepare = document.getElementById('farmprepare').value;
+//     let farmrent = document.getElementById('farmrent').value;
+//     let plant = document.getElementById('plant').value;
+//     let grow = document.getElementById('grow').value;
+//     let harvest = document.getElementById('harvest').value;
+//     let answer = document.getElementById("Answer2");
+//
+//
+//     answer.innerHTML =  (parseInt(farmprepare) + parseInt(farmrent) +parseInt(plant)  + parseInt(grow) + parseInt(harvest)) ;
+//
+//     console.log(answer)
+//     console.log(isNaN(answer.innerHTML))
+//
+//     if (isNaN(answer.innerHTML)){
+//         answer.innerHTML = "لطفا تمام فیلد ها را پر کنید";
+//         answer.style.color = 'darkred'
+//     }else{
+//         answer.innerHTML =  "نتیجه: "+ answer.innerHTML
+//         answer.style.color = 'white'
+//     }
+// }
+//
+// // fixed costs
+// function calc3(){
+//
+//     let farm = document.getElementById('farm').value;
+//     let areaconstruction = document.getElementById('areaconstruction').value;
+//     let building = document.getElementById('building').value;
+//     let machinery = document.getElementById('machinery').value;
+//     let equipment = document.getElementById('equipment').value;
+//     let transportation = document.getElementById("transportation").value;
+//     let officeequipment = document.getElementById("officeequipment").value;
+//     let costbefore = document.getElementById("costbefore").value;
+//     let unpredictedcosts = document.getElementById("unpredictedcosts").value;
+//
+//     let answer = document.getElementById("Answer3");
+//
+//     answer.innerHTML =  (parseInt(farm) + parseInt(areaconstruction) +parseInt(building)  + parseInt(machinery) + parseInt(equipment) + parseInt(transportation) +
+//                             parseInt(officeequipment) + parseInt(costbefore) + parseInt(unpredictedcosts)) ;
+//
+//     console.log(answer)
+//     console.log(isNaN(answer.innerHTML))
+//
+//
+//     if (isNaN(answer.innerHTML)){
+//         answer.innerHTML = "لطفا تمام فیلد ها را پر کنید";
+//         answer.style.color = 'darkred'
+//     }else{
+//         answer.innerHTML =  "نتیجه: "+ answer.innerHTML
+//         answer.style.color = 'white'
+//     }
+// }
 
 function calculate(){
-
     // remove chart data
     for (let i = 0 ; i < 5; i++) {
         removeData(mixedChart);
         removeData(cumulative_chart);
         removeData(net_chart);
     }
-
-
-    // let return_percent = document.getElementById('return-percent').value;
-    // let b0 = document.getElementById('1400').value;
-    // let b1 = document.getElementById('1401').value;
-    // let b2 = document.getElementById('1402').value;
-    // let b3 = document.getElementById('1403').value;
-    // let b4 = document.getElementById('1404').value;
-
-    // let answer = document.getElementById("Answer4");
 
     //income
     let productp = document.getElementById('productprice').value;
@@ -351,19 +193,24 @@ function calculate(){
     let salary = document.getElementById("salary").value;
     let employee = document.getElementById("employee").value;
 
+    console.log(seeda);
+    console.log(seedp);
+    console.log(seedp * seeda);
+
     let seedsum = seeda * seedp;
     let poisonsum = poisona * poisonp;
     let fertilsum = fertilizera * fertilizerp;
     let salarysum = salary * employee;
 
-
+	console.log(seedsum);
+	
     //      test        //
-    fixedcost = 3469376*1.15;
-    seedsum = 45000;
-    poisonsum = 6968;
-    fertilsum = 50254;
-    salarysum = 459000;
-    income = 1350000;
+    // fixedcost = 3469376*1.15;
+    // seedsum = 45000;
+    // poisonsum = 6968;
+    // fertilsum = 50254;
+    // salarysum = 459000;
+    // income = 1350000;
 
     let other = 0.25 *(seedsum + poisonsum + salarysum + fertilsum) ;
 	console.log(other);
@@ -467,20 +314,6 @@ function calculate(){
     let BC = income_NPV / (fixed_cost_NPV + variable_cost_NPV);
     console.log(BC.toFixed(3));
     document.getElementById('bcResult').innerHTML = BC.toFixed(2);
-    // answer.innerHTML = x.toFixed(2)
-    //
-    // console.log(answer)
-    // console.log(isNaN(answer.innerHTML))
-    //
-    // if (isNaN(answer.innerHTML)){
-    //     answer.innerHTML = "لطفا تمام فیلد ها را پر کنید";
-    //     answer.style.color = 'darkred'
-    // }else{
-    //     answer.innerHTML =  "NPV: "+ answer.innerHTML
-    //     // answer.style.color = 'white'
-    //     answer.style.color = 'green'
-    // }
-
 
 }
 
@@ -513,11 +346,147 @@ function getNPV(rate, initialCost, cashFlows){
 
 
 // Bar chart
-// var ctx = document.getElementById("bar-chart");
+
+let net_chart = new Chart(document.getElementById("net-chart"), {
+    type: 'bar',
+
+    data: {
+        labels: [],
+        datasets: [
+            {
+
+                // label: "تجمعی",
+                backgroundColor: "#18de61",
+                data: [],
+
+            }
+        ]
+    },
+    options: {
+        responsive: false,
+        legend: { display: false },
+
+        plugins: {
+            legend: {
+                display: false
+            },
+            title: {
+                display: true,
+                text: 'خالص جریان وجوه نقد',
+                font: {
+                    family: "iransans"
+                }
+            }
+        }
+    }
+});
+
+let cumulative_chart = new Chart(document.getElementById("cumulative -chart"), {
+    type: 'bar',
+    data: {
+        labels: [],
+        datasets: [
+            {
+                // label: "تجمعی", ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"]
+                backgroundColor: "#bbc71a",
+                data: [],
+            }
+        ]
+    },
+    options: {
+        responsive: false,
+        legend: { display: false },
+
+        plugins: {
+            legend: {
+                display: false
+            },
+            title: {
+                display: true,
+                text: 'خالص تجمعی جریان وجوه نقد',
+                font: {
+                    family: "iransans"
+                }
+            }
+        }
+    }
+});
+
+let mixedChart = new Chart(document.getElementById("mix -chart"), {
+    type: 'bar',
+    data: {
+        datasets: [{
+            label: 'هزینه‌های متغیر',
+            data: [],
+            backgroundColor: "#3e95cd",
+            // this dataset is drawn below
+            order: 3
+        }, {
+            label: 'هزینه‌های ثابت',
+            data: [],
+            type: 'bar',
+            backgroundColor: "#c45850",
+            // this dataset is drawn on top
+            order: 1
+        },{
+            label: 'درآمد',
+            data: [],
+            type: 'bar',
+            backgroundColor: "#3cba9f",
+            // this dataset is drawn on top
+            order: 2
+        }
+        ],
+        labels: []
+    },
+    options: {
+        responsive: false,
+        legend: { display: false },
+
+        plugins: {
+            legend: {
+                display: true
+            },
+            title: {
+                display: true,
+                text: 'جدول جریان نقدی درآمد و هزینه ها به قیمت جاری',
+                font: {
+                    family: "iransans"
+                }
+            }
+        }
+    }
+
+});
+
+function addData(chart, label, data) {
+    chart.data.labels.push(label);
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data.push(data);
+    });
+    chart.update();
+}
 
 
+function addData2(chart, label, data) {
+    chart.data.labels.push(label);
+    for (let i = 0; i< data.length; ++i){
+        chart.data.datasets[i].data.push(data[i]);
+    }
+    // chart.data.datasets.forEach((dataset) => {
+    //     dataset.data.push(data);
+    // });
+    chart.update();
+}
 
 
+function removeData(chart) {
+    chart.data.labels.pop();
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data.pop();
+    });
+    chart.update();
+}
 
 
 
@@ -587,27 +556,27 @@ function incomeMult(){
     // return fMoney * fProduce;
 }
 
-function splitDigit(inp){
-    var nStr = inp.value + '';
-    nStr = nStr.replace( /\,/g, "");
-    var x = nStr.split( '.' );
-    var x1 = x[0];
-    var x2 = x.length > 1 ? '.' + x[1] : '';
-    var rgx = /(\d+)(\d{3})/;
-    while ( rgx.test(x1) ) {
-        x1 = x1.replace( rgx, '$1' + ',' + '$2' );
-    }
-    inp.value = x1 + x2;
+// function splitDigit(inp){
+//     var nStr = inp.value + '';
+//     nStr = nStr.replace( /\,/g, "");
+//     var x = nStr.split( '.' );
+//     var x1 = x[0];
+//     var x2 = x.length > 1 ? '.' + x[1] : '';
+//     var rgx = /(\d+)(\d{3})/;
+//     while ( rgx.test(x1) ) {
+//         x1 = x1.replace( rgx, '$1' + ',' + '$2' );
+//     }
+//     inp.value = x1 + x2;
+//
+// }
 
-}
-
-let product = document.getElementById('product');  
-let productArea = document.getElementById('productarea');  
-let projectName = document.getElementById('projectname');  
+let product = document.getElementById('product');
+let productArea = document.getElementById('productarea');
+let projectName = document.getElementById('projectname');
 
 function checkInfo(){
-    if(productArea.value == '' || projectName.value == '' || product.select.options[select.selectedIndex].value === '---')
-        alert('لطفا تمام فیلد های اطلاعات کلی را پر کنید');  
+    if(productArea.value == '' || projectName.value == '')
+        alert('لطفا تمام فیلد های اطلاعات کلی را پر کنید');
 }
 
 let farm = document.getElementById('farm');
@@ -621,7 +590,7 @@ let costBefore = document.getElementById('costbefore');
 let unPredictedCosts = document.getElementById('unpredictedcosts');
 
 function checkFixedCost(){
-    if(farm.value == '' || areaConstruction.value == '' || building.value == '' || machinery.value == '' || equipment.value == '' || 
+    if(farm.value == '' || areaConstruction.value == '' || building.value == '' || machinery.value == '' || equipment.value == '' ||
         transportation.value == '' || officeEquipment.value == ''  || costBefore.value == '' || unPredictedCosts.value == ''
     )
         alert('لطفا تمام فیلد های هزینه های ثابت را پر کنید');
