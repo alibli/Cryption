@@ -556,6 +556,7 @@ function incomeMult(){
     // return fMoney * fProduce;
 }
 
+<<<<<<< HEAD
 function splitDigit(inp){
     var nStr = inp.value + '';
     nStr = nStr.replace( /\,/g, "");
@@ -577,6 +578,25 @@ function splitDigit(inp){
 let product = document.getElementById('product');  
 let productArea = document.getElementById('productarea');  
 let projectName = document.getElementById('projectname');  
+=======
+// function splitDigit(inp){
+//     var nStr = inp.value + '';
+//     nStr = nStr.replace( /\,/g, "");
+//     var x = nStr.split( '.' );
+//     var x1 = x[0];
+//     var x2 = x.length > 1 ? '.' + x[1] : '';
+//     var rgx = /(\d+)(\d{3})/;
+//     while ( rgx.test(x1) ) {
+//         x1 = x1.replace( rgx, '$1' + ',' + '$2' );
+//     }
+//     inp.value = x1 + x2;
+//
+// }
+
+let product = document.getElementById('product');
+let productArea = document.getElementById('productarea');
+let projectName = document.getElementById('projectname');
+>>>>>>> 9605bf7029798acfff000b10c36059971a23d48f
 
 function checkInfo(){
     if(productArea.value == '' || projectName.value == '')
