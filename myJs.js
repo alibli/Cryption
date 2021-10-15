@@ -606,7 +606,7 @@ let productArea = document.getElementById('productarea');
 let projectName = document.getElementById('projectname');  
 
 function checkInfo(){
-    if(productArea.value == '' || projectName.value == '' || product.value === '---')
+    if(productArea.value == '' || projectName.value == '' || product.select.options[select.selectedIndex].value === '---')
         alert('لطفا تمام فیلد های اطلاعات کلی را پر کنید');  
 }
 
@@ -642,6 +642,10 @@ function checkvariabledCost(){
     fertilizerPrice.value == '' || salary.value == '' || employee.value == ''
     )
         alert('لطفا تمام فیلد های هزینه های متغیر را پر کنید');
+
+    document.getElementById('productInIncome').innerHTML = product.options[product.selectedIndex].value;
+
+    document.getElementById('areaInIncome').innerHTML = productArea.value;
 }
 
 
@@ -652,3 +656,4 @@ function checkIncome(){
     if(productAmount.value == '' || productPrice.value == '')
         alert('لطفا تمام فیلد های درآمد را پر کنید')
 }
+
