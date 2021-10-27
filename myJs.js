@@ -153,7 +153,19 @@
 //     }
 // }
 
+let productAmount = document.getElementById('productamount');
+let productPrice = document.getElementById('productprice');
+
+
+let error = 0;
+
 function calculate(){
+
+    checkInfo();
+    checkFixedCost();
+    checkvariabledCost();
+
+
     // remove chart data
     for (let i = 0 ; i < 5; i++) {
         removeData(mixedChart);
@@ -321,6 +333,21 @@ function calculate(){
     let BC = income_NPV / (fixed_cost_NPV + variable_cost_NPV);
     console.log(BC.toFixed(3));
     document.getElementById('bcResult').innerHTML = BC.toFixed(2);
+
+    // Ali added at 6 aban
+    if(productAmount.value == '' || productPrice.value == ''){
+        alert('لطفا تمام فیلد های درآمد را پر کنید')
+        error = 1;
+    }
+    else
+        document.getElementById("pills-profile-tab").style.backgroundColor = '#52ef67';
+
+
+    // if(error){
+    //     prev();
+    //     btns[4].classList.remove('active');
+    //     btns[4].ariaSelected = false;
+    // }    
 
 }
 
@@ -515,7 +542,7 @@ function removeData(chart) {
                 btns[i+1].ariaSelected = true;
                 tabPane[i+1].classList.add('active');
                 tabPane[i+1].classList.add('show');
-                if (btns[5].classList.contains('active')){
+                if (btns[4].classList.contains('active')){ //5
                     document.getElementById('nextBtnId').disabled = true;
                 }
                 if (!btns[0].classList.contains('active')){
@@ -548,9 +575,12 @@ function removeData(chart) {
         }
     }
 
-    if (btns[0].classList.contains('active')){
-        document.getElementById('prevBtnId').disabled = true;
-    }
+    // if (btns[0].classList.contains('active')){
+    //     // document.getElementById('prevBtnId').disabled = true;
+    // }
+    // if (btns[4].classList.contains('active')){
+    //     document.getElementById('nextBtnId').disabled = true;
+    // }
 
 
 let answer5 = document.getElementById('answer5');
@@ -586,8 +616,12 @@ let productArea = document.getElementById('productarea');
 let projectName = document.getElementById('projectname');  
 
 function checkInfo(){
-    if(productArea.value == '' || projectName.value == '')
-        alert('لطفا تمام فیلد های اطلاعات کلی را پر کنید');
+    if(productArea.value == '' || projectName.value == ''){
+        alert('لطفا تمام فیلد های اطلاعات کلی را پر کنید'); //
+        error = 1;
+    }
+    else
+        document.getElementById('pills-general-tab').style.backgroundColor = '#52ef67';     
 }
 
 let farm = document.getElementById('farm');
@@ -598,13 +632,22 @@ let equipment = document.getElementById('equipment');
 let transportation = document.getElementById('transportation');
 let officeEquipment = document.getElementById('officeequipment');
 let costBefore = document.getElementById('costbefore');
-let unPredictedCosts = document.getElementById('unpredictedcosts');
+// let unPredictedCosts = document.getElementById('unpredictedcosts');
+
+let fixTab = document.getElementById('pills-fixed-tab');
+// console.log(fixTab.style.backgroundColor);
+// fixTab.style.backgroundColor = 'white';
 
 function checkFixedCost(){
     if(farm.value == '' || areaConstruction.value == '' || building.value == '' || machinery.value == '' || equipment.value == '' ||
-        transportation.value == '' || officeEquipment.value == ''  || costBefore.value == '' || unPredictedCosts.value == ''
-    )
-        alert('لطفا تمام فیلد های هزینه های ثابت را پر کنید');
+        transportation.value == '' || officeEquipment.value == ''  || costBefore.value == '' ){
+            alert('لطفا تمام فیلد های هزینه های ثابت را پر کنید');
+            error = 1;
+    }
+    else{
+        fixTab.style.backgroundColor = '#52ef67'; 
+    }
+
 }
 
 
@@ -619,9 +662,13 @@ let employee = document.getElementById('employee');
 
 function checkvariabledCost(){
     if(seedAmount.value == '' || seedPrice.value == '' || poisonAmount.value == '' || poisonPrice.value == '' || fertilizerAmount.value == '' ||
-    fertilizerPrice.value == '' || salary.value == '' || employee.value == ''
-    )
+    fertilizerPrice.value == '' || salary.value == '' || employee.value == '')
+    {
         alert('لطفا تمام فیلد های هزینه های متغیر را پر کنید');
+        error = 1;
+    }
+    else
+        document.getElementById('pills-variable-tab').style.backgroundColor = '#52ef67'; 
 
     document.getElementById('productInIncome').innerHTML = product.options[product.selectedIndex].value;
 
@@ -629,11 +676,12 @@ function checkvariabledCost(){
 }
 
 
-let productAmount = document.getElementById('productamount');
-let productPrice = document.getElementById('productprice');
+
 
 function checkIncome(){
     if(productAmount.value == '' || productPrice.value == '')
         alert('لطفا تمام فیلد های درآمد را پر کنید')
+    else
+        document.getElementById("pills-profile-tab").style.backgroundColor = 'red';
 }
 

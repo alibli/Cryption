@@ -112,13 +112,13 @@
             <button class="nav-link active" id="pills-general-tab" data-bs-toggle="pill" data-bs-target="#pills-general" type="button" role="tab" aria-controls="pills-home" aria-selected="true">اطلاعات کلی</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" onclick="checkInfo()">هزینه های ثابت</button>
+            <button class="nav-link" id="pills-fixed-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" onclick="">هزینه های ثابت</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-variable-tab" data-bs-toggle="pill" data-bs-target="#pills-variable" type="button" role="tab" aria-controls="pills-home" aria-selected="true" onclick="checkFixedCost()">هزینه های متغیر</button>
+            <button class="nav-link" id="pills-variable-tab" data-bs-toggle="pill" data-bs-target="#pills-variable" type="button" role="tab" aria-controls="pills-home" aria-selected="true" onclick="">هزینه های متغیر</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" onclick="checkvariabledCost()">درآمد ها</button>
+            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" onclick="">درآمد ها</button>
         </li>
 
         <li class="nav-item" role="presentation">
@@ -145,17 +145,17 @@
                         <div class="form">
                             <div class="row">
                                 <!--                        <legend style="text-align : right ">اطلاعات عمومی</legend>-->
-                                <div class="col" >
+                                <div class="col-lg-6 col-md-6">
                                     <label for="projectname">نام پروژه</label>
-                                    <input style="margin-left: 10px;" id="projectname" type="text" class="form-control form-cell" placeholder="" required>
+                                    <input id="projectname" type="text" class="form-control form-cell" placeholder="" style="width: 550px;">
                                 </div>
-                                <div class="col">
+                                <div class="col-lg-6 col-md-6">
                                     <label for="projectname" style="margin-right: 50px">نوع محصول</label>
                                     <select name="cars" id="product">
                                         <option class="dropdown-first" value="-1"  selected hidden>---</option>
                                         <option value="گندم" >گندم</option>
-                                        <option value="جو">جو</option>
-                                        <option value="ذرت">ذرت</option>
+                                        <!-- <option value="جو">جو</option>
+                                        <option value="ذرت">ذرت</option> -->
                                     </select>
                                 </div>
                             </div>
@@ -168,7 +168,7 @@
                                 <!--                        <legend style="text-align : right ">مفروضات هزینه های درصدی</legend>-->
                                 <div class="col-lg-6 col-sm-12" >
                                     <label for="productarea">سطح زیر کشت محصول(هکتار)</label>
-                                    <input id="productarea" type="text" onkeyup="splitDigit(this)" class="form-control form-cell" placeholder="" required >
+                                    <input id="productarea" type="text" onkeyup="splitDigit(this)" class="form-control form-cell" placeholder="" style="width: 550px;" >
                                 </div>
                                 <div class="col-lg-6 col-sm-12">
                                     <label for="projectname" style="margin-right: 50px">استان</label>
@@ -646,11 +646,11 @@
         </div>
 
     </div>
+    
     <div class="row" id="preNextBtn">
-        <button id="prevBtnId" class="btn btn-outline-success  text-center " onclick="prev()" style="">قبلی</button>
-        <button id="nextBtnId" class="btn btn-outline-success  text-center " onclick="next()" style="">بعدی</button>
+        <button id="prevBtnId" class="btn btn-outline-success  text-center " onclick="prev()">قبلی</button>
+        <button id="nextBtnId" class="btn btn-outline-success" onclick="next()" style="float: left;">بعدی</button>
     </div>
-    <!-- End of calculator aria -->
 </div>
 
 <!-- End of calculator aria -->
