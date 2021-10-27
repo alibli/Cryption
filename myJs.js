@@ -177,12 +177,19 @@ function calculate(){
     let transportation = document.getElementById("transportation").value;
     let officeequipment = document.getElementById("officeequipment").value;
     let costbefore = document.getElementById("costbefore").value;
-    let unpredictedcosts = document.getElementById("unpredictedcosts").value;
+    // let unpredictedcosts = document.getElementById("unpredictedcosts").value;
 
-    let fixedcost = 1.15 * (parseInt(farm) + parseInt(areaconstruction) +parseInt(building)  +
+	// commented because unPredictedCosts isn't input anymore
+    // let fixedcost = 1.15 * (parseInt(farm) + parseInt(areaconstruction) +parseInt(building)  +
+                    // parseInt(machinery) + parseInt(equipment) + parseInt(transportation) +
+                    // parseInt(officeequipment) + parseInt(costbefore) + parseInt(unpredictedcosts)) ;
+
+
+    let fixedcost = 1.15 * 1.03 * (parseInt(farm) + parseInt(areaconstruction) +parseInt(building)  +
                     parseInt(machinery) + parseInt(equipment) + parseInt(transportation) +
-                    parseInt(officeequipment) + parseInt(costbefore) + parseInt(unpredictedcosts)) ;
-
+                    parseInt(officeequipment) + parseInt(costbefore)) ;
+					
+					
     // variable costs
     let seeda = document.getElementById("seedamount").value;
     let seedp = document.getElementById("seedprice").value;
