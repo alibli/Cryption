@@ -185,10 +185,11 @@ function calculate(){
                     // parseInt(officeequipment) + parseInt(costbefore) + parseInt(unpredictedcosts)) ;
 
 
-    let fixedcost = 1.15 * 1.03 * (parseInt(farm) + parseInt(areaconstruction) +parseInt(building)  +
+    let fixedcost = 1.15 * (parseInt(farm) + parseInt(areaconstruction) +parseInt(building)  +
                     parseInt(machinery) + parseInt(equipment) + parseInt(transportation) +
                     parseInt(officeequipment) + parseInt(costbefore)) ;
 					
+	fixedcost = fixedcost*1.03
 					
     // variable costs
     let seeda = document.getElementById("seedamount").value;
