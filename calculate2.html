@@ -118,7 +118,7 @@
             <button class="nav-link" id="pills-variable-tab" data-bs-toggle="pill" data-bs-target="#pills-variable" type="button" role="tab" aria-controls="pills-home" aria-selected="true" onclick="">هزینه های متغیر</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" onclick="">درآمد ها</button>
+            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" onclick="printAreaIncome()">درآمد ها</button>
         </li>
 
         <li class="nav-item" role="presentation">
@@ -208,11 +208,8 @@
                                         <option value="32">یزد</option>
                                     </select>
                                     <!--                            TODO: using bootstrap dropdown-->
-
-
                                 </div>
                             </div>
-
                         </div>
                         <br>
                         <!-- <div class="form">
@@ -245,6 +242,8 @@
                 <!--</div>-->
                 <!---->
                 <!--</div>-->
+
+                <button id="nextBtnId" class="btn btn-success confirmBtn" onclick="nextInfo()">تایید</button>
             </div>
         </div>
 
@@ -325,6 +324,9 @@
                 <!--</div>-->
 
                 <!--</div>-->
+
+                <button id="nextBtnId" class="btn btn-success confirmBtn" onclick="nextFixedCost()">تایید</button>
+
             </div>
 
         </div>
@@ -479,6 +481,21 @@
                                 <!--</div>-->
                             </div>
 
+                            <br><br><br><br>
+                            
+                            <div class="row col-lg-12 col-sm-12">
+                                <!-- <legend class="variable" style="text-align : center ">سم</legend> -->
+                                <div class="col-lg-6 col-sm-12" >
+                                    <label for="salary"> (هزار ریال)هزینه ماشین آلات</label>
+                                    <input id="salary" type="text" class="form-control form-cell" placeholder="" >
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <label for="employee">هزینه آب (هزار ریال)</label>
+                                    <input id="employee" type="text"   class="form-control form-cell" placeholder="" >
+                                </div>
+                                
+                            </div>
+
                         </div>
 
                     </form>
@@ -501,6 +518,9 @@
                     </div>
 
                 </div>
+
+
+                <button id="nextBtnId" class="btn btn-success confirmBtn" onclick="nextVariableCost()">تایید</button>
 
             </div>
 
@@ -576,6 +596,9 @@
                 <!--</div>-->
 
                 <!--</div>-->
+
+                <button  class="btn btn-success confirmBtn" onclick="nextIncome()">تایید</button>
+                
             </div>
 
         </div>
@@ -647,7 +670,7 @@
 
     </div>
     
-    <div class="row" id="preNextBtn">
+    <div class="row" id="preNextBtn" style="display:none">
         <button id="prevBtnId" class="btn btn-outline-success  text-center " onclick="prev()">قبلی</button>
         <button id="nextBtnId" class="btn btn-outline-success" onclick="next()" style="float: left;">بعدی</button>
     </div>

@@ -585,6 +585,7 @@ function removeData(chart) {
 
 
 let answer5 = document.getElementById('answer5');
+
 function incomeMult(){
     let fMoney = document.getElementById('productprice').value;
     console.log(fMoney);
@@ -677,8 +678,6 @@ function checkvariabledCost(){
 }
 
 
-
-
 function checkIncome(){
     if(productAmount.value == '' || productPrice.value == '')
         alert('لطفا تمام فیلد های درآمد را پر کنید')
@@ -686,3 +685,63 @@ function checkIncome(){
         document.getElementById("pills-profile-tab").style.backgroundColor = 'red';
 }
 
+
+function printAreaIncome(){
+    document.getElementById('productInIncome').innerHTML = product.options[product.selectedIndex].value;
+    document.getElementById('areaInIncome').innerHTML = productArea.value;
+} 
+
+
+function nextInfo(){
+    btns[0].classList.remove('active');
+    btns[0].ariaSelected = false;
+    tabPane[0].classList.remove('active');
+    tabPane[0].classList.remove('show');
+
+    btns[1].classList.add('active');
+    btns[1].ariaSelected = true;
+    tabPane[1].classList.add('active');
+    tabPane[1].classList.add('show');
+}
+
+function nextFixedCost(){
+    btns[1].classList.remove('active');
+    btns[1].ariaSelected = false;
+    tabPane[1].classList.remove('active');
+    tabPane[1].classList.remove('show');
+
+    btns[2].classList.add('active');
+    btns[2].ariaSelected = true;
+    tabPane[2].classList.add('active');
+    tabPane[2].classList.add('show');
+}
+
+function nextVariableCost(){
+
+    printAreaIncome();
+
+    btns[2].classList.remove('active');
+    btns[2].ariaSelected = false;
+    tabPane[2].classList.remove('active');
+    tabPane[2].classList.remove('show');
+
+    btns[3].classList.add('active');
+    btns[3].ariaSelected = true;
+    tabPane[3].classList.add('active');
+    tabPane[3].classList.add('show');
+}
+
+function nextIncome(){
+
+    calculate();
+
+    btns[2].classList.remove('active');
+    btns[2].ariaSelected = false;
+    tabPane[2].classList.remove('active');
+    tabPane[2].classList.remove('show');
+
+    btns[3].classList.add('active');
+    btns[3].ariaSelected = true;
+    tabPane[3].classList.add('active');
+    tabPane[3].classList.add('show');
+}

@@ -1979,3 +1979,10 @@ label{
 #preNextBtn{
     width: 100px;
 }
+
+.confirmBtn{
+  position: relative;
+  left: 15px;
+
+  margin: 20px;
+}
