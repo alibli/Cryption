@@ -232,8 +232,11 @@ function calculate(){
     // salarysum = 459000;
     // income = 1350000;
 
-    let other = 0.25 *(seedsum + poisonsum + salarysum + fertilsum) ;
-	console.log(other);
+	let machin = document.getElementById("machine").value;
+	let water = document.getElementById("water").value;
+	
+    // let other = 1.03 *(seedsum + poisonsum + salarysum + fertilsum + machin + water) ;
+	// console.log(other);
     let initial_year = 1400;
     let discount_Rate = 0.25;
     let tavarom = 1.15;
@@ -244,6 +247,9 @@ function calculate(){
     let salary_cashflow = [0];
     let income_cashflow = [0];
     let other_cashflow = [0];
+	let machin_cashflow = [0];
+	let water_cashflow = [0];
+
 
     let fixedcost_cashflow = [fixedcost]
     let variablecost_cashflow = []
@@ -254,7 +260,9 @@ function calculate(){
         fertil_cashflow.push(Math.round(fertilsum*Math.pow(tavarom, i)));
         salary_cashflow.push(Math.round(salarysum*Math.pow(tavarom, i)));
         income_cashflow.push(Math.round(income*Math.pow(tavarom, i)));
-        other_cashflow.push(Math.round(other*Math.pow(tavarom, i)));
+        // other_cashflow.push(Math.round(other*Math.pow(tavarom, i)));
+		machin_cashflow.push(Math.round(machin*Math.pow(tavarom, i)));
+		water_cashflow.push(Math.round(water*Math.pow(tavarom, i)));
         fixedcost_cashflow.push(0);
         // console.log(seedsum*Math.pow(tavarom, i));
     }
@@ -263,7 +271,7 @@ function calculate(){
         // console.log(seed_cashflow[i] + poison_cashflow[i] + fertil_cashflow[i] + salary_cashflow[i] + other_cashflow[i]);
         // console.log(103/100*(seed_cashflow[i] + poison_cashflow[i] + fertil_cashflow[i] + salary_cashflow[i] + other_cashflow[i]));
         // adding 3% for unexpected costs
-        variablecost_cashflow.push(103/100*(seed_cashflow[i] + poison_cashflow[i] + fertil_cashflow[i] + salary_cashflow[i] + other_cashflow[i]));
+        variablecost_cashflow.push(103/100*(seed_cashflow[i] + poison_cashflow[i] + fertil_cashflow[i] + salary_cashflow[i] + machin_cashflow[i] + water_cashflow[i]));
     }
 
     // console.log(seed_cashflow);
