@@ -19,7 +19,7 @@
 //         answer.innerHTML = "لطفا تمام فیلد ها را پر کنید";
 //         answer.style.color = 'darkred'
 //     }else{
-//         answer.innerHTML =  "نتیجه: "+ answer.innerHTML
+//         answer.innerHTML =  "نتیجه: "+ answer.innerHTML 
 //         answer.style.color = 'white'
 //     }
 // }
