@@ -486,8 +486,13 @@
                             <div class="row col-lg-12 col-sm-12">
                                 <!-- <legend class="variable" style="text-align : center ">سم</legend> -->
                                 <div class="col-lg-6 col-sm-12" >
-                                    <label for="machine">هزینه ماشین آلات (هزار ریال)</label>
+<<<<<<< HEAD
+                                    <label for="salary">هزینه ماشین آلات (هزار ریال)</label>
+                                    <input id="salary" type="text" class="form-control form-cell" placeholder="" >
+=======
+                                    <label for="machine"> (هزار ریال)هزینه ماشین آلات</label>
                                     <input id="machine" type="text" class="form-control form-cell" placeholder="" >
+>>>>>>> fb831460644a9d272c5334e43382260688460558
                                 </div>
                                 <div class="col-lg-6 col-sm-12">
                                     <label for="water">هزینه آب (هزار ریال)</label>
