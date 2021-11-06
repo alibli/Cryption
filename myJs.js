@@ -310,7 +310,21 @@ function calculate(){
     // ######################################
     // ##########    Results    #############
     // ######################################
-
+	
+	//sum
+	let fixedsum = 0;
+	let varsum = 0;
+	let incomesum = 0;
+	for (let i = 0; i<5; i++){
+		fixedsum += fixedcost_cashflow[i];
+		varsum += variablecost_cashflow[i];
+		incomesum += income_cashflow[i];
+	}
+	
+	document.getElementById('finalfix').innerHTML = parseInt(fixedsum);
+	document.getElementById('finalvar').innerHTML = parseInt(varsum);
+	document.getElementById('finalincome').innerHTML = parseInt(incomesum);
+		
     // NPV
     let final_NPV = NPV([0].concat(IRR_cashflow), discount_Rate);
     console.log(final_NPV);
