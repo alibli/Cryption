@@ -486,8 +486,13 @@
                             <div class="row col-lg-12 col-sm-12">
                                 <!-- <legend class="variable" style="text-align : center ">سم</legend> -->
                                 <div class="col-lg-6 col-sm-12" >
-                                    <label for="machine">هزینه ماشین آلات (هزار ریال)</label>
+<<<<<<< HEAD
+                                    <label for="salary">هزینه ماشین آلات (هزار ریال)</label>
+                                    <input id="salary" type="text" class="form-control form-cell" placeholder="" >
+=======
+                                    <label for="machine"> (هزار ریال)هزینه ماشین آلات</label>
                                     <input id="machine" type="text" class="form-control form-cell" placeholder="" >
+>>>>>>> fb831460644a9d272c5334e43382260688460558
                                 </div>
                                 <div class="col-lg-6 col-sm-12">
                                     <label for="water">هزینه آب (هزار ریال)</label>
@@ -617,33 +622,7 @@
                 <div class="space-60"></div>
                 <div class="row">
 
-				
-					<div class="row col-lg-6 " style="margin: auto ; text-align: center"  dir="ltr">
-                        <table class="table  table-bordered table-secondary">
-                            <thead>
-                            <tr class="table-secondary">
-                                <th scope="col">هزینه‌های ثابت</th>
-                                <th scope="col">هزینه‌های متغیر</th>
-                                <th scope="col">درآمد</th>
-                            </tr>
-                            </thead>                            
-                            <tbody>
-                            <tr class="table-success">
-                                <td scope="row" id="finalfix"></td>
-                                <td id="finalvar"></td>
-                                <td id="finalincome"></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
 
-					<div class="row col-lg-12">
-                       <canvas dir="ltr" id="mix -chart" class="mx-auto justify-content-center" style="width: 600px"></canvas>
-					</div>
-
-					<div class="space-40"></div>
-                    
-					
                     <div class="row col-lg-6 " style="margin: auto ; text-align: center"  dir="ltr">
                         <table class="table  table-bordered table-secondary">
                             <thead>
@@ -672,10 +651,6 @@
                             </tbody>
                         </table>
                     </div>
-					</div>
-					<br>
-					<br>
-
 					
 					<div class="space-40"></div>
                     
@@ -684,6 +659,8 @@
                         <canvas dir="ltr" id="cumulative -chart" class="mx-auto justify-content-center" style="width: 500px"></canvas>
 						<div class="space-40"></div>
 						
+                        <canvas dir="ltr" id="mix -chart" class="mx-auto justify-content-center" style="width: 700px"></canvas>
+
                     </div>
 
                 </div>
