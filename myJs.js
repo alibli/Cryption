@@ -296,15 +296,15 @@ function calculate(){
 	let payback = -1;
     let tajamoe = IRR_cashflow.map(cumulativeSum);
     for (let i = 0; i<5; i++){
-        addData(cumulative_chart, initial_year + i, tajamoe[i]);
-		if (tajamoe[i] > 0){
-			payback = i+1;
-		}
-		
+        addData(cumulative_chart, initial_year + i, tajamoe[i]);		
         addData2(mixedChart, initial_year + i, [-1 * variablecost_cashflow[i], -1*fixedcost_cashflow[i], income_cashflow[i] ] );
     }
-
-
+    for(let i = 0; i<5; i++){
+    if (tajamoe[i] > 0){
+        payback = i+1;
+        break;
+    }
+    }
     console.log("final",IRR_cashflow);
 
     // ######################################
@@ -321,10 +321,11 @@ function calculate(){
 		incomesum += income_cashflow[i];
 	}
 	
-	document.getElementById('finalfix').innerHTML = parseInt(fixedsum);
-	document.getElementById('finalvar').innerHTML = parseInt(varsum);
-	document.getElementById('finalincome').innerHTML = parseInt(incomesum);
-		
+	// finalfix = document.getElementById('finalfix').innerHTML;
+    document.getElementById('finalfix').innerHTML = commafy(Math.round(fixedsum));
+    document.getElementById('finalvar').innerHTML  = commafy(Math.round(varsum));
+	document.getElementById('finalincome').innerHTML = commafy(Math.round(incomesum));
+	
     // NPV
     let final_NPV = NPV([0].concat(IRR_cashflow), discount_Rate);
     console.log(final_NPV);
@@ -357,7 +358,7 @@ function calculate(){
     console.log(BC.toFixed(3));
     document.getElementById('bcResult').innerHTML = BC.toFixed(2);
 
-    // Ali added at 6 aban
+
     if(productAmount.value == '' || productPrice.value == ''){
         alert('لطفا تمام فیلد های درآمد را پر کنید')
         error = 1;
@@ -400,6 +401,16 @@ function getNPV(rate, initialCost, cashFlows){
     return cashFlows.reduce((accumulator, currentValue, index) =>accumulator + currentValue / Math.pow(rate / 100 + 1, index + 1),initialCost )
 }
 
+function commafy( num ) {
+    var str = num.toString().split('.');
+    if (str[0].length >= 5) {
+        str[0] = str[0].replace(/(\d)(?=(\d{3})+$)/g, '$1,');
+    }
+    if (str[1] && str[1].length >= 5) {
+        str[1] = str[1].replace(/(\d{3})/g, '$1 ');
+    }
+    return str.join('.');
+}
 
 
 // Bar chart
@@ -628,7 +639,7 @@ function splitDigit(inp){
         x1 = x1.replace( rgx, '$1' + ',' + '$2' );
     }
     inp.value = x1 + x2;
-
+	
     console.log(inp.value);
     console.log(x1);
     console.log(x);
