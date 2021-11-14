@@ -329,7 +329,7 @@ function calculate(){
     // NPV
     let final_NPV = NPV([0].concat(IRR_cashflow), discount_Rate);
     console.log(final_NPV);
-    document.getElementById('npvResult').innerHTML = parseInt(final_NPV);
+    document.getElementById('npvResult').innerHTML = commafy(Math.round(final_NPV));
 
     // IRR
     let final_IRR = IRR(IRR_cashflow);
