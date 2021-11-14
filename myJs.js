@@ -232,11 +232,19 @@ function calculate(){
     // salarysum = 459000;
     // income = 1350000;
 
-	let machin = document.getElementById("machine").value;
-	let water = document.getElementById("water").value;
+	let machina = document.getElementById("machinehour").value;
+	let machinp = document.getElementById("machineprice").value;
 	
-    // let other = 1.03 *(seedsum + poisonsum + salarysum + fertilsum + machin + water) ;
-	// console.log(other);
+	let watera = document.getElementById("waterhour").value;
+	let waterp = document.getElementById("waterprice").value;
+	
+	let machin = machina*machinp;
+	let water = watera*waterp;
+	console.log(machin);
+	console.log(water);
+	
+    let other = 0.03 *(seedsum + poisonsum + salarysum + fertilsum + machin + water) ;
+	console.log(other);
     let initial_year = 1400;
     let discount_Rate = 0.25;
     let tavarom = 1.15;
@@ -260,15 +268,24 @@ function calculate(){
         fertil_cashflow.push(Math.round(fertilsum*Math.pow(tavarom, i)));
         salary_cashflow.push(Math.round(salarysum*Math.pow(tavarom, i)));
         income_cashflow.push(Math.round(income*Math.pow(tavarom, i)));
-        // other_cashflow.push(Math.round(other*Math.pow(tavarom, i)));
+        other_cashflow.push(Math.round(other*Math.pow(tavarom, i)));
 		machin_cashflow.push(Math.round(machin*Math.pow(tavarom, i)));
 		water_cashflow.push(Math.round(water*Math.pow(tavarom, i)));
         fixedcost_cashflow.push(0);
         // console.log(seedsum*Math.pow(tavarom, i));
     }
+	
+    console.log("seed",seed_cashflow);	
+    console.log("poison",poison_cashflow);	
+    console.log("fertil",fertil_cashflow);	
+    console.log("salarysum",salary_cashflow);	
+    console.log("machin",machin_cashflow);	
+    console.log("water",water_cashflow);	
+    console.log("other",other_cashflow);	
 
     for (let i = 0 ; i < 5; i++){
-        // console.log(seed_cashflow[i] + poison_cashflow[i] + fertil_cashflow[i] + salary_cashflow[i] + other_cashflow[i]);
+        console.log("variable sum -3%",seed_cashflow[i] + poison_cashflow[i] + fertil_cashflow[i] + salary_cashflow[i] + machin_cashflow[i] + water_cashflow[i] );
+        console.log("+ 3% ",103/100 * (seed_cashflow[i] + poison_cashflow[i] + fertil_cashflow[i] + salary_cashflow[i] + machin_cashflow[i] + water_cashflow[i] ));
         // console.log(103/100*(seed_cashflow[i] + poison_cashflow[i] + fertil_cashflow[i] + salary_cashflow[i] + other_cashflow[i]));
         // adding 3% for unexpected costs
         variablecost_cashflow.push(103/100*(seed_cashflow[i] + poison_cashflow[i] + fertil_cashflow[i] + salary_cashflow[i] + machin_cashflow[i] + water_cashflow[i]));
